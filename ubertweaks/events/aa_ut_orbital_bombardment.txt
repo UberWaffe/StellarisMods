@@ -1,0 +1,471 @@
+#########################################
+#
+# orbital_bombardment.txt
+# Effects of orbital bombardment
+#
+# Event is triggered once a month if planet is being orbital bombarded
+#
+# Remember to update the following localization-strings if the effects are changed;
+#
+# GROUND_SUPPORT_STANCE_SOFT_BASE_DESC
+# GROUND_SUPPORT_STANCE_LIMITED_BASE_DESC
+# GROUND_SUPPORT_STANCE_FULL_BASE_DESC
+#
+#########################################
+
+namespace = orbital_bombardment
+
+planet_event = {
+	id = orbital_bombardment.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# Kill a pop
+		# 6% limited
+		# 50% full
+		# 100% Armgeddon
+		random_list = {
+			6 = {
+				if = {
+					limit = {
+						AND = {
+							has_owner = yes
+							fortification_health < 1
+							owner = controller
+							OR = {
+								orbital_bombardment = limited
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					if = {
+						limit = {
+							count_pops = {
+								count > 2
+								limit = {
+									is_sapient = yes
+									owner = { NOT = { is_country_type = "primitive" } }
+								}
+							}
+						}
+						FROM = {
+							country_event = { id = action.23 }
+						}						
+						random_pop = {
+							limit = {
+								is_sapient = yes
+								owner = { NOT = { is_country_type = "primitive" } }
+							}
+							kill_pop = yes
+						}
+						else = {
+							if = {
+								limit = {
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								random_pop = {
+									kill_pop = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			44 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					if = {
+						limit = {
+							count_pops = {
+								count > 2
+								limit = {
+									is_sapient = yes
+									owner = { NOT = { is_country_type = "primitive" } }
+								}
+							}
+						}
+						FROM = {
+							country_event = { id = action.23 }
+						}							
+						random_pop = {
+							limit = {
+								is_sapient = yes
+								owner = { NOT = { is_country_type = "primitive" } }
+							}
+							kill_pop = yes
+						}
+						else = {
+							if = {
+								limit = {
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								random_pop = {
+									kill_pop = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			50 = {
+
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							orbital_bombardment = armageddon
+						}
+					}
+					if = {
+						limit = {
+							count_pops = {
+								count > 2
+								limit = {
+									is_sapient = yes
+									owner = { NOT = { is_country_type = "primitive" } }
+								}
+							}
+						}
+						FROM = {
+							country_event = { id = action.23 }
+						}							
+						random_pop = {
+							limit = {
+								is_sapient = yes
+								owner = { NOT = { is_country_type = "primitive" } }
+							}
+							kill_pop = yes
+						}
+						else = {
+							if = {
+								limit = {
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								random_pop = {
+									kill_pop = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Ruin a building
+		# 5% light
+		# 20% limited
+		# 50% full
+		# 100% Armageddon
+		random_list = {
+			5 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = soft
+								orbital_bombardment = limited
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					random_tile = {
+						limit = {
+							has_building = yes
+							is_ruined = no
+						}
+						set_ruined = yes
+					}
+				}
+			}		
+			15 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = limited
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					random_tile = {
+						limit = {
+							has_building = yes
+							is_ruined = no
+						}
+						set_ruined = yes
+					}
+				}
+			}
+			30 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					random_tile = {
+						limit = {
+							has_building = yes
+							is_ruined = no
+						}
+						set_ruined = yes
+					}
+				}
+			}
+			50 = {
+
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							orbital_bombardment = armageddon
+						}
+					}
+					random_tile = {
+						limit = {
+							has_building = yes
+							is_ruined = no
+						}
+						set_ruined = yes
+					}
+				}
+			}
+		}
+
+		# Create tile blocker
+		# 2% limited
+		# 10% full
+		# 24% Armageddon
+		random_list = {
+			2 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = limited
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					if = {
+						limit = {
+							planet = {
+								OR = {
+									count_pops = {
+										count > 1
+										limit = {
+											is_sapient = yes
+											owner = { NOT = { is_country_type = "primitive" } }
+										}
+									}
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_building = no
+							}
+							set_blocker = "tb_bombarded_land"
+						}
+						else = {
+							random_tile = {
+								limit = {
+									has_blocker = no
+									has_building = no
+									OR = {
+										NOT = { exists = pop }
+										pop = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								set_blocker = "tb_bombarded_land"
+							}
+						}
+					}
+				}
+			}		
+			8 = {
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							OR = {
+								orbital_bombardment = full
+								orbital_bombardment = armageddon
+							}
+						}
+					}
+					if = {
+						limit = {
+							planet = {
+								OR = {
+									count_pops = {
+										count > 1
+										limit = {
+											is_sapient = yes
+											owner = { NOT = { is_country_type = "primitive" } }
+										}
+									}
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_building = no
+							}
+							set_blocker = "tb_bombarded_land"
+						}
+						else = {
+							random_tile = {
+								limit = {
+									has_blocker = no
+									has_building = no
+									OR = {
+										NOT = { exists = pop }
+										pop = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								set_blocker = "tb_bombarded_land"
+							}
+						}
+					}
+				}
+			}
+			14 = {
+
+				if = {
+					limit = {
+						AND = {
+							fortification_health < 1
+							orbital_bombardment = armageddon
+						}
+					}
+					if = {
+						limit = {
+							planet = {
+								OR = {
+									count_pops = {
+										count > 1
+										limit = {
+											is_sapient = yes
+											owner = { NOT = { is_country_type = "primitive" } }
+										}
+									}
+									count_pops = {
+										count = all
+										limit = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_building = no
+							}
+							set_blocker = "tb_bombarded_land"
+						}
+						else = {
+							random_tile = {
+								limit = {
+									has_blocker = no
+									has_building = no
+									OR = {
+										NOT = { exists = pop }
+										pop = {
+											OR = {
+												is_sapient = no
+												owner = { is_country_type = "primitive" }
+											}
+										}
+									}
+								}
+								set_blocker = "tb_bombarded_land"
+							}
+						}
+					}
+				}
+			}
+			76 = {
+			}
+		}
+	}
+}

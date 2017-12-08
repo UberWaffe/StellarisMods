@@ -1,0 +1,19 @@
+################
+## Tomb World ##
+################
+
+terraform_link = {
+	from = "pc_shrouded"
+	to = "us_pc_shrouded_livable"
+	
+	energy = 30000
+	duration = 7200
+	
+	condition = {
+		has_technology = "tech_psionic_shield"
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

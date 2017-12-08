@@ -1,0 +1,19 @@
+#Defensive armies can't transport of the planet
+#Garrison armies are created by pops
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+
+# Defensive armies spawned when a planet is consumed by the Shroud
+us_shroud_nightmare_army = {
+	defensive = yes
+	damage = 1.25
+	morale_damage = 2.5
+	health = 2
+	morale = 2
+	time = 5
+	maintenance = -1
+	icon_frame = 9
+	
+	potential = {
+		always = no
+	}
+}

@@ -1,0 +1,450 @@
+﻿l_english: 
+ ############################################################################################################
+ # Modded Traits
+ ############################################################################################################
+ trait_ubergenes_1:0 "Hardened Genetics A"
+ trait_ubergenes_1_desc:0 "§LHardens genetics against harm, from all sources, age, radiation, biological or other.§!\n"
+ trait_ubergenes_2:0 "Multi-Helix Genetics I"
+ trait_ubergenes_2_desc:0 "§LExpands the genetic code into a multi-helix structure.§!\n"
+ trait_ubergenes_3:0 "Engineered Genetics I"
+ trait_ubergenes_3_desc:0 "§LEngineers genetic sequences to include the best traits from individuals all across the empire.§!\n"
+ trait_ubergenes_4:0 "Hardened Genetics II"
+ trait_ubergenes_4_desc:0 "§LHardens genetics against harm, from all sources, age, radiation, biological or other.§!\n"
+ trait_ubergenes_5:0 "Multi-Helix Genetics II"
+ trait_ubergenes_5_desc:0 "§LExpands the genetic code into a multi-helix structure.§!\n"
+ trait_ubergenes_6:0 "Engineered Genetics II"
+ trait_ubergenes_6_desc:0 "§LEngineers genetic sequences to include the best traits from individuals all across the empire.§!\n"
+ trait_ubergenes_7:0 "Engineered Genetics III"
+ trait_ubergenes_7_desc:0 "§LEngineers genetic sequences to include the best traits from individuals all across the empire.§!\n"
+ trait_ubergenes_8:0 "Engineered Genetics IV"
+ trait_ubergenes_8_desc:0 "§LEngineers genetic sequences to include the best traits from individuals all across the empire.§!\n"
+ 
+ trait_prethoryn_swarm:0 "Prethoryn Swarm"
+ trait_prethoryn_swarm_desc:0 "§LMembers of this species have been created by devouring the best genetics traits of several galaxies.§!\n"
+ 
+ ############################################################################################################
+ # Modded Planet Edicts
+ ############################################################################################################
+ edict_ut_religious_seeking:1 "Spiritual Seeking"
+ edict_ut_religious_seeking_desc:1 "This Fanatic Spiritualist Edict encourages the populace to question and attack the Faith. While it causes unhappiness, it ultimately strengthens the Faith's conviction and influence.\n\n"
+ edict_ut_religious_drive:1 "Spiritual Drive"
+ edict_ut_religious_drive_desc:1 "The Edict sparks religious fervor amongst the populace, driving them to be more productive.\n\n"
+ 
+ ############################################################################################################
+ # Modded Technologies
+ ############################################################################################################
+ # End Game : GalNet
+ tech_ut_qetcomms_1:0 "Deterministic Quantum Entangled Communication"
+ tech_ut_qetcomms_1_desc:1 "Initial research into creating massive galaxy wide networks of high throughput instant communication not influenced by distance.\n\n"
+ tech_ut_qetcomms_2:0 "Practical DQEC Networks"
+ tech_ut_qetcomms_2_desc:1 "Understanding the principles is one thing, turning it into a viable everyday technology is an entirely different matter.\n\n"
+ tech_ut_qetpsi_1:0 "Psionic Instant Networks"
+ tech_ut_qetpsi_1_desc:1 "A living psionic network of instant communication that spans across any distance. Can this intimate form of communication bring an entire galaxy's individuals closer together?\n\n"
+ # --------------------------------------------
+ # End Game : Empire Ethos Wonders
+ tech_ut_wonspi_unity:0 "Unity of Spirit"
+ tech_ut_wonspi_unity_desc:1 "Unites the entire civilization in purpose and spirit, strengthening the Faith.\n\n"
+ tech_ut_wonder_collectivist:0 "Many Hands"
+ tech_ut_wonder_collectivist_desc:1 "This grand project seeks to spread our collective people to every corner of the galaxy. For many hands make light work.\n\n"
+ # --------------------------------------------
+ tech_genetic_restructuring_one:0 "Genetic Restructuring One"
+ tech_genetic_restructuring_one_desc:1 "If you let a Blorg into a genetic resequencing lab, he'll tell you how he wants charisma to make some friends...\n\n"
+ tech_genetic_restructuring_two:0 "Genetic Restructuring Two"
+ tech_genetic_restructuring_two_desc:1 "...If you give a Blorg charisma, he'll want beauty so he can attract friends...\n\n"
+ tech_genetic_restructuring_three:0 "Genetic Restructuring Three"
+ tech_genetic_restructuring_three_desc:1 "...If you give a Blorg beauty, he'll want to become thrifty so he can take his friends to the movies...\n\n"
+ tech_genetic_restructuring_four:0 "Genetic Restructuring Four"
+ tech_genetic_restructuring_four_desc:1 "...If you give a Blorg thrift, he'll want smarts so he can build cool gadgets for his friends...\n\n"
+ tech_genetic_restructuring_five:0 "Genetic Restructuring Five"
+ tech_genetic_restructuring_five_desc:1 "...If you give a Blorg intelligence, he'll want strength so he can protect his friends...\n\n"
+ tech_genetic_restructuring_six:0 "Genetic Restructuring Six"
+ tech_genetic_restructuring_six_desc:1 "...If you give a Blorg strength, he'll realize he never actually wanted friends in the first place, so he'll KILL THEM ALL...\n\n"
+ tech_genetic_restructuring_seven:0 "Genetic Restructuring Seven"
+ tech_genetic_restructuring_seven_desc:1 "...When a Blorg kills his friends, he'll immediately regret it. He'll think about how uncharismatic it is to murder one's comrades, so he'll go to a genetic resequencing lab to get fixed. And when a Blorg goes to a genetic resequencing lab... chances are he'll want charisma to make some friends.\n\n"
+ tech_genetic_restructuring_eight:0 "Genetic Restructuring Eight"
+ tech_genetic_restructuring_eight_desc:1 "...If you give a Blorg charisma, he'll want extreme adaptibility so he can live close to all his friends...\n\n"
+ tech_genetic_restructuring_nine:0 "Genetic Restructuring Nine"
+ tech_genetic_restructuring_nine_desc:1 "...If you give a Blorg extreme adaptibility, he'll want to be nomadic, so he can visit all his friends...\n\n"
+ tech_genetic_restructuring_ten:0 "Ultimate Genetic Restructuring"
+ tech_genetic_restructuring_ten_desc:1 "...If you give a Blorg CLASSIFIED, he'll want CLASSIFIED, so he can REDACTED...\n\n"
+ tech_colonization_four:0 "Environmental Stabilizers"
+ tech_colonization_four_desc:1 "By treating a planet's environmental cycles we can make weather much more pleasant.\n\n"
+ tech_colonization_five:0 "Gravitational Equillibrators"
+ tech_colonization_five_desc:1 "Modifying gravity to suit our species' needs makes all worlds even better to live on.\n\n"
+ tech_efficient_foodmanagement:0 "Efficient Food Management"
+ tech_efficient_foodmanagement_desc:1 "Our growing species will need new techniques to manage sustenance. Development of best-practice strategies for food allocation will allow our species to devote less time to agriculture and more time to exploration and infrastructure.\n\n"
+ tech_rapid_population_1:0 "Rapid Population 1"
+ tech_rapid_population_1_desc:1 "By subsidizing childbirth and rewarding mothers, we can effectively increase the population growth of our nascent empire.\n\n"
+ tech_rapid_population_2:0 "Rapid Population 2"
+ tech_rapid_population_2_desc:1 "Through medical advances around childbirth the population growth can be greatly accelerated.\n\n"
+ tech_rapid_population_3:0 "Rapid Population 3"
+ tech_rapid_population_3_desc:1 "By improving the average lifespan of all individuals in our society, we can greatly improve overall population growth.\n\n"
+ tech_flexible_research:0 "Flexible Research"
+ tech_flexible_research_desc:1 "Sometimes, researching the right technology can mean the difference between poverty and starvation, and the abundant life.\n\n"
+ tech_physics_development:0 "Physics Development"
+ tech_physics_development_desc:1 "By reorienting our universities to place a greater emphasis on basic research at the expense of teaching, we can improve our society's ability to innovate. The undergrads might not be happy, though.\n\n"
+ tech_great_society:0 "Great Society"
+ tech_great_society_desc:1 "By preaching the need for government reform, we can galvanize volunteers to help design new programs.\n\n"
+ tech_private_engineering_contractors:0 "Private Engineering Contractors"
+ tech_private_engineering_contractors_desc:1 "By bringing private companies onboard to assist with special projects, we can focus our empire's attention on other engineering issues.\n\n"
+ tech_quality_of_life:0 "Quality of Life"
+ tech_quality_of_life_desc:1 "The dividends of space colonization have finally paid off for the average individual. The quality of life enjoyed by our people is now a little bit better than what our ancestors experienced.\n\n"
+ tech_nanomedicine:0 "Nanomedicine"
+ tech_nanomedicine_desc:1 "New advances in miniturization bring a corresponding increase in the life expectency of our people.\n\n"
+ tech_nanomedicine_2:0 "Nanomedicine II"
+ tech_nanomedicine_2_desc:1 "Further advances in nanomedicine not only combats diseases more effectively, but can further slow the aging process.\n\n"
+ tech_repeatable_fleet_size_industry:0 "Self-Sustaining Military Industry"
+ tech_repeatable_fleet_size_industry_desc:1 "Given the levels of technological advancements in industry, it is now possible to create entire self-sustaining industries for military applications, allowing for vastly increased fleet support.\n\n"
+ tech_dimensional_storage_1:0 "Dimensional Storage Solutions I"
+ tech_dimensional_storage_1_desc:1 "Advances in physics and containment allow us to create pocket dimensions, which while energy intensive, allow for massively improved storage within the same amount of real-space.\n\n"
+ tech_dimensional_storage_2:0 "Dimensional Storage Solutions II"
+ tech_dimensional_storage_2_desc:1 "Further improvement to the stability of pocket dimensions not only expands their relative size, but also reduces the energy needed to sustain them.\n\n"
+ tech_dimensional_storage_3:0 "Dimensional Storage Solutions III"
+ tech_dimensional_storage_3_desc:1 "By learning to control dimensional fluctuations better the size of pocket dimensions can be improved and the energy needed to sustain them can be lowered even more.\n\n"
+ #Ship build speed
+ tech_repeatable_ship_build_speed_rm:0 "Industrial Rapid Manufacturing"
+ tech_repeatable_ship_build_speed_rm_desc:0 "Through advances in rapid manufacturing processes that can produce parts in-situ we can improve the speed of industry.\n\n"
+ tech_repeatable_ship_build_speed_li:0 "Supreme Industrial Manufacturing"
+ tech_repeatable_ship_build_speed_li_desc:0 "Through mastering advances in rapid manufacturing processes that can produce parts in-situ we can greatly improve the speed of industry.\n\n"
+ #Faster ships
+ tech_repeatable_thrust_performance:0 "Improved Cruise Thrusters"
+ tech_repeatable_thrust_performance_desc:0 "When not operating under the constraints of combat, there are various advancements that can boost thruster performance and improve overall ship cruising speed.\n\n"
+ #Blocker cost and time
+ tech_repeatable_reduced_tile_blockers:0 "Environmental Sculpting"
+ tech_repeatable_reduced_tile_blockers_desc:0 "Further improvements to localized terraforming projects allows for cheaper and significantly more rapid removal of undesirable environmental obstacles.\n\n"
+ #Faster building construction
+ tech_repeatable_eng_reduced_building_time:0 "Supreme Construction"
+ tech_repeatable_eng_reduced_building_time_desc:0 "Incorporate the knowledge of megastructure engineering into everyday construction projects, we can increase the rate at which buildings can be constructed and maintained.\n\n"
+ #Juggernaught armies
+ tech_juggernaught_armies:0 "Juggernaught Defenders"
+ tech_juggernaught_armies_desc:1 "These genewarrior armies specialise in defensive warfare, turning planets they protect into nigh insurmountable obstacles for enemies."
+ 
+ ############################################################################################################
+ # Modded Buildings
+ ############################################################################################################
+ # End Game : GalNet (Planetary Wonders that improve the Empire)
+ building_ut_galnet:1 "QEC GalNet"
+ building_ut_galnet_desc:0 "Instant communication network spanning any distance. Needs to be widely deployed across many planets to have a decent effect."
+ building_ut_galpsinet:1 "Psionic GalNet"
+ building_ut_galpsinet_desc:0 "Upgrades the GalNet into a living psionic instant communications network. Needs to be widely deployed across many planets to have a decent effect."
+ # --------------------------------------------
+ # End Game : Empire Ethos Wonders
+ building_ut_spiritunity:1 "Unity of Spirit"
+ building_ut_spiritunity_desc:0 "Unites the entire civilization in purpose and spirit, strengthening the Faith.\n\n"
+ building_ut_empwon_collectivist:1 "Many Hands"
+ building_ut_empwon_collectivist_desc:0 "This grand project seeks to spread our collective people to every corner of the galaxy. For many hands make light work.\n\n"
+ # --------------------------------------------
+ building_dimensional_silo_1:1 "Pocket Dimension Storage I"
+ building_dimensional_silo_1_desc:0 "By creating and sustaining a pocket dimension, this fascility can store massive quantities of resources.\n\n"
+ building_dimensional_silo_2:1 "Pocket Dimension Storage II"
+ building_dimensional_silo_2_desc:0 "By creating and sustaining a pocket dimension, this fascility can store massive quantities of resources.\n\n"
+ building_dimensional_silo_3:1 "Pocket Dimension Storage III"
+ building_dimensional_silo_3_desc:0 "By creating and sustaining a pocket dimension, this fascility can store massive quantities of resources.\n\n"
+  
+ ############################################################################################################
+ # Ringworld Construction
+ ############################################################################################################ 
+ ring_mil_con:0 "Ringworld Constructor"
+ ring_mil_con_plural:0 "Ringworld Constructors"
+ ringcon.01.name:0 "Ringworld Completed"
+ ringcon.01.desc:0 "The last cargo hauler has made it journey to a once lone star, now enveloped by a wonder of engineering on an unbeliveble scale. The mega constructor has completed its task and been integrated into the structure. After a final inspection by our scientists it shall become a new home for us.\n\nOur industry will have to recover for a few years until we can begin another megaproject."
+ DEFAULT_MINING_STATION_SECTION_XXX:0 "Ring Constructor Module"
+ megaconstruction_cooldown_ringworld:0 "Megaconstruction Strain: Ringworld"
+ megaconstruction_cooldown_ringworld_desc:0 "Our industry is resting after the colossal project. We can't undertake another one until this goes away."
+ tech_ringworld_construction_one:0 "Ringworld Construction I: Understanding"
+ tech_ringworld_construction_one_desc:0 "Getting a basic understanding of what ringworlds are is necessary for any scientific progress in the area.\n\n"
+ tech_ringworld_construction_two:0 "Ringworld Construction II: Theorizing"
+ tech_ringworld_construction_two_desc:0 "Now that we can wrap our heads around ringworlds, it's time to begin thinking about how they can be replicated with our existing infrastructure.\n\n"
+ tech_ringworld_construction_three:0 "Ringworld Construction III: Emulating"
+ tech_ringworld_construction_three_desc:0 "With the designs in place, we can go ahead and start adapting our industry to the mammoth task of creating a ringworld.\n\n"
+ tech_ringworld_construction_four:0 "Ringworld Construction IV: Finalizing"
+ tech_ringworld_construction_four_desc:0 "We can now build ringworlds.\n\n"
+ TECH_UNLOCK_RING_MIL_CON:0 "§HUnlocks:§! Ringworld Megaproject"
+ TECH_UNLOCK_RING_MIL_CON_DESC:0 "§HRingworld Megaproject!\nWhen this megastructure is built in a barren system, the planetary mass can be used to build a ringworld."
+ TECH_UNLOCK_RINGWORLD_REPAIR:0 "§HRepair and Upgrade ringworld segements"
+ TECH_UNLOCK_RINGWORLD_REPAIR_DESC:0 "§HAllows the repair of damaged ringworld segments, as well as upgrading partial ringworld segments into habitable ringworld segements."
+
+   
+ ############################################################################################################
+ # More Policy Sliders
+ ############################################################################################################ 
+ tech_fleet_focus:0 "Fleet Focus"
+ tech_fleet_focus_desc:0 "Through a concerted effort we can push our navy in a bold new direction.\n\n"
+ policy_ship_focus:0 "Ship Focus"
+ policy_ship_focus_desc:0 "By honing in on our fleet doctrine, we can exaggerate our strengths and weaknesses.\n"
+ balanced_ship_focus:0 "Balanced"
+ balanced_ship_focus_name:0 "Balanced Ship Focus"
+ balanced_ship_focus_desc:0 " "
+ slight_quality_ship_focus:0 "Slight Quality Focus"
+ slight_quality_ship_focus_name:0 "Slight Quality Ship Focus"
+ slight_quality_ship_focus_desc:0 " "
+ quality_ship_focus:0 "Quality Focus"
+ quality_ship_focus_name:0 "Quality Ship Focus"
+ quality_ship_focus_desc:0 " "
+ extreme_quality_ship_focus:0 "Extreme Quality Focus"
+ extreme_quality_ship_focus_name:0 "Extreme Quality Ship Focus"
+ extreme_quality_ship_focus_desc:0 " "
+ slight_quantity_ship_focus:0 "Slight Quantity Focus"
+ slight_quantity_ship_focus_name:0 "Slight Quantity Ship Focus"
+ slight_quantity_ship_focus_desc:0 " "
+ quantity_ship_focus:0 "Quantity Focus"
+ quantity_ship_focus_name:0 "Quantity Ship Focus"
+ quantity_ship_focus_desc:0 " "
+ extreme_quantity_ship_focus:0 "Extreme Quantity Focus"
+ extreme_quantity_ship_focus_name:0 "Extreme Quantity Ship Focus"
+ extreme_quantity_ship_focus_desc:0 " "
+ 
+ tech_mind_or_materials:0 "Mind or Materials"
+ tech_mind_or_materials_desc:0 "By emphasizing either the physical world or the mental one, we can further emphasize our empire's paradigm.\n\n"
+ policy_mind_or_materials:0 "Mind or Materials"
+ policy_mind_or_materials_desc:0 "Adopting an emphasis on either raw goods or intellectual capacity, we can shift the course of our empire dramatically.\n"
+ balanced_mind_materials_focus:0 "Balanced"
+ balanced_mind_materials_focus_name:0 "Balanced Mind vs. Materials"
+ balanced_mind_materials_focus_desc:0 " "
+ slight_mind_focus:0 "Slight Mind Focus"
+ slight_mind_focus_name:0 "Slight Mind Focus"
+ slight_mind_focus_desc:0 " "
+ mind_focus:0 "Mind Focus"
+ mind_focus_name:0 "Mind Focus"
+ mind_focus_desc:0 " "
+ extreme_mind_focus:0 "Extreme Mind Focus"
+ extreme_mind_focus_name:0 "Extreme Mind Focus"
+ extreme_mind_focus_desc:0 " "
+ slight_materials_focus:0 "Slight Materials Focus"
+ slight_materials_focus_name:0 "Slight Materials Focus"
+ slight_materials_focus_desc:0 " "
+ materials_focus:0 "Materials Focus"
+ materials_focus_name:0 "Materials Focus"
+ materials_focus_desc:0 " "
+ extreme_materials_focus:0 "Extreme Materials Focus"
+ extreme_materials_focus_name:0 "Extreme Materials Focus"
+ extreme_materials_focus_desc:0 " "
+ 
+ tech_centralization_extent:0 "Centralization Extent"
+ tech_centralization_extent_desc:0 "Our burgeoning state should specify exactly how much it will interfere with people's lives.\n\n"
+ policy_centralization_extent:0 "Centralization Extent"
+ policy_centralization_extent_desc:0 "Changing our state practices for management of the peripheries of our empire can pay dividends.\n"
+ balance_of_power:0 "Balance of Power"
+ balance_of_power_name:0 "Balance of Power"
+ balance_of_power_desc:0 " "
+ slight_centralization:0 "Slight Centralization"
+ slight_centralization_name:0 "Slight Centralization"
+ slight_centralization_desc:0 " "
+ moderate_centralization:0 "Moderate Centralization"
+ moderate_centralization_name:0 "Moderate Centralization"
+ moderate_centralization_desc:0 " "
+ extreme_centralization:0 "Extreme Centralizations"
+ extreme_centralization_name:0 "Extreme Centralization"
+ extreme_centralization_desc:0 " "
+ slight_decentralization:0 "Slight Decentralization"
+ slight_decentralization_name:0 "Slight Decentralization"
+ slight_decentralization_desc:0 " "
+ moderate_decentralization:0 "Moderate Decentralization"
+ moderate_decentralization_name:0 "Moderate Decentralization"
+ moderate_decentralization_desc:0 " "
+ extreme_decentralization:0 "Extreme Decentralization"
+ extreme_decentralization_name:0 "Extreme Decentralization"
+ extreme_decentralization_desc:0 " "
+ 
+ tech_imperial_reforms:0 "Imperial Reforms"
+ tech_imperial_reforms_desc:0 "Our past leaders had deemed reform too costly. But those leaders are no longer around; let us throw caution to the wind and build the empire we were always meant to."
+
+ policy_test_desc_policy:0 "More slider options"
+ policy_test_desc_policy_desc:0 "Policy Test Desc Policy Desc"
+ reform_desc_fake_policy:0 "Moderate and Extreme versions"
+ reform_desc_fake_policy_name:0 "More slider options"
+ reform_desc_fake_policy_desc:0 "Allows us access to the moderate and extreme versions of the slider policies (like Centralization, Fleet Focus, etc.)"
+ 
+  
+ ############################################################################################################
+ # Multi-Resource (Advanced) Buildings
+ ############################################################################################################ 
+ building_combo_food_power_desc:1 "Solar Harvesters use advanced hydrophonics with large solar arrays, any waste is also recycled into energy. Higher build cost and smaller yield, but can utilize both food and power tile resources"
+ building_combo_food_power_0:1 "Solar Harvester"
+ building_combo_food_power_0_desc:1 "$ building_combo_food_power_desc$"
+ building_combo_food_power_1:1 "Solar Harvester I"
+ building_combo_food_power_1_desc:1 "$ building_combo_food_power_desc$"
+ building_combo_food_power_2:1 "Solar Harvester II"
+ building_combo_food_power_2_desc:1 "$ building_combo_food_power_desc$" 
+ building_combo_food_power_3:1 "Solar Harvester III"
+ building_combo_food_power_3_desc:1 "$ building_combo_food_power_desc$"
+ building_combo_food_power_4:1 "Solar Harvester IV"
+ building_combo_food_power_4_desc:1 "$ building_combo_food_power_desc$"
+ 
+ building_combo_mineral_power_desc:1 "Thermal Bores use deep boreholes to generate power and mine minerals. Higher build cost and smaller yield, but can utilize both Mineral and Power tile resources"
+ building_combo_mineral_power_0:1 "Thermal Bore"
+ building_combo_mineral_power_0_desc:1 "$ building_combo_mineral_power_desc$"
+ building_combo_mineral_power_1:1 "Thermal Bore I"
+ building_combo_mineral_power_1_desc:1 "$ building_combo_mineral_power_desc$"
+ building_combo_mineral_power_2:1 "Thermal Bore II"
+ building_combo_mineral_power_2_desc:1 "$ building_combo_mineral_power_desc$" 
+ building_combo_mineral_power_3:1 "Thermal Bore III"
+ building_combo_mineral_power_3_desc:1 "$ building_combo_mineral_power_desc$" 
+ building_combo_mineral_power_4:1 "Thermal Bore IV"
+ building_combo_mineral_power_4_desc:1 "$ building_combo_mineral_power_desc$" 
+ 
+ building_combo_mineral_food_desc:1 "Bio-Quarry use biological materials to extract minerals, the waste biological material is also edible. Higher build cost and smaller yield, but can utilize both Mineral and Power tile resources"
+ building_combo_mineral_food_0:1 "Bio-Quarry"
+ building_combo_mineral_food_0_desc:1 "$ building_combo_mineral_food_desc$"
+ building_combo_mineral_food_1:1 "Bio-Quarry I"
+ building_combo_mineral_food_1_desc:1 "$ building_combo_mineral_food_desc$"
+ building_combo_mineral_food_2:1 "Bio-Quarry II"
+ building_combo_mineral_food_2_desc:1 "$ building_combo_mineral_food_desc$" 
+ building_combo_mineral_food_3:1 "Bio-Quarry III"
+ building_combo_mineral_food_3_desc:1 "$ building_combo_mineral_food_desc$" 
+ building_combo_mineral_food_4:1 "Bio-Quarry IV"
+ building_combo_mineral_food_4_desc:1 "$ building_combo_mineral_food_desc$" 
+
+ building_energy_silo_1:1 "Energy Storage I"
+ building_energy_silo_1_desc:1 "Energy Storage increase our Empire's maximum Energy storage capacity."
+ building_energy_silo_2:1 "Energy Storage II"
+ building_energy_silo_2_desc:1 "$building_energy_silo_1_desc$"
+ building_energy_silo_3:1 "Energy Storage III"
+ building_energy_silo_3_desc:1 "$building_energy_silo_1_desc$"
+
+ ############################################################################################################
+ # Technologies for Multi-Resource (Advanced) Buildings
+ ############################################################################################################
+ tech_combo_food_power_1:0 "Industrial Biopower Plants I"
+ tech_combo_food_power_1_desc: "Advances in biological power and symbiosis allows for massive complexes that produce both food and energy.\n\n"
+ tech_combo_food_power_2:0 "Industrial Biopower Plants II"
+ tech_combo_food_power_2_desc: "Through better engineering of bio-domes even greater density of bio-matter farming can occur.\n\n"
+ tech_combo_food_power_3:0 "Industrial Biopower Plants III"
+ tech_combo_food_power_3_desc: "By making maximum use of advances in solar, genetics and bio-forming, these complex can be improved even further.\n\n"
+ tech_combo_food_power_4:0 "Industrial Biopower Plants IV"
+ tech_combo_food_power_4_desc: "New advances allow for more variety of foods to be produced, at even greater energy efficiencies, further boosting output.\n\n"
+ 
+ tech_combo_mineral_power_1:0 "Industrial Mineral Power Plants I"
+ tech_combo_mineral_power_1_desc: "By tapping into both the mineral and thermal resources of the planet with advanced mining techniques, massive complexes that provide both minerals and energy become possible.\n\n"
+ tech_combo_mineral_power_2:0 "Industrial Mineral Power Plants II"
+ tech_combo_mineral_power_2_desc: "By making use of micro-robotics a network of mini-mining wells can extract greater amounts of minerals and thermal energy.\n\n"
+ tech_combo_mineral_power_3:0 "Industrial Mineral Power Plants III"
+ tech_combo_mineral_power_3_desc: "Through development of nanites that extract minerals and energy right of of solid soil and rock, greater production can be achieved.\n\n"
+ tech_combo_mineral_power_4:0 "Industrial Mineral Power Plants IV"
+ tech_combo_mineral_power_4_desc: "By tapping into the very core of the planet, massive amounts of minerals and energy can be harnessed directly.\n\n"
+ 
+ tech_combo_mineral_food_1:0 "Industrial Mineral Farms I"
+ tech_combo_mineral_food_1_desc: "Living mining plants that extract minerals from the soil while simultaneously growing crops for food production.\n\n"
+ tech_combo_mineral_food_2:0 "Industrial Mineral Farms II"
+ tech_combo_mineral_food_2_desc: "By making use of genetically engineered enzimes more minerals can be extracted without mining, and also improves food production.\n\n"
+ tech_combo_mineral_food_3:0 "Industrial Mineral Farms III"
+ tech_combo_mineral_food_3_desc: "Genetically engineering plants that can grows roots down to immense depths allows for extended farming of both minerals and crops.\n\n"
+ tech_combo_mineral_food_4:0 "Industrial Mineral Farms IV"
+ tech_combo_mineral_food_4_desc: "Turning thousands of cubic kilometers of soil and rock into living networks of bio-mines creates unpresedented levels of mineral wealth.\n\n"
+ 
+ ############################################################################################################
+ # Empire Edicts
+ ############################################################################################################
+ edict_total_research_frenzy:0 "Total Research Frenzy"
+ edict_total_research_frenzy_desc:0 "A massive political drive is undertaken to supercharge technological advancement.\n\n"
+ 
+ ############################################################################################################
+ # Planetary Edicts
+ ############################################################################################################
+ edict_ut_tribal_turmoil:0 "Tribal Taskforce"
+ edict_ut_tribal_turmoil_desc:0 "Start a special project to either eradicate or integrate the local tribals on this planet.\n\n"
+ 
+ ############################################################################################################
+ # Armies
+ ############################################################################################################
+ living_defenses_army:0 "Living Defenses"
+ living_defenses_army_plural:0 "Living Defenses"
+ living_defenses_army_desc:0 "Living metal sculpted and genetically engineered to form the ultimate in planetary surface defense. Self-sustaining, these surface fortifications will withstand massive onslaught."
+
+ juggernaught_army:0 "Juggernaught Army"
+ juggernaught_army_plural:0 "Juggernaught Armies"
+ juggernaught_army_desc:1 "Union of high psionics and geneseed purification, these warriors are feared on any battlefield."
+ 
+ swarm_army_invaders:0 "Prethoryn Invaders"
+ swarm_army_invaders_plural:0 "Prethoryn Invaders"
+ swarm_army_invaders_desc:1 "They hunger."
+ 
+ swarm_planet_infestation:0 "Prethoryn Infestation"
+ swarm_planet_infestation_plural:0 "Prethoryn Infestation"
+ swarm_planet_infestation_desc:1 "A fully infested biosphere is not an easy thing to clear out."
+ 
+ ############################################################################################################
+ # System Initializers
+ ############################################################################################################
+ ringworld_st_system_NAME:0 "Ringworld"
+ ringworld_st_system_DESC:0 "Ringworld with 4 habitable sections.\n\n$system_initializer_DESC$"
+ ringworld_dmg_st_system_NAME:0 "Ringworld Damaged"
+ ringworld_dmg_st_system_DESC:0 "Damaged ringworld with 4 habitable sections and a busted seam.\n\n$system_initializer_DESC$"
+ ringworld_des_st_system_NAME:0 "Ringworld Destroyed"
+ ringworld_des_st_system_DESC:0 "Nearly entirely destroyed ringworld with only 1 habitable section.\n\n$system_initializer_DESC$"
+ ringworld_sup_st_system_NAME:0 "Ringworld Full"
+ ringworld_sup_st_system_DESC:0 "Fully upgraded ringworld with 12 habitable sections.\n\n$system_initializer_DESC$"
+ gaia_rich_system_NAME:0 "Rich Gaia System"
+ gaia_rich_system_DESC:0 "Gaia homeworld with many orbiting bodies with rich orbital deposits.\n\n$system_initializer_DESC$"
+ 
+ ############################################################################################################
+ # War Demands
+ ############################################################################################################
+ war_demand_abductpop_header:1 "§HAbduct Population§!"
+ war_demand_abductpop_subtext:0 "[parameter:country.GetName]"
+ war_demand_abductpop_tooltip_header:0 "$war_demand_abductpop_header$"
+ war_demand_abductpop_tooltip_content:2 "A single [parameter:country.GetName] population will be abducted from one of their worlds and relocated to one of ours."
+ war_demand_abductpop_tooltip_proper_header:0 "$war_demand_abductpop_header$"
+ war_demand_abductpop_tooltip_proper_content:1 "$war_demand_abductpop_tooltip_content$"
+ 
+ 
+ ############################################################################################################
+ # Mega Structures
+ ############################################################################################################
+ requires_not_dyson_sphere:0 "$TRIGGER_FAIL$Cannot build in systems with Dyson Spheres."
+ requires_not_ring_world:0 "$TRIGGER_FAIL$Cannot build in systems with Ring Worlds."
+ requires_tech_ringworld_construction_three:1 "$TRIGGER_FAIL$Requires the £engineering  §Y$tech_ringworld_construction_three$§! technology."
+ requires_tech_mine_living_metal:1 "$TRIGGER_FAIL$Requires the £engineering  §Y$tech_mine_living_metal$§! technology."
+ requires_active_ringworld:0 "Can only be built in active ringworld systems"
+ requires_sr_living_metal:0 "Requires the §HLiving Metal§! strategic resource"
+ 
+ # Ring world
+ ring_world_2_type2:0 "Ring World Frame Section"
+ ring_world_2_type2_DESC:0 "This skeletal frame section makes up roughly one quarter of the unfinished Ring World's total surface area. Work on the smaller habitable section has not yet been completed."
+ ring_world_3_intermediate_type2:0 "Completed Ring World Section"
+ ring_world_3_intermediate_type2_DESC:0 "A fully functional habitable Ring World section, complete with an active biosphere, that is ready for settlement."
+ 
+ # --------------------------------------------
+ # Habitat expansion
+ tech_tb_ut_habitatexpansion:0 "Habitat Expansion"
+ tech_tb_ut_habitatexpansion_desc:1 "Allows orbital habitats to be expanded through additional construction.\n\n"
+ tb_ut_habitatexpansion:0 "£blocker  Expand Habitat"
+ tb_ut_habitatexpansion_desc:0 "The habitat can be expanded."
+ 
+ ####################################
+ # Civics
+ ####################################
+
+ ####################################
+ # Ascension perks
+ ####################################
+ 
+ ####################################
+ # Events
+ ####################################
+ guardian.110.f:0 "£minerals §G10000§! for £energy §R19000§! (§G5% discount§!)"
+ guardian.110.f.reply:0 "Good to see a booming economy! Glad to be trading well again!"
+ 
+ guardian.120.f:0 "£energy §G10000§! for £minerals §R19000§! (§G5% discount§!)"
+ guardian.120.f.reply:0 "If only all of our customers traded with us in such bulk! Transferring credits to you now."
+ 
+ utevents.5.a:0 "Planetary Computer"
+ utevents.5.b:0 "Gaia"
+ utevents.5.c:0 "Nuked"
+ utevents.5.d:0 "Savannah"
+ utevents.5.e:0 "Tropical"
+ utevents.5.f:0 "Add Unity Precursor"
+ 
+ ####################################
+ # Factions
+ ####################################
+ TRADITIONALIST_PSIONIC_TRANSCENDENCE:2 "Psionic Transcendence"
+ TRADITIONALIST_NO_PSIONIC_TRANSCENDENCE:1 "$TRADITIONALIST_PSIONIC_TRANSCENDENCE$"
+ TRADITIONALIST_PSIONIC_TRANSCENDENCE_DESC:2 "Adopting the §YTranscendence§! Ascension Perk will please the [Root.GetName]."
+ 
+ ####################################
+ # Habitability
+ ####################################
+ pc_plcom_habitability:1 "Planetary Computer Habitability"
+ pc_infested_habitability:1 "Infested Habitability"
+ 

@@ -1,0 +1,25 @@
+﻿l_english:
+ 
+ pc_plcom: "Planetary Computer"
+ pc_plcom_desc: "A planet-sized sentient computer used for galactic scale computation."
+ 
+ pc_plcom_tile: "Planetary Computer Surface"
+ pc_plcom_tile_desc: "Cold, lifeless and artifical terrain. An access point to the planetary data conduits."
+ 
+ plcom_planet: "Planetary Computer"
+ plcom_planet_desc: "The entire surface of this planet is one giant sentient computer."
+ 
+ tech_plcom_creation: "Planetary Computer Creation"
+ tech_plcom_creation_desc: "Create planet-sized computers driven by sentient AI that work on Galactic scale computational tasks. In addition to terraforming technologies and new power generation technologies, macro-scale computers covering the entire surface of a celestial body can now manage themselves and tackle realities most complex problems." 
+ 
+ tech_plcom_annihilation:"Geological Annihilation"
+ tech_plcom_annihilation_desc: "Chemical dispersal units, planetary crust harvesting and automated mass annihilation are processes required to destroy all habitable terrain and atmosphere in order to make something new."
+ 
+ ut00_planet_computer_0:0 "Planetary Computer Terraformer"
+ ut00_planet_computer_0_DESC:0 "Allows a planet to be terraformed into a planetary computer."
+ ut00_planet_computer_0_MEGASTRUCTURE_DETAILS:0 "Power hungry terraformer that converts a barren planet into a planetary computer."
+ ut00_planet_computer_0_CONSTRUCTION_INFO_DELAYED:0 "This terraformer will have to be powered up in order to terraform the planet it orbits."
+ ut00_planet_computer_1:0 "Planetary Computer (Partial Carge)"
+ ut00_planet_computer_1_DESC:0 "Partially charged terraformer. Will convert the planet into a planetary computer once fully charged."
+ ut00_planet_computer_2:0 "Planetary Computer (Charged)"
+ ut00_planet_computer_2_DESC:0 "Fully charged terraformer. Will convert the planet into a planetary computer."

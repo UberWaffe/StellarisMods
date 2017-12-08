@@ -1,0 +1,996 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+#	Example:
+# 
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+# Adds a good trait to a leader
+add_random_good_leader_trait = {
+	if = { #Is a science ship commander
+		limit = {
+			leader_class = scientist
+		}
+		while = {
+			limit = {
+				NOT = { has_leader_flag = has_gained_trait }
+			}
+			random_list = {
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_adaptable }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_adaptable
+						set_timed_leader_flag = { flag = gained_leader_trait_adaptable days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_resilient }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_resilient
+						set_timed_leader_flag = { flag = gained_leader_trait_resilient days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_meticulous }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_meticulous
+						set_timed_leader_flag = { flag = gained_leader_trait_meticulous days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_careful }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_careful
+						set_timed_leader_flag = { flag = gained_leader_trait_careful days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_spark_of_genius }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_spark_of_genius
+						set_timed_leader_flag = { flag = gained_leader_trait_spark_of_genius days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_carefree }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_carefree
+						set_timed_leader_flag = { flag = gained_leader_trait_carefree days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_roamer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_roamer
+						set_timed_leader_flag = { flag = gained_leader_trait_roamer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_archaeologist }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_archaeologist
+						set_timed_leader_flag = { flag = gained_leader_trait_archaeologist days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_maniacal }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_maniacal
+						set_timed_leader_flag = { flag = gained_leader_trait_maniacal days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_custom_AI_assistant }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_custom_AI_assistant
+						set_timed_leader_flag = { flag = gained_leader_trait_custom_AI_assistant days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_materials }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_materials
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_materials days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_rocketry }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_rocketry
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_rocketry days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_voidcraft }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_voidcraft
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_voidcraft days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_industry }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_industry
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_industry days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_field_manipulation }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_field_manipulation
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_field_manipulation days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_particles }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_particles
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_particles days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_computing }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_computing
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_computing days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_psionics }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_psionics
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_psionics days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_new_worlds }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_new_worlds
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_new_worlds days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_statecraft }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_statecraft
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_statecraft days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_biology }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_biology
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_biology days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_expertise_military_theory }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_expertise_military_theory
+						set_timed_leader_flag = { flag = gained_leader_trait_expertise_military_theory days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			leader_class = admiral
+		}
+		while = {
+			limit = {
+				NOT = { has_leader_flag = has_gained_trait }
+			}
+			random_list = {
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_adaptable }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_adaptable
+						set_timed_leader_flag = { flag = gained_leader_trait_adaptable days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_resilient }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_resilient
+						set_timed_leader_flag = { flag = gained_leader_trait_resilient days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_trickster }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_trickster
+						set_timed_leader_flag = { flag = gained_leader_trait_trickster days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_fleet_logistician }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_fleet_logistician
+						set_timed_leader_flag = { flag = gained_leader_trait_fleet_logistician days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_engineer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_engineer
+						set_timed_leader_flag = { flag = gained_leader_trait_engineer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_aggressive }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_aggressive
+						set_timed_leader_flag = { flag = gained_leader_trait_aggressive days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_cautious }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_cautious
+						set_timed_leader_flag = { flag = gained_leader_trait_cautious days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_scout }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_scout
+						set_timed_leader_flag = { flag = gained_leader_trait_scout days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_gale_speed }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_gale_speed
+						set_timed_leader_flag = { flag = gained_leader_trait_gale_speed days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			leader_class = governor
+		}
+		while = {
+			limit = {
+				NOT = { has_leader_flag = has_gained_trait }
+			}
+			random_list = {
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_adaptable }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_adaptable
+						set_timed_leader_flag = { flag = gained_leader_trait_adaptable days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_resilient }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_resilient
+						set_timed_leader_flag = { flag = gained_leader_trait_resilient days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_iron_fist }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_iron_fist
+						set_timed_leader_flag = { flag = gained_leader_trait_iron_fist days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_architectural_interest }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_architectural_interest
+						set_timed_leader_flag = { flag = gained_leader_trait_architectural_interest days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_intellectual }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_intellectual
+						set_timed_leader_flag = { flag = gained_leader_trait_intellectual days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_environmental_engineer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_environmental_engineer
+						set_timed_leader_flag = { flag = gained_leader_trait_environmental_engineer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			leader_class = general
+		}
+		while = {
+			limit = {
+				NOT = { has_leader_flag = has_gained_trait }
+			}
+			random_list = {
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_adaptable }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_adaptable
+						set_timed_leader_flag = { flag = gained_leader_trait_adaptable days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_resilient }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_resilient
+						set_timed_leader_flag = { flag = gained_leader_trait_resilient days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_defender }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_defender
+						set_timed_leader_flag = { flag = gained_leader_trait_defender days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_attacker }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_attacker
+						set_timed_leader_flag = { flag = gained_leader_trait_attacker days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_charismatic }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_charismatic
+						set_timed_leader_flag = { flag = gained_leader_trait_charismatic days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_butcher }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_butcher
+						set_timed_leader_flag = { flag = gained_leader_trait_butcher days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_glory_seeker }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_glory_seeker
+						set_timed_leader_flag = { flag = gained_leader_trait_glory_seeker days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_army_logistician }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_army_logistician
+						set_timed_leader_flag = { flag = gained_leader_trait_army_logistician days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			leader_class = ruler
+		}
+		while = {
+			limit = {
+				NOT = { has_leader_flag = has_gained_trait }
+			}
+			random_list = {
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_adaptable }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_adaptable
+						set_timed_leader_flag = { flag = gained_leader_trait_adaptable days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_resilient }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_resilient
+						set_timed_leader_flag = { flag = gained_leader_trait_resilient days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_corvette_focus }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_corvette_focus
+						set_timed_leader_flag = { flag = gained_trait_ruler_corvette_focus days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_destroyer_focus }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_destroyer_focus
+						set_timed_leader_flag = { flag = gained_trait_ruler_destroyer_focus days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_cruiser_focus }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_cruiser_focus
+						set_timed_leader_flag = { flag = gained_trait_ruler_cruiser_focus days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_battleship_focus }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_battleship_focus
+						set_timed_leader_flag = { flag = gained_trait_ruler_battleship_focus days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_recruiter }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_recruiter
+						set_timed_leader_flag = { flag = gained_trait_ruler_recruiter days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_from_the_ranks }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_from_the_ranks
+						set_timed_leader_flag = { flag = gained_trait_ruler_from_the_ranks days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_fortifier }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_fortifier
+						set_timed_leader_flag = { flag = gained_trait_ruler_fortifier days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_logistic_understanding }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_logistic_understanding
+						set_timed_leader_flag = { flag = gained_trait_ruler_logistic_understanding days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_military_pioneer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_military_pioneer
+						set_timed_leader_flag = { flag = gained_trait_ruler_military_pioneer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_warlike }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_warlike
+						set_timed_leader_flag = { flag = gained_trait_ruler_warlike days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_architectural_sense }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_architectural_sense
+						set_timed_leader_flag = { flag = gained_trait_ruler_architectural_sense days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_frontier_spirit }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_frontier_spirit
+						set_timed_leader_flag = { flag = gained_trait_ruler_frontier_spirit days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_world_shaper }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_world_shaper
+						set_timed_leader_flag = { flag = gained_trait_ruler_world_shaper days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_home_in_the_sky }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_home_in_the_sky
+						set_timed_leader_flag = { flag = gained_trait_ruler_home_in_the_sky days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_industrialist }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_industrialist
+						set_timed_leader_flag = { flag = gained_trait_ruler_industrialist days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				100 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_eye_for_talent }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_eye_for_talent
+						set_timed_leader_flag = { flag = gained_trait_ruler_eye_for_talent days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_deep_connections }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_deep_connections
+						set_timed_leader_flag = { flag = gained_trait_ruler_deep_connections days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_champion_of_the_people }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_champion_of_the_people
+						set_timed_leader_flag = { flag = gained_trait_ruler_champion_of_the_people days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_expansionist }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_expansionist
+						set_timed_leader_flag = { flag = gained_trait_ruler_expansionist days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_fertility_preacher }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_fertility_preacher
+						set_timed_leader_flag = { flag = gained_trait_ruler_fertility_preacher days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_investor }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_investor
+						set_timed_leader_flag = { flag = gained_trait_ruler_investor days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = trait_ruler_explorer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = trait_ruler_explorer
+						set_timed_leader_flag = { flag = gained_trait_ruler_explorer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							NOT = { has_trait = leader_trait_fleet_organizer }
+							NOT = { owner = { has_ethic = "ethic_gestalt_consciousness" } }
+						}
+						add_trait = leader_trait_fleet_organizer
+						set_timed_leader_flag = { flag = gained_leader_trait_fleet_organizer days = 7 }
+						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+					}
+				}
+			}
+		}
+	}
+}
+
+#
+# Spawns in a scourge fleet.
+#
+# Requires:
+#	event_target:prethoryn = the country that is the Scourge.
+#	event_target:prethoryn_species = the species that is the Scourge.
+#	event_target:spaceport_planet = the spaceport to spawn the fleet next to.
+#
+ut_swarm_brood = {
+	random_list = {
+		75 = {
+			create_leader = {
+				type = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 500
+				set_age = 1125
+			}
+		}
+		25 = {
+			create_leader = {
+				type = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 500
+				set_age = 1125
+				traits = {
+					trait = leader_trait_hive_affinity
+				}
+			}
+		}
+	}
+	create_fleet = {
+		name = "Prethoryn Star Brood"
+		effect = {
+			set_owner = event_target:prethoryn
+			create_ship = {
+				name = random
+				design = "NAME_Swarm_Queen"
+				graphical_culture = "swarm_01"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 15
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Large"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 13
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Carrier"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 63
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Small"
+					graphical_culture = "swarm_01"
+				}
+			}
+			set_location = {
+				target = event_target:spaceport_planet
+				distance = 35
+				angle = random 
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+	}
+}
+
+#
+# Makes the swarm eat a planet.
+#
+# Requires:
+#	scope -> scoped to the target planet.	
+#
+ut_swarm_eat_planet = {
+	if = {
+		limit = {
+			NOR = {
+				is_planet_class = pc_ringworld_habitable
+				is_planet_class = pc_habitat # habitats are currently uninfestable
+			}
+		}
+		change_pc = pc_infested
+	}
+	set_owner = controller
+	every_tile = {
+		remove_blocker = yes
+		remove_building = yes
+		create_pop = {
+			species = event_target:prethoryn_species
+		}
+	}
+	create_army = {
+		name = "Prethoryn Infestation"
+		owner = FROM
+		species = event_target:prethoryn_species
+		type = "swarm_planet_infestation"
+	}
+	create_army = {
+		name = "Prethoryn Infestation"
+		owner = FROM
+		species = event_target:prethoryn_species
+		type = "swarm_planet_infestation"
+	}
+	create_army = {
+		name = "Prethoryn Infestation"
+		owner = FROM
+		species = event_target:prethoryn_species
+		type = "swarm_planet_infestation"
+	}
+	create_army = {
+		name = "Prethoryn Infestation"
+		owner = FROM
+		species = event_target:prethoryn_species
+		type = "swarm_planet_infestation"
+	}
+	create_army = {
+		name = "Prethoryn Infestation"
+		owner = FROM
+		species = event_target:prethoryn_species
+		type = "swarm_planet_infestation"
+	}
+	planet_event = { id = crisis.215 }
+}

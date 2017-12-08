@@ -1,0 +1,23 @@
+### Planet Modifiers
+
+pm_plcom = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = "pc_plcom"
+		}
+	}
+	
+	modifier = "plcom_planet"
+}
+
+pm_gaia_boost = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = "pc_gaia"
+		}
+	}
+	
+	modifier = "gaia_world"
+}

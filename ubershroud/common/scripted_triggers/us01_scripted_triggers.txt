@@ -1,0 +1,105 @@
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+# Clueless
+shroud_level_0 = {
+	check_variable = { which = us_shroud_experience value < 50 }
+}
+
+# Initiate
+shroud_level_1 = {
+	check_variable = { which = us_shroud_experience value > 49 }
+	check_variable = { which = us_shroud_experience value < 100 }
+}
+
+# Apprentice
+shroud_level_2 = {
+	check_variable = { which = us_shroud_experience value > 99 }
+	check_variable = { which = us_shroud_experience value < 200 }
+}
+
+# Journeyman
+shroud_level_3 = {
+	check_variable = { which = us_shroud_experience value > 199 }
+	check_variable = { which = us_shroud_experience value < 300 }
+}
+
+# Evoker
+shroud_level_4 = {
+	check_variable = { which = us_shroud_experience value > 299 }
+	check_variable = { which = us_shroud_experience value < 400 }
+}
+
+# Master Evoker
+shroud_level_5 = {
+	check_variable = { which = us_shroud_experience value > 399 }
+	check_variable = { which = us_shroud_experience value < 500 }
+}
+
+# Warlock
+shroud_level_6 = {
+	check_variable = { which = us_shroud_experience value > 499 }
+	check_variable = { which = us_shroud_experience value < 600 }
+}
+
+# High Warlock
+shroud_level_7 = {
+	check_variable = { which = us_shroud_experience value > 599 }
+	check_variable = { which = us_shroud_experience value < 700 }
+}
+
+# Magnus
+shroud_level_8 = {
+	check_variable = { which = us_shroud_experience value > 699 }
+	check_variable = { which = us_shroud_experience value < 800 }
+}
+
+# Arch-Magnus
+shroud_level_9 = {
+	check_variable = { which = us_shroud_experience value > 799 }
+	check_variable = { which = us_shroud_experience value < 900 }
+}
+
+# Weaver
+shroud_level_10 = {
+	check_variable = { which = us_shroud_experience value > 899 }
+	check_variable = { which = us_shroud_experience value < 1000 }
+}
+
+# Master Weaver
+shroud_level_11 = {
+	check_variable = { which = us_shroud_experience value > 999 }
+	check_variable = { which = us_shroud_experience value < 2000 }
+}
+
+# Arch-Weaver
+shroud_level_12 = {
+	check_variable = { which = us_shroud_experience value > 1999 }
+}
+
+
+# ----------------------------------------------------------------------------------------------------------
+# Level X or Greater checks
+# ----------------------------------------------------------------------------------------------------------
+
+# Master Evoker OR GREATER
+shroud_level_5_plus = {
+	check_variable = { which = us_shroud_experience value > 399 }
+}
+
+# Warlock OR GREATER
+shroud_level_6_plus = {
+	check_variable = { which = us_shroud_experience value > 499 }
+}

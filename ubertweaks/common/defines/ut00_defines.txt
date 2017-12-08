@@ -1,0 +1,85 @@
+﻿	NInterface = {
+		TRADE_VIEW_SMALL_CREDIT_CHANGE			= 20	# Decides how much value is changed while holding control when increasing/decreasing credit in trade
+		TRADE_VIEW_LARGE_CREDIT_CHANGE			= 200	# Decides how much value is changed while holding shift when increasing/decreasing credit in trade
+		TRADE_VIEW_MASSIVE_CREDIT_CHANGE		= 2500	# Decides how much value is changed while holding shift AND control when increasing/decreasing credit in trade
+	}
+		
+	NGameplay = {
+		VICTORY_CONDITION_DOMINATION = 0.7
+		VICTORY_CONDITION_FEDERATION = 0.9
+		
+		ETHOS_MAX_POINTS					= 4	# Number of points which you can spend on ethos.
+		
+		PLANET_FORTIFICATION_BASE			= 1500		# was 1000 # Planet always has this much fortification health
+		PLANET_FORTIFICATION_DEFENSE_BONUS	= 10		# was 50 # At 100% fortification divide damage to defending armies by this
+		PLANET_FORTIFICATION_DEFENSE_MIN	= 1.0		# was 0.5 # At 0% fortification divide damage to defending armies by this
+		MAX_BOMBARD_FLEET_SIZE				= 400		# was 200 # Fleet size over this won't be counted for how fast planetary defenses are bombed down
+
+		GOVERNMENT_CIVIC_POINTS_BASE		= 3		# Base amount of civic points (to "pay" for government civic costs)
+
+		DEBRIS_ANALYZED_TECH_PROGRESS		= 0.01	# Tech progress added when analyzing component that require tech you don't have
+		DEBRIS_RESEARCH_TIME				= 90	# How many days it takes to analyze 1 debris.
+
+		TRUCE_YEARS							= 1 	# Truce last for X years
+
+		# Vanilla Tech cost:
+		#	16 Tile planet = 0.1 + 0.01 x 16 = x0.26
+		#	25 Tile planet = 0.1 + 0.01 x 25 = x0.35
+		# Adjusted Tech cost:
+		#	16 Tile planet = 0.0 + 0.015 x 16 = x0.24
+		#	25 Tile planet = 0.0 + 0.015 x 25 = x0.375
+		TECH_COST_MULT_NUM_COLONIES				= 0.0 # Each Planet adds +X% tech cost
+		TECH_COST_FREE_POPS						= 25 # First X pops do not add any tech cost
+		TECH_COST_MULT_NUM_POPS					= 0.015 # Each non-free Pop adds +X% tech cost.
+
+		MAX_TRADE_DEAL_LENGTH_YEARS				= 500	# Maximum length of a trade deal in years.
+
+		SECTOR_SUPPORT_RESOURCE_AMOUNT_LARGE	= 2000 	# How much resources each click will give the sector if CTRL is held down
+		SECTOR_SUPPORT_RESOURCE_AMOUNT			= 100 	# How much resources each click will give the sector.
+		
+		ANOMALY_RISK_MOD_NEGATIVE				= 30	# was 20 # Negative risk modifier for researching discovery
+		ANOMALY_RISK_MIN						= 0		# was 5 # Risk is never less than this
+		
+		# FTL changes - Quicker in own territory, slower in enemy territory.
+		
+		WORMHOLE_OPEN_SPEED = 5.0						# was 1.3 # Wormhole opening speed. Wormhole capacity is incremented with this every micro update ( 10/day )
+		WORMHOLE_CAPREQ_OUTSIDE_BORDERS = 10.0			# was 0.3 # Percentage malus when opening wormholes to systems outside owner borders 
+		
+		LEADER_BASE_CAP			= 20		# was 10
+		LEADER_MAX_SKILL_CAP	= 20		# was 10
+	}
+
+	NShip = {
+		# FTL changes - Quicker in own territory, slower in enemy territory.
+	
+		WARP_WINDDOWN 						= 4.0 		# was 8.0 # Distance multiplier to warp winddown in microupdates
+		WARP_WINDDOWN_OUTSIDE_BORDER		= 3.0		# was 2.0 # How much more winddown time is there for systems which are 100% away from friendly territory
+		WARP_INTERSTELLAR_TRAVEL_SPEED 		= 0.17		# was 0.35 # In micro updates ( 10/day )
+
+		HYPERLANE_WINDUP 					= 75		# was 150 # In micro updates ( 10/day )
+		HYPERLANE_WINDUP_OUTSIDE_BORDER		= 10.0		# was 5.0 # How much more windup time is there for systems which are 100% away from friendly territory
+		
+		JUMPDRIVE_WINDUP					= 180		# was 150 # In micro updates ( 10/day )
+		JUMPDRIVE_WINDDOWN					= 20		# was 50 # In micro updates ( 10/day )
+	}
+	
+	NSpecies = {		
+		MAX_ETHIC_POINTS 					= 4
+		
+		TRAIT_CLIMATE_MODIFICATION_COST		= 100
+		
+		MUTATION_MAX_TRAITS					= 99
+	}
+
+	NEconomy = {
+		WORMHOLE_STATION_MAINTENANCE 		= 1.0		# was 0.25 # Monthly wormhole station maintenance
+		MILITARY_STATION_MAINTENANCE_MUL	= -0.50		# Monthly military station maintenance reduction
+	}
+	
+	NArmy = {
+		NUM_DAYS_BEFORE_RETREAT			= 720			# How many days that need to pass before we can retreat.
+	}
+
+	NPop = {
+		FOOD_SURPLUS_EXTRA_GROWTH_MAX 		= 4	# was 2 # Max extra growth from food surplus
+	}

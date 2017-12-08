@@ -1,0 +1,72 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+## ---- Modded Tier Costs ----
+
+@tier4cost1 = 5200
+@tier4cost2 = 6760
+@tier4cost3 = 8450
+@tier4cost4 = 10140
+
+@tier5cost1 = 10400
+@tier5cost2 = 13520
+@tier5cost3 = 16900
+@tier5cost4 = 20280
+
+@tier6cost1 = 20800
+@tier6cost2 = 27040
+@tier6cost3 = 33800
+@tier6cost4 = 40560
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+## ---- Modded Tier Weights ----
+
+@tier4weight1 = 40
+@tier4weight2 = 35
+@tier4weight3 = 30
+@tier4weight4 = 25
+
+@tier5weight1 = 35
+@tier5weight2 = 30
+@tier5weight3 = 25
+@tier5weight4 = 20
+
+@tier6weight1 = 30
+@tier6weight2 = 25
+@tier6weight3 = 20
+@tier6weight4 = 15

@@ -1,0 +1,202 @@
+
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+## ---- Modded Tier Costs ----
+
+@tier4cost1 = 8200
+@tier4cost2 = 8760
+@tier4cost3 = 10450
+@tier4cost4 = 12140
+
+@tier5cost1 = 12400
+@tier5cost2 = 15520
+@tier5cost3 = 18900
+@tier5cost4 = 22280
+
+@tier6cost1 = 22800
+@tier6cost2 = 29040
+@tier6cost3 = 35800
+@tier6cost4 = 42560
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+## ---- Modded Tier Weights ----
+
+@tier4weight1 = 40
+@tier4weight2 = 35
+@tier4weight3 = 30
+@tier4weight4 = 25
+
+@tier5weight1 = 35
+@tier5weight2 = 30
+@tier5weight3 = 25
+@tier5weight4 = 20
+
+@tier6weight1 = 30
+@tier6weight2 = 25
+@tier6weight3 = 20
+@tier6weight4 = 15
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+@repeatableTechBaseCost = 5000
+@repeatableTechLevelCost = 1000
+@repeatableTechTier = 4
+
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+## ---- Modded Repeatable Costs ----
+
+@tier6repeatableLevelCost = 10000
+
+################################################################################
+
+########################
+# Modded Technologies  #
+########################
+
+#Quantum Entangled Communication Methods
+tech_ut_qetcomms_1 = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	category = { particles }
+	prerequisites = { "tech_sensors_4" "tech_aura_quantum_destabilizer" }
+	is_rare = yes
+	weight = @tier4weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 0.25 #AI probably won't use this correctly, so make it unlikely to get this while it economy might be fragile.
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	modifier = {
+		country_core_sector_system_cap = 1
+	}
+}
+
+#More Research Alternatives
+tech_flexible_research = {
+	area = physics
+	tier = 2
+	cost = @tier2cost2
+	category = { computing }
+	prerequisites = { "tech_administrative_ai" }
+	weight = @tier1weight3
+	
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+#Better Physics research
+tech_physics_development = {
+	area = physics
+	tier = 3
+	cost = @tier3cost2
+	category = { computing }	
+	prerequisites = { "tech_physics_lab_3" }
+	weight = @tier1weight4
+	
+	modifier = {
+		tile_resource_physics_research_mult = 0.20
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}

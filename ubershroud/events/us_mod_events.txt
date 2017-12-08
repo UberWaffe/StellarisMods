@@ -1,0 +1,414 @@
+
+namespace = ubershroud
+
+country_event = {
+	id = ubershroud.1
+	is_triggered_only = yes
+
+	immediate = {
+		create_country = {
+			name = "The Shroud"
+			type = shroud
+			flag = {
+				icon = {
+					category = "special"
+					file = "the_shroud.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"red"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		
+		random_country = {
+			limit = { is_country_type = shroud }
+			save_event_target_as = the_shroud
+		}
+		last_created_country = {
+			establish_communications_no_message = event_target:the_shroud
+		}
+	}
+}
+
+country_event = {
+	id = ubershroud.2
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				leader_class = ruler
+				NOR = {
+					has_trait = trait_psionic
+					has_trait = leader_trait_us_psionic_level6_ruler
+				}
+			}
+			add_trait = trait_psionic
+			add_trait = leader_trait_us_psionic_level6_ruler
+		}
+	}
+}
+
+country_event = {
+	id = ubershroud.3
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = shroud_diplomacy_engaged }
+				remove_country_flag = shroud_diplomacy_engaged
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ubershroud.4
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_planet = {
+			limit = { 
+				is_capital = yes 
+			}
+			create_species = {
+				name = "Garou"
+				plural = "Garou"
+				class = "MAM"
+				portrait = "mam3"
+				traits = {
+					trait = trait_psionic
+					trait = trait_psionic_level6
+					trait = trait_immensely_strong
+					trait = trait_extremely_communal
+					trait = trait_super_genius
+					trait = trait_extremely_slow_breeders
+					trait = trait_extremely_slow_learners
+					trait = trait_immensely_sedentary
+					trait = trait_extremely_nonadaptive
+				}
+				homeworld = this
+			}
+			create_pop = {
+				species = last_created_species
+			}
+		}
+		change_dominant_species = last_created
+		kill_leader = {
+			type = ruler
+			show_notification = no
+			heir = yes
+		}
+		kill_leader = {
+			type = ruler
+			show_notification = no
+			heir = no
+		}
+		create_leader = {
+			type = ruler
+			species = last_created_species
+			name = random
+			skill = 5
+			traits = {
+				trait = leader_trait_ruler_psionic
+				trait = leader_trait_us_psionic_level6_ruler
+			}
+		}
+		assign_leader = last_created_leader
+		create_leader = {
+			type = admiral
+			species = last_created_species
+			name = random
+			skill = 201
+			traits = {
+				trait = leader_trait_admiral_psionic
+				trait = leader_trait_us_psionic_level6_admiral
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = ubershroud.100
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	trigger = {
+		has_country_edict = burn_that_unity
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_edict = burn_that_unity
+				}
+				us_burn_that_unity_bonus = yes
+				us_burn_that_unity_bonus = yes
+				us_burn_that_unity_bonus = yes
+				us_burn_that_unity_bonus = yes
+				us_burn_that_unity_bonus = yes
+			}
+		}
+	}
+}
+
+
+event = {
+	id = ubershroud.101
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_ascension_perk = ap_transcendence
+				is_country_type = default
+				is_ai = yes
+			}
+
+			random_list = {
+
+				### Transcendent empire makes bargain with the End of the Cycle
+				1 = {
+					modifier = {
+						factor = 0
+						has_global_flag = end_of_the_cycle
+					}
+					modifier = {
+						factor = 0
+						NOT = {
+							is_crises_allowed = yes
+						}
+					}
+					modifier = {
+						factor = 10000
+						has_civic = civic_fanatic_purifiers
+					}
+					modifier = {
+						factor = 20
+						is_subject = yes
+					}
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_fanatic_xenophobe
+							has_ethic = ethic_xenophobe
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_militarist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_authoritarian
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					country_event = { id = utopia.3308 days = 20 random = 80 }
+				}
+
+				### Transcendent empire makes bargain with The Instrument of Desire
+				5 = {
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_xenophile
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_authoritarian
+							has_civic = civic_fanatic_purifiers
+						}
+					}
+					country_event = { id = utopia.3307 days = 20 random = 80 }
+				}
+
+				### Transcendent empire makes bargain with The Whisperers in the Void
+				5 = {
+					modifier = {
+						factor = 10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_militarist
+							has_civic = civic_fanatic_purifiers
+						}
+					}
+					country_event = { id = utopia.3304 days = 20 random = 80 }
+				}
+
+				### Transcendent empire makes bargain with The Eater of Worlds
+				5 = {
+					modifier = {
+						factor = 2
+						has_civic = civic_fanatic_purifiers
+					}
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_militarist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_fanatic_xenophobe
+							has_ethic = ethic_xenophobe
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					country_event = { id = utopia.3306 days = 20 random = 80 }
+				}
+
+				### Transcendent empire makes bargain with The Composer of Strands
+				5 = {
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_xenophile
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_authoritarian
+						}
+					}
+					modifier = {
+						factor = 0
+						has_civic = civic_fanatic_purifiers
+					}
+					country_event = { id = utopia.3305 days = 20 random = 80 }
+				}
+
+				### Transcendent empire makes bargain with The Guide
+				1 = {
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_xenophile
+						}
+					}
+					modifier = {
+						factor = 5
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					modifier = {
+						factor = 0
+						has_civic = civic_fanatic_purifiers
+					}
+					country_event = { id = utopia.3311 days = 20 random = 80 }
+				}
+
+				### Nothing
+				78 = {}
+			}
+		}
+	}
+}
+
+# Shroud held planet invaded and taken
+country_event = {
+	id = ubershroud.102
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		FROM = {
+			is_same_value = event_target:the_end_of_the_cycle
+		}
+	}
+	
+	immediate = {
+		FROMFROM = {
+			set_controller = root
+		}
+	}
+}

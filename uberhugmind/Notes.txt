@@ -1,0 +1,76 @@
+#
+# Symbiotic Hive-mind
+#
+# Sources of Symbiosis points:
+#	If hugged pops % > 50% : +10 per month
+#	If hugged pops % > 45% : +9 per month
+#	If hugged pops % > 40% : +8 per month
+#	If hugged pops % > 35% : +7 per month
+#	If hugged pops % > 30% : +6 per month
+#	If hugged pops % > 25% : +5 per month
+#	If hugged pops % > 20% : +4 per month
+#	If hugged pops % > 15% : +3 per month
+#	If hugged pops % > 10% : +2 per month
+#	If hugged pops % > 5% : +1 per month
+#
+#	Warfare demand, per pop kidnapped : +20 per pop
+#	
+#	If hugged pops count > 200 : +40 per month
+#	If hugged pops count > 190 : +38 per month
+#	If hugged pops count > 180 : +36 per month
+#	If hugged pops count > 170 : +34 per month
+#	If hugged pops count > 160 : +32 per month
+#	If hugged pops count > 150 : +30 per month
+#	If hugged pops count > 140 : +28 per month
+#	If hugged pops count > 130 : +26 per month
+#	If hugged pops count > 120 : +24 per month
+#	If hugged pops count > 110 : +22 per month
+#	If hugged pops count > 100 : +20 per month
+#	If hugged pops count > 90 : +18 per month
+#	If hugged pops count > 80 : +16 per month
+#	If hugged pops count > 70 : +14 per month
+#	If hugged pops count > 60 : +12 per month
+#	If hugged pops count > 50 : +10 per month
+#	If hugged pops count > 40 : +8 per month
+#	If hugged pops count > 30 : +6 per month
+#	If hugged pops count > 20 : +4 per month
+#	If hugged pops count > 10 : +2 per month
+#
+#	If different species of hugged pops count >= 10 : +10 per month
+#	If different species of hugged pops count >= 9 : +9 per month
+#	If different species of hugged pops count >= 8 : +8 per month
+#	If different species of hugged pops count >= 7 : +7 per month
+#	If different species of hugged pops count >= 6 : +6 per month
+#	If different species of hugged pops count >= 5 : +5 per month
+#	If different species of hugged pops count >= 4 : +4 per month
+#	If different species of hugged pops count >= 3 : +3 per month
+#	If different species of hugged pops count >= 2 : +2 per month
+#	If different species of hugged pops count >= 1 : +1 per month
+#
+#
+#	So expected:
+#		About +6 p/m early game ~= +72 p/y
+#		About +16 p/m mid game ~= +196 p/y
+#		About +46 p/m late game ~= +552 p/y
+#
+#
+#
+#
+#
+#	New warfare demand:
+#		(20 cost) Kidnap pops: Kidnaps all pops except 1 from target planet. (5 threat per pop)
+#			Each pop gives:
+#				+20 symbiosis points. (Main means of getting symbiosis points quickly.)
+#				+10% of monthly physics research.
+#				+10% of monthly society research.
+#				+10% of monthly engineering research.
+#				+25% of monthly unity.
+#				+New pop on planet (if space for the pop).
+#				+50% of monthly unity (if no space for pop on planets).
+#
+#	New citizen type:
+#		Symbiotic Slave
+#
+#
+#	Rewards:
+#		

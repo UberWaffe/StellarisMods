@@ -1,0 +1,480 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+## ---- Modded Tier Costs ----
+
+@tier4cost1 = 8200
+@tier4cost2 = 8760
+@tier4cost3 = 10450
+@tier4cost4 = 12140
+
+@tier5cost1 = 12400
+@tier5cost2 = 15520
+@tier5cost3 = 18900
+@tier5cost4 = 22280
+
+@tier6cost1 = 22800
+@tier6cost2 = 29040
+@tier6cost3 = 35800
+@tier6cost4 = 42560
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+## ---- Modded Tier Weights ----
+
+@tier4weight1 = 40
+@tier4weight2 = 35
+@tier4weight3 = 30
+@tier4weight4 = 25
+
+@tier5weight1 = 35
+@tier5weight2 = 30
+@tier5weight3 = 25
+@tier5weight4 = 20
+
+@tier6weight1 = 30
+@tier6weight2 = 25
+@tier6weight3 = 20
+@tier6weight4 = 15
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+@repeatableTechBaseCost = 5000
+@repeatableTechLevelCost = 1000
+@repeatableTechTier = 4
+
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+################################################################################
+
+################################################
+# Below coded by Remanemporor
+# Reworked by UberWaffe
+################################################
+
+tech_combo_food_power_1 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_power_plant_4" "tech_nano_vitality_crops" }
+	weight = @tier3weight4
+	
+	# Unlocks Solar-Harvester 1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_food_power_2 = {
+	cost = @tier4cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_food_power_1" }
+	weight = @tier4weight4
+	
+	# Unlocks Solar-Harvester 2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_food_power_3 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_food_power_2" "tech_colonization_4" }
+	weight = @tier5weight1
+	
+	# Unlocks Solar-Harvester 3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_food_power_4 = {
+	cost = @tier5cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_food_power_3" "tech_colonization_5" }
+	weight = @tier5weight4
+	
+	# Unlocks Solar-Harvester 4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_power_1 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_power_plant_4" "tech_mining_network_4" }
+	weight = @tier4weight1
+	
+	# Unlocks Thermal-Bore 1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_power_2 = {
+	cost = @tier4cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_power_1" }
+	weight = @tier4weight4
+	
+	# Unlocks Thermal-Bore 2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_power_3 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_power_2" "tech_colonization_4" }
+	weight = @tier5weight1
+	
+	# Unlocks Thermal-Bore 3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_power_4 = {
+	cost = @tier5cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_power_3" "tech_colonization_5" }
+	weight = @tier5weight4
+	
+	# Unlocks Thermal-Bore 4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_food_1 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_nano_vitality_crops" "tech_mining_network_4" }
+	weight = @tier3weight4
+	
+	# Unlocks Bio-Quarry 1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_food_2 = {
+	cost = @tier4cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_food_1" }
+	weight = @tier4weight4
+	
+	# Unlocks Bio-Quarry 2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+
+tech_combo_mineral_food_3 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_food_2" "tech_colonization_4" }
+	weight = @tier5weight1
+		
+	# Unlocks Bio-Quarry 3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_combo_mineral_food_4 = {
+	cost = @tier5cost4
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_combo_mineral_food_3" "tech_colonization_5" }
+	weight = @tier5weight4
+	
+	# Unlocks Bio-Quarry 4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}

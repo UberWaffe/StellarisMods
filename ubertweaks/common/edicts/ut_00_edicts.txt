@@ -1,0 +1,21 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+country_edict = {
+	name = "total_research_frenzy"
+	modifier = {
+		country_engineering_tech_research_speed = 2.5
+		country_society_tech_research_speed = 2.5
+		country_physics_tech_research_speed = 2.5
+	}
+	
+	influence_cost = 50
+		
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}

@@ -1,0 +1,39 @@
+#HIVEMIND
+#########
+
+
+# Symbiosis Hive-Mind civic
+civic_symbiosis_mind = {
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+		
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_symbiosis_mind_effects"
+	has_secondary_species = {	# see game_start.11
+		title = civic_symbiosis_mind_secondary_species
+		traits = {
+			trait = trait_communal
+		}
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -0.75
+	}
+}

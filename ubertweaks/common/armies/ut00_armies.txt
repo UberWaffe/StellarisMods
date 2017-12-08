@@ -1,0 +1,90 @@
+#Defensive armies can't transport off the planet
+#Garrison armies are created by pops
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+
+# Juggernaught Armies
+juggernaught_army = {
+	defensive = yes
+	damage = 2.25
+	health = 3.0
+	morale = 3.0
+	morale_damage = 1.5
+	
+	time = 180
+	icon_frame = 1
+	maintenance = 0.15
+	
+	cost = {
+		minerals = 150
+		energy = 200
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" }
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_robotic_1"
+				has_trait = "trait_robotic_2"
+				has_trait = "trait_robotic_3"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
+}
+
+# Living Defenses
+living_defenses_army = {
+	defensive = yes
+	time = 360
+	damage = 3.0
+	health = 5.0
+	morale = 5.0
+	icon_frame = 6
+	has_species = no
+	maintenance = 0
+	
+	cost = {
+		minerals = 350
+		energy = 1000
+	}
+	
+	prerequisites = { "tech_mine_living_metal" }
+	potential = {
+		always = yes
+	}
+}
+
+# Pethoryn Invaders
+swarm_army_invaders = {
+	defensive = yes
+	damage = 2.0
+	morale_damage = 2.0
+	health = 2.0
+	morale = 2.0
+	time = 730
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}
+
+# Pethoryn Infestation
+swarm_planet_infestation = {
+	defensive = yes
+	damage = 5.0
+	morale_damage = 5.0
+	health = 20.0
+	morale = 20.0
+	time = 7300
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}

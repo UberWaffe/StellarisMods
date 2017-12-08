@@ -1,0 +1,39 @@
+# A planet is being bombarded
+# This = planet under bombardment
+# From = bombarding empire
+on_monthly_orbital_bombardment = {
+	events = {
+		utevents.1000
+	}
+}
+
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		utevents.1001
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_win = {
+	events = {
+		utevents.1002
+	}
+}
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraformer
+on_terraforming_complete = {
+	events = {
+		plcom_eve.1
+	}
+}

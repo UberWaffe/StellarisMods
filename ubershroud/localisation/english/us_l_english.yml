@@ -1,0 +1,99 @@
+﻿l_english: 
+ 
+ ####################################
+ # Species Archetypes
+ ####################################
+ SHROUD: "Creatures of the Shroud"
+ 
+ ####################################
+ # Civics
+ ####################################
+ civic_kyuubi_pack:0 "Kyuubi of the Shroud"
+ civic_kyuubi_pack_desc:0 "This society has legends of a mythical being that is somehow tied to them."
+ 
+ ############################################################################################################
+ # Empire Edicts
+ ############################################################################################################
+ edict_burn_that_unity:0 "Call upon the people"
+ edict_burn_that_unity_desc:0 "Draws upon the unity of our empire, producing minerals and energy equal to a month's worth of production."
+ 
+ ####################################
+ # Planet Modifiers
+ ####################################
+ us_shroudedplanet:0 "Shrouded World"
+ us_shroudedplanet_desc:0 "A world claimed by a malevolent presence from the Shroud. A place of nightmares beyond description."
+ 
+ ############################################################################################################
+ # Psionic Special Traits
+ ############################################################################################################
+ trait_psionic_level2:0 "Psionics (H14)"
+ trait_psionic_level2_desc:0 "§LHigh Psionics rating 14. Even greater Psionic power.§!\n"
+ trait_psionic_level3:0 "Psionics (H27)"
+ trait_psionic_level3_desc:0 "§LHigh Psionics rating 27.§!\n"
+ trait_psionic_level4:0 "Psionics (H41)"
+ trait_psionic_level4_desc:0 "§LHigh Psionics rating 41.§!\n"
+ trait_psionic_level5:0 "Psionics (H65)"
+ trait_psionic_level5_desc:0 "§LHigh Psionics rating 65.§!\n"
+ trait_psionic_level6:0 "Psionics (H79)"
+ trait_psionic_level6_desc:0 "§LHigh Psionics rating 79.§!\n"
+
+ ############################################################################################################
+ # Other Traits
+ ############################################################################################################
+ leader_trait_admiral_chosen:0 "Chosen One"
+ leader_trait_admiral_chosen_desc:0 "This leader is an Chosen One, an immortal being that wields incredible psionic power."
+ leader_trait_general_chosen:0 "$leader_trait_admiral_chosen$"
+ leader_trait_general_chosen_desc:0 "$leader_trait_admiral_chosen_desc$"
+ leader_trait_governor_chosen:0 "$leader_trait_admiral_chosen$"
+ leader_trait_governor_chosen_desc:0 "$leader_trait_admiral_chosen_desc$"
+ leader_trait_ruler_chosen:0 "$leader_trait_admiral_chosen$"
+ leader_trait_ruler_chosen_desc:0 "$leader_trait_admiral_chosen_desc$"
+ leader_trait_scientist_chosen:0 "$leader_trait_admiral_chosen$"
+ leader_trait_scientist_chosen_desc:0 "$leader_trait_admiral_chosen_desc$"
+ 
+ leader_trait_us_psionic_level3_ruler:0 "Immortal One"
+ leader_trait_us_psionic_level3_ruler_desc:0 "This leader is an Immortal One, an immortal being that wields unfathomable psionic power."
+ leader_trait_us_psionic_level3_governor:0 "$leader_trait_us_psionic_level3_ruler$"
+ leader_trait_us_psionic_level3_governor_desc:0 "$leader_trait_us_psionic_level3_ruler_desc$"
+ leader_trait_us_psionic_level3_scientist:0 "$leader_trait_us_psionic_level3_ruler$"
+ leader_trait_us_psionic_level3_scientist_desc:0 "$leader_trait_us_psionic_level3_ruler_desc$"
+ leader_trait_us_psionic_level3_admiral:0 "$leader_trait_us_psionic_level3_ruler$"
+ leader_trait_us_psionic_level3_admiral_desc:0 "$leader_trait_us_psionic_level3_ruler_desc$"
+ leader_trait_us_psionic_level3_general:0 "$leader_trait_us_psionic_level3_ruler$"
+ leader_trait_us_psionic_level3_general_desc:0 "$leader_trait_us_psionic_level3_ruler_desc$"
+ 
+ leader_trait_us_psionic_level6_ruler:0 "Incarnate One"
+ leader_trait_us_psionic_level6_ruler_desc:0 "This leader is an Incarnate One, an immortal being that wields incalculable psionic power."
+ leader_trait_us_psionic_level6_governor:0 "$leader_trait_us_psionic_level6_ruler$"
+ leader_trait_us_psionic_level6_governor_desc:0 "$leader_trait_us_psionic_level6_ruler_desc$"
+ leader_trait_us_psionic_level6_scientist:0 "$leader_trait_us_psionic_level6_ruler$"
+ leader_trait_us_psionic_level6_scientist_desc:0 "$leader_trait_us_psionic_level6_ruler_desc$"
+ leader_trait_us_psionic_level6_admiral:0 "$leader_trait_us_psionic_level6_ruler$"
+ leader_trait_us_psionic_level6_admiral_desc:0 "$leader_trait_us_psionic_level6_ruler_desc$"
+ leader_trait_us_psionic_level6_general:0 "$leader_trait_us_psionic_level6_ruler$"
+ leader_trait_us_psionic_level6_general_desc:0 "$leader_trait_us_psionic_level6_ruler_desc$"
+ 
+ ####################################
+ # Pop Modifiers
+ ####################################
+ us_recently_kidnapped:0 "I have these haunting dreams of another life..."
+ 
+ ####################################
+ # Static Modifiers
+ ####################################
+ covenant_kyuubi_of_the_shroud:0 "Covenant with Kyuubi"
+ covenant_kyuubi_of_the_shroud_desc:0 "Nine tailed hug"
+ us_covenant_end_of_the_cycle:0 "Covenant: End of the Cycle"
+ us_covenant_end_of_the_cycle_desc:0 "We have formed a Covenant with the End of the Cycle.\n\n§RThere will be a reckoning.§!"
+ 
+ ############################################################################################################
+ # Habitability Traits
+ ############################################################################################################
+ trait_us_pc_shrouded_livable:0 ""
+ trait_us_pc_shrouded_livable_desc:0 ""
+ 
+ ####################################
+ # Armies
+ ####################################
+ us_shroud_nightmare_army:0 "Nightmares Incarnate"
+ us_shroud_nightmare_army_desc:0 "Born from malevolent entities from the Shroud. This is Horror and Nightmare incarnate.\n\nWill eat anything. Very fond of children."

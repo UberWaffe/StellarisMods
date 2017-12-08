@@ -1,0 +1,2750 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+# Costs 2000 unity
+us_burn_that_unity_bonus = {
+	if = {
+		limit = { unity > 2000 }
+		add_unity = -2000
+		add_monthly_resource_mult = {
+			resource = minerals
+			value = 0.25
+		}
+		add_monthly_resource_mult = {
+			resource = energy
+			value = 0.25
+		}
+	}
+}
+
+# Costs 2000 down to 500 unity
+# Cost applied in the event.
+us_shroud_unity_to_goodies = { 
+	add_monthly_resource_mult = {
+		resource = minerals
+		value = 0.25
+	}
+	add_monthly_resource_mult = {
+		resource = physics_research
+		value = 1
+	}
+	add_monthly_resource_mult = {
+		resource = society_research
+		value = 1
+	}
+	add_monthly_resource_mult = {
+		resource = engineering_research
+		value = 1
+	}
+}
+
+# Random Vision Picker code
+us_random_vision_picker = {
+	hidden_effect = {
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_1
+				}
+				country_event = { id = utopia.3100 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_2
+				}
+				country_event = { id = utopia.3110 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_3
+				}
+				country_event = { id = utopia.3120 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_4
+				}
+				country_event = { id = utopia.3130 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_5
+				}
+				country_event = { id = utopia.3140 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = {
+							any_country = {
+								is_country_type = fallen_empire
+								has_communications = root
+								NOT = { is_at_war_with = root }
+							}
+						}
+						check_variable = { which = us_shroud_fe_thief value > 10 }
+					}
+					# Allow this to trigger multiple times # has_country_flag = shroud_fallen_empire
+				}
+				country_event = { id = utopia.3150 }
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					has_country_flag = shroud_vision_10
+				}
+				country_event = { id = utopia.3190 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_technology = tech_psionic_shield
+						has_tech_option = tech_psionic_shield
+					}
+				}
+				country_event = { id = utopia.3170 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_technology = tech_precognition_interface
+						has_tech_option = tech_precognition_interface
+					}
+				}
+				country_event = { id = utopia.3180 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_technology = tech_psi_jump_drive_1
+						has_tech_option = tech_psi_jump_drive_1
+					}
+				}
+				country_event = { id = utopia.3160 }
+			}
+			10 = { country_event = { id = utopia.3200 } }
+		}
+	}
+}
+
+us_remove_shroud_flags = {
+	hidden_effect = {
+		remove_country_flag = us_shroud_high.1
+		remove_country_flag = us_shroud_high.2
+		remove_country_flag = us_shroud_high.3
+		remove_country_flag = us_shroud_high.4
+		remove_country_flag = us_shroud_high.5
+		remove_country_flag = us_shroud_high.6
+		remove_country_flag = us_shroud_high.7
+		remove_country_flag = us_shroud_high.8
+		remove_country_flag = us_shroud_high.9
+		remove_country_flag = us_shroud_high.10
+		remove_country_flag = us_shroud_high.11
+		remove_country_flag = us_shroud_high.12
+		remove_country_flag = us_shroud_high.13
+		remove_country_flag = us_shroud_high.14
+		remove_country_flag = us_shroud_high.15
+		remove_country_flag = us_shroud_high.16
+		remove_country_flag = us_shroud_medium.1
+		remove_country_flag = us_shroud_medium.2
+		remove_country_flag = us_shroud_medium.3
+		remove_country_flag = us_shroud_medium.4
+		remove_country_flag = us_shroud_medium.5
+		remove_country_flag = us_shroud_medium.6
+		remove_country_flag = us_shroud_medium.7
+		remove_country_flag = us_shroud_medium.8
+		remove_country_flag = us_shroud_medium.9
+		remove_country_flag = us_shroud_medium.10
+		remove_country_flag = us_shroud_medium.11
+		remove_country_flag = us_shroud_medium.12
+		remove_country_flag = us_shroud_medium.13
+		remove_country_flag = us_shroud_medium.14
+		remove_country_flag = us_shroud_medium.15
+		remove_country_flag = us_shroud_medium.16
+		remove_country_flag = us_shroud_low.1
+		remove_country_flag = us_shroud_low.2
+		remove_country_flag = us_shroud_low.3
+		remove_country_flag = us_shroud_low.4
+		remove_country_flag = us_shroud_low.5
+		remove_country_flag = us_shroud_low.6
+		remove_country_flag = us_shroud_low.7
+		remove_country_flag = us_shroud_low.8
+		remove_country_flag = us_shroud_low.9
+		remove_country_flag = us_shroud_low.10
+		remove_country_flag = us_shroud_low.11
+		remove_country_flag = us_shroud_low.12
+		remove_country_flag = us_shroud_low.13
+		remove_country_flag = us_shroud_low.14
+		remove_country_flag = us_shroud_low.15
+		remove_country_flag = us_shroud_low.16
+	}
+}
+
+us_randomize_shroud_flags_tier_high = {
+	hidden_effect = {
+		random_list = {
+			25 = { set_country_flag = us_shroud_high.1 }
+			25 = { set_country_flag = us_shroud_high.2 }
+			25 = { set_country_flag = us_shroud_high.3 }
+			25 = { set_country_flag = us_shroud_high.4 }
+			25 = { set_country_flag = us_shroud_high.5 }
+			25 = { set_country_flag = us_shroud_high.6 }
+			25 = { set_country_flag = us_shroud_high.7 }
+			25 = { set_country_flag = us_shroud_high.8 }
+			25 = { set_country_flag = us_shroud_high.9 }
+			25 = { set_country_flag = us_shroud_high.10 }
+			25 = { set_country_flag = us_shroud_high.11 }
+			25 = { set_country_flag = us_shroud_high.12 }
+			25 = { set_country_flag = us_shroud_high.13 }
+			25 = { set_country_flag = us_shroud_high.14 }
+			25 = { set_country_flag = us_shroud_high.15 }
+			25 = { set_country_flag = us_shroud_high.16 }
+			200 = {}
+		}
+	}
+}
+
+us_randomize_shroud_flags_tier_mid = {
+	hidden_effect = {
+		random_list = {
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.1 } }
+					set_country_flag = us_shroud_medium.1 
+					else = { set_country_flag = us_shroud_medium.2 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.2 } }
+					set_country_flag = us_shroud_medium.2 
+					else = { set_country_flag = us_shroud_medium.3 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.3 } }
+					set_country_flag = us_shroud_medium.3 
+					else = { set_country_flag = us_shroud_medium.4 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.4 } }
+					set_country_flag = us_shroud_medium.4 
+					else = { set_country_flag = us_shroud_medium.5 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.5 } }
+					set_country_flag = us_shroud_medium.5 
+					else = { set_country_flag = us_shroud_medium.6 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.6 } }
+					set_country_flag = us_shroud_medium.6
+					else = { set_country_flag = us_shroud_medium.7 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.7 } }
+					set_country_flag = us_shroud_medium.7 
+					else = { set_country_flag = us_shroud_medium.8 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.8 } }
+					set_country_flag = us_shroud_medium.8 
+					else = { set_country_flag = us_shroud_medium.9 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.9 } }
+					set_country_flag = us_shroud_medium.9 
+					else = { set_country_flag = us_shroud_medium.10 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.10 } }
+					set_country_flag = us_shroud_medium.10 
+					else = { set_country_flag = us_shroud_medium.11 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.11 } }
+					set_country_flag = us_shroud_medium.11 
+					else = { set_country_flag = us_shroud_medium.12 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.12 } }
+					set_country_flag = us_shroud_medium.12
+					else = { set_country_flag = us_shroud_medium.13 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.13 } }
+					set_country_flag = us_shroud_medium.13 
+					else = { set_country_flag = us_shroud_medium.14 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.14 } }
+					set_country_flag = us_shroud_medium.14 
+					else = { set_country_flag = us_shroud_medium.15 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { NOT = { has_country_flag = us_shroud_high.15 } }
+					set_country_flag = us_shroud_medium.15
+					else = { set_country_flag = us_shroud_medium.16 }
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { has_country_flag = us_shroud_high.16 } 
+						count_owned_ships = {
+							limit = { is_ship_size = psionic_avatar }
+							count < 1
+						}
+						count_armies = {
+							limit = { army_type = shroud_army }
+							count < 1
+						}
+					}
+					set_country_flag = us_shroud_medium.16
+					else = { set_country_flag = us_shroud_medium.1 }
+				}
+			}
+			150 = {}
+		}
+	}
+}
+
+us_randomize_shroud_flags_tier_low = {
+	hidden_effect = {
+		random_list = {
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.1 
+							has_country_flag = us_shroud_medium.1 
+						} 
+					}
+					set_country_flag = us_shroud_low.1 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.2 
+									has_country_flag = us_shroud_medium.2 
+								} 
+							}
+							set_country_flag = us_shroud_low.2 
+							else = { set_country_flag = us_shroud_low.3 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.2 
+							has_country_flag = us_shroud_medium.2 
+						} 
+					}
+					set_country_flag = us_shroud_low.2 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.3
+									has_country_flag = us_shroud_medium.3 
+								} 
+							}
+							set_country_flag = us_shroud_low.3 
+							else = { set_country_flag = us_shroud_low.4 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.3 
+							has_country_flag = us_shroud_medium.3 
+						} 
+					}
+					set_country_flag = us_shroud_low.3 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.4 
+									has_country_flag = us_shroud_medium.4 
+								} 
+							}
+							set_country_flag = us_shroud_low.4 
+							else = { set_country_flag = us_shroud_low.5 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.4 
+							has_country_flag = us_shroud_medium.4 
+						} 
+					}
+					set_country_flag = us_shroud_low.4 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.5 
+									has_country_flag = us_shroud_medium.5 
+								} 
+							}
+							set_country_flag = us_shroud_low.5 
+							else = { set_country_flag = us_shroud_low.6 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.5 
+							has_country_flag = us_shroud_medium.5 
+						} 
+					}
+					set_country_flag = us_shroud_low.5
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.6 
+									has_country_flag = us_shroud_medium.6 
+								} 
+							}
+							set_country_flag = us_shroud_low.6 
+							else = { set_country_flag = us_shroud_low.7 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.6 
+							has_country_flag = us_shroud_medium.6 
+						} 
+					}
+					set_country_flag = us_shroud_low.6 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.7 
+									has_country_flag = us_shroud_medium.7 
+								} 
+							}
+							set_country_flag = us_shroud_low.7 
+							else = { set_country_flag = us_shroud_low.8 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.7 
+							has_country_flag = us_shroud_medium.7 
+						} 
+					}
+					set_country_flag = us_shroud_low.7 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.8 
+									has_country_flag = us_shroud_medium.8 
+								} 
+							}
+							set_country_flag = us_shroud_low.8 
+							else = { set_country_flag = us_shroud_low.9 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.8 
+							has_country_flag = us_shroud_medium.8 
+						} 
+					}
+					set_country_flag = us_shroud_low.8 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.9 
+									has_country_flag = us_shroud_medium.9 
+								} 
+							}
+							set_country_flag = us_shroud_low.9 
+							else = { set_country_flag = us_shroud_low.10 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.9 
+							has_country_flag = us_shroud_medium.9
+						} 
+					}
+					set_country_flag = us_shroud_low.9 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.10 
+									has_country_flag = us_shroud_medium.10 
+								} 
+							}
+							set_country_flag = us_shroud_low.10 
+							else = { set_country_flag = us_shroud_low.11 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.10
+							has_country_flag = us_shroud_medium.10
+						} 
+					}
+					set_country_flag = us_shroud_low.10 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.11 
+									has_country_flag = us_shroud_medium.11 
+								} 
+							}
+							set_country_flag = us_shroud_low.11 
+							else = { set_country_flag = us_shroud_low.12 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.11 
+							has_country_flag = us_shroud_medium.11 
+						} 
+					}
+					set_country_flag = us_shroud_low.11 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.12 
+									has_country_flag = us_shroud_medium.12 
+								} 
+							}
+							set_country_flag = us_shroud_low.12 
+							else = { set_country_flag = us_shroud_low.13 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.12 
+							has_country_flag = us_shroud_medium.12 
+						} 
+					}
+					set_country_flag = us_shroud_low.12 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.13 
+									has_country_flag = us_shroud_medium.13 
+								} 
+							}
+							set_country_flag = us_shroud_low.13 
+							else = { set_country_flag = us_shroud_low.14 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.13 
+							has_country_flag = us_shroud_medium.13 
+						} 
+					}
+					set_country_flag = us_shroud_low.13 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.14 
+									has_country_flag = us_shroud_medium.14 
+								} 
+							}
+							set_country_flag = us_shroud_low.14 
+							else = { set_country_flag = us_shroud_low.15 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.14 
+							has_country_flag = us_shroud_medium.14 
+						} 
+					}
+					set_country_flag = us_shroud_low.14 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.15 
+									has_country_flag = us_shroud_medium.15 
+								} 
+							}
+							set_country_flag = us_shroud_low.15 
+							else = { set_country_flag = us_shroud_low.16 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.15 
+							has_country_flag = us_shroud_medium.15 
+						} 
+					}
+					set_country_flag = us_shroud_low.15 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.16
+									has_country_flag = us_shroud_medium.16
+								} 
+							}
+							set_country_flag = us_shroud_low.16 
+							else = { set_country_flag = us_shroud_low.1 }
+						}
+					}
+				}
+			}
+			25 = { 
+				if = {
+					limit = { 
+						NOT = { 
+							has_country_flag = us_shroud_high.16 
+							has_country_flag = us_shroud_medium.16 
+						} 
+					}
+					set_country_flag = us_shroud_low.16 
+					else = { 
+						if = {
+							limit = {
+								NOT = { 
+									has_country_flag = us_shroud_high.1 
+									has_country_flag = us_shroud_medium.1 
+								}
+								count_owned_ships = {
+									limit = { is_ship_size = psionic_avatar }
+									count < 1
+								}
+								count_armies = {
+									limit = { army_type = shroud_army }
+									count < 1
+								}
+							}
+							set_country_flag = us_shroud_low.1 
+							else = { set_country_flag = us_shroud_low.2 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+us_randomize_shroud_flags_awesome = {
+	us_remove_shroud_flags = yes
+	hidden_effect = {
+		while = {
+			count = 3
+			us_randomize_shroud_flags_tier_high = yes
+		}
+		while = {
+			count = 3
+			us_randomize_shroud_flags_tier_mid = yes
+		}
+		while = {
+			count = 3
+			us_randomize_shroud_flags_tier_low = yes
+		}
+	}
+}
+
+us_randomize_shroud_flags_great = {
+	us_remove_shroud_flags = yes
+	hidden_effect = {
+		while = {
+			count = 2
+			us_randomize_shroud_flags_tier_high = yes
+		}
+		while = {
+			count = 2
+			us_randomize_shroud_flags_tier_mid = yes
+		}
+		while = {
+			count = 2
+			us_randomize_shroud_flags_tier_low = yes
+		}
+	}
+}
+
+us_randomize_shroud_flags_normal = {
+	us_remove_shroud_flags = yes
+	hidden_effect = {
+		us_randomize_shroud_flags_tier_high = yes
+		us_randomize_shroud_flags_tier_mid = yes
+		us_randomize_shroud_flags_tier_low = yes
+	}
+}
+
+us_reroll_high = { 
+	hidden_effect = {
+		random_list = {
+			90 = { country_event = { id = utopia.3200 }}
+			8 = { country_event = { id = utopia.3045 }}
+			2 = { us_critical_fail_random = yes }
+		}
+	}
+}
+us_reroll_low = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3200 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { us_critical_fail_random = yes }
+		}
+	}
+}
+
+us_critical_fail_random = { 
+	hidden_effect = {
+		random_list = {
+			10 = { country_event = { id = utopia.3050 }}
+			10 = { country_event = { id = utopia.3051 }}
+			10 = { country_event = { id = utopia.3052 }}
+			10 = { country_event = { id = utopia.3053 }}
+			10 = { country_event = { id = utopia.3054 }}
+			10 = { country_event = { id = utopia.3055 }}
+			10 = { country_event = { id = utopia.3056 }}
+			10 = { country_event = { id = utopia.3057 }}
+			10 = { country_event = { id = utopia.3058 }}
+			10 = { country_event = { id = utopia.3059 }}
+		}
+	}
+}
+
+happiness_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3030 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3050 }}
+		}
+	}
+}
+happiness_shroud_medium = {
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3030 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3050 }}
+		}
+	}
+}
+happiness_shroud_low = {
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3030 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3050 }}
+		}
+	}
+}
+
+upkeep_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3031 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3051 }}
+		}
+	}
+}
+upkeep_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3031 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3051 }}
+		}
+	}
+}
+upkeep_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3031 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3051 }}
+		}
+	}
+}
+
+research_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3032 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3052 }}
+		}
+	}
+}
+research_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3032 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3052 }}
+		}
+	}
+}
+research_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3032 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3052 }}
+		}
+	}
+}
+
+shields_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3033 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3053 }}
+		}
+	}
+}
+shields_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3033 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3053 }}
+		}
+	}
+}
+shields_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3033 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3053 }}
+		}
+	}
+}
+
+weapons_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3034 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3054 }}
+		}
+	}
+}
+weapons_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3034 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3054 }}
+		}
+	}
+}
+weapons_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3034 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3054 }}
+		}
+	}
+}
+
+firingrate_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3035 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3055 }}
+		}
+	}
+}
+firingrate_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3035 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3055 }}
+		}
+	}
+}
+firingrate_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3035 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3055 }}
+		}
+	}
+}
+
+ethics_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3036 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3056 }}
+		}
+	}
+}
+ethics_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3036 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3056 }}
+		}
+	}
+}
+ethics_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3036 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3056 }}
+		}
+	}
+}
+
+influence_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3037 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3057 }}
+		}
+	}
+}
+influence_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3037 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3057 }}
+		}
+	}
+}
+influence_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3037 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3057 }}
+		}
+	}
+}
+
+unity_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3038 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3058 }}
+		}
+	}
+}
+unity_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3038 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3058 }}
+		}
+	}
+}
+unity_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3038 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3058 }}
+		}
+	}
+}
+
+evasion_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3039 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3059 }}
+		}
+	}
+}
+evasion_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3039 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3059 }}
+		}
+	}
+}
+evasion_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3039 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3059 }}
+		}
+	}
+}
+
+repair_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3040 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3050 }}
+		}
+	}
+}
+repair_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3040 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3051 }}
+		}
+	}
+}	
+repair_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3040 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3052 }}
+		}
+	}
+}
+
+lifespan_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3041 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3053 }}
+		}
+	}
+}
+lifespan_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3041 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3054 }}
+		}
+	}
+}	
+lifespan_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3041 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3055 }}
+		}
+	}
+}
+
+speed_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3042 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3056 }}
+		}
+	}
+}
+speed_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3042 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3057 }}
+		}
+	}
+}
+speed_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3042 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3058 }}
+		}
+	}
+}
+
+morale_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3043 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3059 }}
+		}
+	}
+}
+morale_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3043 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3050 }}
+		}
+	}
+}
+morale_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3043 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3051 }}
+		}
+	}
+}
+
+sensor_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			70 = { country_event = { id = utopia.3044 }}
+			20 = { country_event = { id = utopia.3045 }}
+			10 = { country_event = { id = utopia.3052 }}
+		}
+	}
+}
+sensor_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			50 = { country_event = { id = utopia.3044 }}
+			30 = { country_event = { id = utopia.3045 }}
+			20 = { country_event = { id = utopia.3053 }}
+		}
+	}
+}
+sensor_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			30 = { country_event = { id = utopia.3044 }}
+			40 = { country_event = { id = utopia.3045 }}
+			30 = { country_event = { id = utopia.3054 }}
+		}
+	}
+}
+
+avatar_shroud_high = { 
+	hidden_effect = {
+		random_list = {
+			38 = { country_event = { id = utopia.3020 }}
+			38 = { country_event = { id = utopia.3021 }}
+			20 = { country_event = { id = utopia.3022 }}
+			10 = { country_event = { id = utopia.3023 }}
+		}
+	}
+}
+avatar_shroud_medium = { 
+	hidden_effect = {
+		random_list = {
+			25 = { country_event = { id = utopia.3020 }}
+			25 = { country_event = { id = utopia.3021 }}
+			30 = { country_event = { id = utopia.3022 }}
+			20 = { country_event = { id = utopia.3023 }}
+		}
+	}
+}
+avatar_shroud_low = { 
+	hidden_effect = {
+		random_list = {
+			15 = { country_event = { id = utopia.3020 }}
+			15 = { country_event = { id = utopia.3021 }}
+			40 = { country_event = { id = utopia.3022 }}
+			30 = { country_event = { id = utopia.3023 }}
+		}
+	}
+}
+
+give_fe_tech = {
+	if = {
+		limit = {
+			NOT = { has_technology = tech_mine_living_metal }
+		}
+		give_technology = { tech = tech_mine_living_metal }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_mine_dark_matter }
+		}
+		give_technology = { tech = tech_mine_dark_matter }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_mine_neutronium }
+		}
+		give_technology = { tech = tech_mine_neutronium }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_ship_armor_5 }
+		}
+		give_technology = { tech = tech_ship_armor_5 }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_antimatter_power }
+		}
+		give_technology = { tech = tech_antimatter_power }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_zero_point_power }
+		}
+		give_technology = { tech = tech_zero_point_power }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_climate_restoration }
+		}
+		give_technology = { tech = tech_climate_restoration }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_gaia_creation }
+		}
+		give_technology = { tech = tech_gaia_creation }
+		break = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_technology = tech_nutrient_replication }
+		}
+		give_technology = { tech = tech_nutrient_replication }
+		break = yes
+	}
+	random_list = {
+		1 = { give_technology = { tech = tech_repeatable_improved_tile_energy_output } }
+		1 = { give_technology = { tech = tech_repeatable_improved_tile_mineral_output } }
+		1 = { give_technology = { tech = tech_repeatable_improved_tile_food_output } }
+		1 = { give_technology = { tech = tech_repeatable_improved_leader_life_span } }
+		1 = { give_technology = { tech = tech_repeatable_improved_leader_cap } }
+		1 = { give_technology = { tech = tech_repeatable_improved_core_system_cap } }
+		1 = { give_technology = { tech = tech_repeatable_improved_edict_length } }
+	}
+}
+
+
+# Give latent psionic trait
+# Give up to 10 random, biological pops the latent psionic trait
+us_give_pop_latent_psionics = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+						has_trait = trait_psionic_level2
+						has_trait = trait_psionic_level3
+						has_trait = trait_psionic_level4
+						has_trait = trait_psionic_level5
+					}
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+						has_trait = trait_psionic_level2
+						has_trait = trait_psionic_level3
+						has_trait = trait_psionic_level4
+						has_trait = trait_psionic_level5
+					}
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_latent_psionic
+				}
+				homeworld = this
+			}
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+					has_trait = trait_psionic_level2
+					has_trait = trait_psionic_level3
+					has_trait = trait_psionic_level4
+					has_trait = trait_psionic_level5
+				}
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+
+# Upgrade psionics trait
+# For 10 random pops, upgrade their psionic trait.
+# trait_latent_psionic -> trait_psionic
+us_pop_upgrade_psionics_0_1 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_latent_psionic
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_latent_psionic
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic
+				}
+				homeworld = this
+			}
+		}
+		modify_species = {
+			species = last_created_species
+			remove_trait = trait_latent_psionic
+			change_scoped_species = no
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+				}
+				has_trait = trait_latent_psionic
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Upgrade psionics trait
+# For a random species of pops, add the level 2 psionic trait.
+# trait_psionic -> trait_psionic_level2
+# Note: Do not actually remove trait_psionic, as it is used in many mods and events as a check for a species being psionic.
+us_pop_upgrade_psionics_1_2 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+						has_trait = trait_psionic_level2
+						has_trait = trait_psionic_level3
+						has_trait = trait_psionic_level4
+						has_trait = trait_psionic_level5
+						has_trait = trait_psionic_level6
+					}
+					has_trait = trait_psionic
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+						has_trait = trait_psionic_level2
+						has_trait = trait_psionic_level3
+						has_trait = trait_psionic_level4
+						has_trait = trait_psionic_level5
+						has_trait = trait_psionic_level6
+					}
+					has_trait = trait_psionic
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic_level2
+				}
+				homeworld = this
+			}
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+					has_trait = trait_psionic_level2
+					has_trait = trait_psionic_level3
+					has_trait = trait_psionic_level4
+					has_trait = trait_psionic_level5
+					has_trait = trait_psionic_level6
+				}
+				has_trait = trait_psionic
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Upgrade psionics trait
+# For a random species of pops, upgrade their psionic trait.
+# trait_psionic_level2 -> trait_psionic_level3
+us_pop_upgrade_psionics_2_3 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level2
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level2
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic_level3
+				}
+				homeworld = this
+			}
+		}
+		modify_species = {
+			species = last_created_species
+			remove_trait = trait_psionic_level2
+			change_scoped_species = no
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+				}
+				has_trait = trait_psionic_level2
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Upgrade psionics trait
+# For a random species of pops, upgrade their psionic trait.
+# trait_psionic_level3 -> trait_psionic_level4
+us_pop_upgrade_psionics_3_4 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level3
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level3
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic_level4
+				}
+				homeworld = this
+			}
+		}
+		modify_species = {
+			species = last_created_species
+			remove_trait = trait_psionic_level3
+			change_scoped_species = no
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+				}
+				has_trait = trait_psionic_level3
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Upgrade psionics trait
+# For a random species of pops, upgrade their psionic trait.
+# trait_psionic_level4 -> trait_psionic_level5
+us_pop_upgrade_psionics_4_5 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level4
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level4
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic_level5
+				}
+				homeworld = this
+			}
+		}
+		modify_species = {
+			species = last_created_species
+			remove_trait = trait_psionic_level4
+			change_scoped_species = no
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_materialist
+				}
+				has_trait = trait_psionic_level4
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Upgrade psionics trait
+# For a random species of pops, upgrade their psionic trait.
+# trait_psionic_level5 -> trait_psionic_level6
+us_pop_upgrade_psionics_5_6 = { 
+	hidden_effect = {
+		random_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level5
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+					has_trait = trait_psionic_level5
+				}
+				species = { save_event_target_as = target_species }
+			}
+		}
+		random_owned_pop = {
+			limit = { is_same_species = event_target:target_species }
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = this
+				traits = {
+					trait = trait_psionic_level6
+				}
+				homeworld = this
+			}
+		}
+		modify_species = {
+			species = last_created_species
+			remove_trait = trait_psionic_level5
+			change_scoped_species = no
+		}
+		last_created_species = {
+			save_event_target_as = empowered_species
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:target_species
+				NOR = {
+					has_trait = trait_cybernetic
+					has_trait = trait_mechanical
+				}
+				has_trait = trait_psionic_level5
+			}
+			change_species = event_target:empowered_species
+		}
+		every_owned_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+		every_pool_leader = {
+			limit = { is_same_species = event_target:target_species }
+			change_species = event_target:empowered_species
+		}
+	}
+}
+
+# Gives a random leader the Chosen leader trait.
+us_leader_give_psionic_chosen = { 
+	hidden_effect = {
+		random_owned_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_ruler_psionic
+					has_trait = leader_trait_governor_psionic
+					has_trait = leader_trait_scientist_psionic
+					has_trait = leader_trait_admiral_psionic
+					has_trait = leader_trait_general_psionic
+				}
+				NOR = {
+					has_trait = leader_trait_ruler_chosen
+					has_trait = leader_trait_governor_chosen
+					has_trait = leader_trait_scientist_chosen
+					has_trait = leader_trait_admiral_chosen
+					has_trait = leader_trait_general_chosen
+					has_trait = leader_trait_us_psionic_level3_ruler
+					has_trait = leader_trait_us_psionic_level3_governor
+					has_trait = leader_trait_us_psionic_level3_scientist
+					has_trait = leader_trait_us_psionic_level3_admiral
+					has_trait = leader_trait_us_psionic_level3_general
+					has_trait = leader_trait_us_psionic_level6_ruler
+					has_trait = leader_trait_us_psionic_level6_governor
+					has_trait = leader_trait_us_psionic_level6_scientist
+					has_trait = leader_trait_us_psionic_level6_admiral
+					has_trait = leader_trait_us_psionic_level6_general
+				}
+			}
+			save_event_target_as = chosen_leader
+		}
+	
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = ruler }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_ruler_chosen
+				add_ruler_trait = leader_trait_ruler_chosen
+				remove_trait = leader_trait_ruler_psionic
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = governor }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_governor_chosen
+				add_ruler_trait = leader_trait_ruler_chosen
+				remove_trait = leader_trait_governor_psionic
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = scientist }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_scientist_chosen
+				add_ruler_trait = leader_trait_ruler_chosen
+				remove_trait = leader_trait_scientist_psionic
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = admiral }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_admiral_chosen
+				add_ruler_trait = leader_trait_ruler_chosen
+				remove_trait = leader_trait_admiral_psionic
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = general }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_general_chosen
+				add_ruler_trait = leader_trait_ruler_chosen
+				remove_trait = leader_trait_general_psionic
+			}
+		}
+	}
+}
+
+# Gives a random leader the Psionic Level 3 leader trait.
+us_leader_give_psionic_level3 = { 
+	hidden_effect = {
+		random_owned_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_ruler_chosen
+					has_trait = leader_trait_governor_chosen
+					has_trait = leader_trait_scientist_chosen
+					has_trait = leader_trait_admiral_chosen
+					has_trait = leader_trait_general_chosen
+				}
+			}
+			save_event_target_as = chosen_leader
+		}
+	
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = ruler }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level3_ruler
+				add_ruler_trait = leader_trait_us_psionic_level3_ruler
+				remove_trait = leader_trait_ruler_chosen
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = governor }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level3_governor
+				add_ruler_trait = leader_trait_us_psionic_level3_ruler
+				remove_trait = leader_trait_governor_chosen
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = scientist }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level3_scientist
+				add_ruler_trait = leader_trait_us_psionic_level3_ruler
+				remove_trait = leader_trait_scientist_chosen
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = admiral }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level3_admiral
+				add_ruler_trait = leader_trait_us_psionic_level3_ruler
+				remove_trait = leader_trait_admiral_chosen
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = general }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level3_general
+				add_ruler_trait = leader_trait_us_psionic_level3_ruler
+				remove_trait = leader_trait_general_chosen
+			}
+		}
+	}
+}
+
+# Gives a random leader the Psionic Level 6 leader trait.
+us_leader_give_psionic_level6 = { 
+	hidden_effect = {
+		random_owned_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_us_psionic_level3_ruler
+					has_trait = leader_trait_us_psionic_level3_governor
+					has_trait = leader_trait_us_psionic_level3_scientist
+					has_trait = leader_trait_us_psionic_level3_admiral
+					has_trait = leader_trait_us_psionic_level3_general
+				}
+			}
+			save_event_target_as = chosen_leader
+		}
+	
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = ruler }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level6_ruler
+				add_ruler_trait = leader_trait_us_psionic_level6_ruler
+				remove_trait = leader_trait_us_psionic_level3_ruler
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = governor }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level6_governor
+				add_ruler_trait = leader_trait_us_psionic_level6_ruler
+				remove_trait = leader_trait_us_psionic_level3_governor
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = scientist }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level6_scientist
+				add_ruler_trait = leader_trait_us_psionic_level6_ruler
+				remove_trait = leader_trait_us_psionic_level3_scientist
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = admiral }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level6_admiral
+				add_ruler_trait = leader_trait_us_psionic_level6_ruler
+				remove_trait = leader_trait_us_psionic_level3_admiral
+			}
+		}
+		if = {
+			limit = {
+				event_target:chosen_leader = { leader_class = general }
+			}
+			event_target:chosen_leader = {
+				add_trait = leader_trait_us_psionic_level6_general
+				add_ruler_trait = leader_trait_us_psionic_level6_ruler
+				remove_trait = leader_trait_us_psionic_level3_general
+			}
+		}
+	}
+}
+
+
+us_shroud_incursion_country_create = { 
+	if = {
+		limit = { NOT = { exists = event_target:shroud_country } }
+		create_species = {
+			name = "Creatures of the Shroud"
+			class = SHROUD
+			portrait = random
+			traits = {
+				trait = trait_shroud_creatures
+				trait = trait_psionic
+				trait = trait_psionic_level4
+				trait = random_traits
+			}
+			allow_negative_traits = no
+			extra_trait_points = 4
+		}
+		last_created_species = {
+			save_event_target_as = species_shroud_creatures
+		}
+		create_country = {
+			name = "Creatures of the Shroud"
+			type = shroud_spirits
+			species = last_created
+			flag = {
+				icon = {
+					category = "special"
+					file = "the_shroud.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"dark_purple"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			establish_communications_no_message = root
+			save_global_event_target_as = shroud_country
+		}
+	}
+}
+
+# Shroud consumes a planet
+# You're gonna have a bad time.
+us_shroud_omnomnom_planet = {
+	hidden_effect = {
+		set_owner = event_target:shroud_country
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+		if = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_habitable
+				}
+			}
+			change_pc = us_pc_shrouded_livable
+		}
+
+		remove_all_armies = yes
+		create_army = {
+			name = "Unspeakable Horrors"
+			owner = event_target:shroud_country
+			species = event_target:species_shroud_creatures
+			type = "us_shroud_nightmare_army"
+		}
+		create_army = {
+			name = "Unspeakable Horrors"
+			owner = event_target:shroud_country
+			species = event_target:species_shroud_creatures
+			type = "us_shroud_nightmare_army"
+		}
+		create_army = {
+			name = "Unspeakable Horrors"
+			owner = event_target:shroud_country
+			species = event_target:species_shroud_creatures
+			type = "us_shroud_nightmare_army"
+		}
+		create_army = {
+			name = "Unspeakable Horrors"
+			owner = event_target:shroud_country
+			species = event_target:species_shroud_creatures
+			type = "us_shroud_nightmare_army"
+		}
+		create_army = {
+			name = "Unspeakable Horrors"
+			owner = event_target:shroud_country
+			species = event_target:species_shroud_creatures
+			type = "us_shroud_nightmare_army"
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_modifier = "us_shroudedplanet" }
+			}
+			add_modifier = {
+				modifier = "us_shroudedplanet"
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = {
+				free_pop_tiles < 1
+			}
+			random_pop = {
+				kill_pop = yes
+			}
+		}
+		every_tile = {
+			limit = { 
+				has_grown_pop = no
+				has_growing_pop = no
+			}
+			create_pop = {
+				species = event_target:species_shroud_creatures
+			}
+		}
+		
+		us_shroud_create_invasion_fleet = yes
+		us_shroud_buff_per_pop_eaten = yes
+	}
+}
+
+# Shroud invades real space with magic-puff fleet
+us_shroud_create_the_wreck_owning = {
+	hidden_effect = {
+		create_fleet = {
+			name = "NAME_The_End"
+			settings = {
+				spawn_debris = no
+				ai_ignore_strength = yes
+				is_boss = yes
+			}
+			effect = {
+				save_global_event_target_as = the_end_of_the_cycle
+				set_name = "Cycle's End"
+				set_owner = event_target:shroud_country
+				create_ship = {
+					name = "NAME_Reckoning"
+					design = "NAME_Warped_Consciousness"
+				}
+				set_location = event_target:former_capital
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 3000
+			}
+		}
+		us_shroud_buff_per_pop_eaten = yes
+	}
+}
+
+# Shroud invades real space with magic-puff fleet
+us_shroud_create_invasion_fleet = {
+	hidden_effect = {
+		create_fleet = {
+			name = "NAME_Shroud_Manifestation"
+			settings = {
+				spawn_debris = no
+			}				
+			effect = {					
+				set_owner = event_target:shroud_country
+				while = {
+					count = 5
+					create_ship = {
+						name = "NAME_Corrupted_Avatar"
+						design = "NAME_Corrupted_Avatar"
+					}
+				}
+				while = {
+					count = 32
+					create_ship = {
+						name = "NAME_Fragment"
+						design = "NAME_Shroud_Manifestation"
+					}
+				}
+				set_location = prev
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 3000
+			}
+		}
+	}
+}
+
+# Shroud THE END buff the big bad blob planet eater psychic thing
+us_shroud_buff_per_pop_eaten = {
+	hidden_effect = {
+		event_target:the_end_of_the_cycle = {
+			if = {
+				limit = { has_modifier = "absorbed_consciousness_1"	}
+				remove_modifier = "absorbed_consciousness_1"
+			}
+			if = {
+				limit = { has_modifier = "absorbed_consciousness_2"	}
+				remove_modifier = "absorbed_consciousness_2"
+			}
+			if = {
+				limit = { has_modifier = "absorbed_consciousness_3"	}
+				remove_modifier = "absorbed_consciousness_3"
+			}
+			if = {
+				limit = { has_modifier = "absorbed_consciousness_4"	}
+				remove_modifier = "absorbed_consciousness_4"
+			}
+			if = {
+				limit = { has_modifier = "absorbed_consciousness_5"	}
+				remove_modifier = "absorbed_consciousness_5"
+			}
+			if = {
+				limit = {
+					event_target:shroud_country = {
+						num_pops < 200			
+					}
+				}
+				add_modifier = {
+					modifier = "us_absorbed_consciousness_1"
+					days = -1
+				}	
+				else = {
+					if = {
+						limit = {
+							event_target:shroud_country = {
+								num_pops < 400			
+							}
+						}
+						add_modifier = {
+							modifier = "us_absorbed_consciousness_2"
+							days = -1
+						}	
+						else = {
+							if = {
+								limit = {
+									event_target:shroud_country = {
+										num_pops < 600			
+									}
+								}
+								add_modifier = {
+									modifier = "us_absorbed_consciousness_3"
+									days = -1
+								}	
+								else = {
+									if = {
+										limit = {
+											event_target:shroud_country = {
+												num_pops < 800			
+											}
+										}
+										add_modifier = {
+											modifier = "us_absorbed_consciousness_4"
+											days = -1
+										}
+										else = {
+											add_modifier = {
+												modifier = "us_absorbed_consciousness_5"
+												days = -1
+											}											
+										}											
+									}	
+								}									
+							}					
+						}								
+					}						
+				}
+			}
+		}
+	}
+}
+
+
+# -------------------------------------------------------------------------
+# Wrath Boons
+# -------------------------------------------------------------------------
+
+# Note: Code mostly based off of ISBS doomsday mod events and from Refugees events of Vanilla.
+us_wrath_boon_kidnap = { 
+	hidden_effect = {
+		# Ubducts a pop. Kills them if the spellcaster does not have an open position on one of their planets.
+		# Country doing the kidnapping => event_target:us_spell_caster
+		# Planet that pop is being stolen from => event_target:us_spell_target_planet
+
+		# Pick a random pop on the planet and then snatch them.
+		event_target:us_spell_target_planet = {
+			random_pop = {
+				limit = {
+					is_sentient = yes
+					is_robot_pop = no
+				}
+				save_event_target_as = abduct_pop
+			}
+		}
+		
+		# Now move that pop to one of the caster's planets, or they vanish into the shroud
+		event_target:us_spell_caster = {
+			random_owned_planet = {
+				limit = {
+					habitability = { who = event_target:abduct_pop value > 0.4 }
+					any_tile = {
+						has_blocker = no
+						has_pop = no
+					}					
+				}
+				resettle_pop = {
+					pop = event_target:abduct_pop
+					planet = this
+				}
+				event_target:abduct_pop = {
+					add_modifier = {
+						modifier = us_recently_kidnapped days = 3600
+					}
+				}
+				
+				set_country_flag = us_spell_completed
+			}
+
+			if = {
+				limit = {
+					NOT = { has_country_flag = us_spell_completed }
+				}
+				# Any planet will do
+				random_owned_planet = {
+					limit = {
+						free_pop_tiles > 0
+						is_under_colonization = no
+					}
+
+					resettle_pop = {
+						pop = event_target:abduct_pop
+						planet = this
+					}
+					event_target:abduct_pop = {
+						add_modifier = {
+							modifier = us_recently_kidnapped days = 3600
+						}
+					}
+
+					set_country_flag = us_spell_completed
+				}
+			}
+
+			# No free space. Whoopsie! You get omnomnommed by the Shroud.
+			if = {
+				limit = {
+					NOT = { has_country_flag = us_spell_completed }
+				}
+				
+				event_target:abduct_pop = {
+					kill_pop = yes
+				}
+				set_country_flag = us_spell_completed
+			}
+
+			if = {
+				limit = { has_country_flag = us_spell_completed }
+				remove_country_flag = us_spell_completed
+			}
+		}
+	}
+}
+
+us_wrath_boon_invade = { 
+	hidden_effect = {
+		us_shroud_incursion_country_create = yes
+		
+		event_target:us_spell_target_planet = {
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+		}
+	}
+}
+
+us_wrath_boon_incursion = { 
+	hidden_effect = {
+		us_shroud_incursion_country_create = yes
+		
+		event_target:us_spell_target_planet = {
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+			create_army = {
+				name = "Manifastation"
+				owner = event_target:shroud_country
+				species = event_target:species_shroud_creatures
+				type = "shroud_army"
+			}
+		}
+	}
+}
+
+# -------------------------------------------------------------------------
+# Patron Boons
+# -------------------------------------------------------------------------
+us_whispers_boon_offensive = { 
+	hidden_effect = {
+		random_planet = {
+			limit = {
+				owner = {
+					OR = {
+						is_rival = event_target:us_spell_caster
+						is_at_war_with = event_target:us_spell_caster
+					}
+				}
+				NOT = { has_modifier = "us_patron_whispers_offensive_1" }
+			}
+			add_modifier = {
+				modifier = "us_patron_whispers_offensive_1"
+				days = 1800
+			}
+		}
+	}
+}
+
+us_kyuubi_boon_offensive = { 
+	hidden_effect = {
+		random_planet = {
+			limit = {
+				owner = {
+					OR = {
+						is_rival = event_target:us_spell_caster
+						is_at_war_with = event_target:us_spell_caster
+					}
+				}
+				NOT = { has_modifier = "us_patron_kyuubi_offensive_1" }
+			}
+			add_modifier = {
+				modifier = "us_patron_kyuubi_offensive_1"
+				days = 3600
+			}
+		}
+	}
+}
+
+# -------------------------------------------------------------------------
+# Shroud Shenanigans Experience
+# -------------------------------------------------------------------------
+us_shroud_cooldown_experience_based = { 
+	if = {
+		limit = { has_modifier = shroud_cooldown }
+		remove_modifier = "shroud_cooldown"
+	}
+	if = {
+		limit = {
+			shroud_level_0 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 1800
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_1 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 1600
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_2 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 1400
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_3 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 1200
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_4 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 900
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_5 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 450
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_6 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 240
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_7 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 120
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_8 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 60
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_9 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 30
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_10 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 15
+		}
+	}
+	if = {
+		limit = {
+			shroud_level_11 = yes
+		}
+		add_modifier = {
+			modifier = "shroud_cooldown"
+			days = 5
+		}
+	}
+	# Basically never has cooldown
+	if = {
+		limit = {
+			shroud_level_12 = yes
+		}
+		remove_modifier = "shroud_cooldown"
+	}
+}
+
+us_shroud_reroll_experience_based = {
+	if = {
+		limit = {
+			shroud_level_0 = yes
+		}
+		us_randomize_shroud_flags_normal = yes
+		us_reroll_low = yes
+	}
+	if = {
+		limit = {
+			shroud_level_1 = yes
+		}
+		us_randomize_shroud_flags_normal = yes
+		us_reroll_high = yes
+	}
+	if = {
+		limit = {
+			shroud_level_2 = yes
+		}
+		us_randomize_shroud_flags_great = yes
+		country_event = { id = utopia.3200 }
+	}
+	if = {
+		limit = {
+			check_variable = { which = us_shroud_experience value > 199 }
+		}
+		us_randomize_shroud_flags_awesome = yes
+		country_event = { id = utopia.3200 }
+	}
+}
+
+us_shroud_reroll_plus1_experience_based = {
+	if = {
+		limit = {
+			shroud_level_0 = yes
+		}
+		us_randomize_shroud_flags_normal = yes
+		us_reroll_high = yes
+	}
+	if = {
+		limit = {
+			shroud_level_1 = yes
+		}
+		us_randomize_shroud_flags_great = yes
+		country_event = { id = utopia.3200 }
+	}
+	if = {
+		limit = {
+			check_variable = { which = us_shroud_experience value > 99 }
+		}
+		us_randomize_shroud_flags_awesome = yes
+		country_event = { id = utopia.3200 }
+	}
+}
+
+us_shroud_reroll_plus2_experience_based = {
+	if = {
+		limit = {
+			shroud_level_0 = yes
+		}
+		us_randomize_shroud_flags_great = yes
+		country_event = { id = utopia.3200 }
+	}
+	if = {
+		limit = {
+			check_variable = { which = us_shroud_experience value > 49 }
+		}
+		us_randomize_shroud_flags_awesome = yes
+		country_event = { id = utopia.3200 }
+	}
+}

@@ -1,0 +1,26 @@
+﻿l_english: 
+ 
+ ####################################
+ # Civics
+ ####################################
+ civic_tooltip_symbiosis_mind_effects:4 "§YXeno Pops§! become symbiotic slaves.\nGains symbiosis points each month for Xeno £pop  Pops.\n."
+ civic_symbiosis_mind_secondary_species:0 "Symbiotic Species"
+ 
+ ####################################
+ # Citizenships
+ ####################################
+ citizenship_symbiotic_citizen:0 "Symbiotic Citizen"
+ citizenship_symbiotic_citizen_tooltip:0 "Pops of this species are treated as citizens by the §H$auth_hive_mind$§!, allowed near total autonomy on a local level."
+ citizenship_symbiotic_citizen_tooltip_delayed:0 "§LSymbiosis should be beneficial to both parties.§!"
+ 
+ citizenship_symbiotic_slave:0 "Symbiotic Slave"
+ citizenship_symbiotic_slave_tooltip:0 "Pops of this species are treated as slaves by the §H$auth_hive_mind$§!, existing only for the benefit of the §H$auth_hive_mind$§!."
+ citizenship_symbiotic_slave_tooltip_delayed:0 "§LAll serve the hive.§!"
+ 
+ slavery_symbiosis_normal:0 "Chattel Slavery"
+ slavery_symbiosis_normal_tooltip:0 "§HChattel Slaves§! have their rights curtailed to maximize productivity, and commonly work with £food §HFood§! and £minerals §HMineral§! production."
+ slavery_symbiosis_normal_tooltip_delayed:0 "§LChattel Slavery is the most common form of slavery in the galaxy. Whether for life or a limited time, unrestricted access to the labor of others is in some parts seen as a privilege with numerous counter-duties attached, and elsewhere considered a self-evident prerequisite for a functioning society.§!"
+ 
+ slavery_symbiosis_hedonistic:0 "Hedonism Slaves"
+ slavery_symbiosis_hedonistic_tooltip:0 "§HHedonism Slaves§! exist purely for the pleasure of the §H$auth_hive_mind$§!, greatly increasing population growth of the hive drones, and £unity §HUnity§! production."
+ slavery_symbiosis_hedonistic_tooltip_delayed:0 "§LChattel Slavery is the most common form of slavery in the galaxy. Whether for life or a limited time, unrestricted access to the labor of others is in some parts seen as a privilege with numerous counter-duties attached, and elsewhere considered a self-evident prerequisite for a functioning society.§!"

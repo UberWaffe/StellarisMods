@@ -1,0 +1,99 @@
+#################################
+#
+# Fix missing research event
+#
+#################################
+
+namespace = utevents
+
+# ping
+planet_event = {
+	id = utevents.1
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_species = {
+			name = "Human"
+			class = HUM
+			portrait = human
+			adjective = "Human"
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_adaptive
+				trait = trait_thrifty
+				trait = trait_deviants
+				trait = trait_weak
+			}
+		}
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_grown_pop = no
+				has_growing_pop = no
+			}
+			create_pop = {
+				species = last_created
+			}
+		}
+	}
+}
+
+#Change Planet Class, part 2
+planet_event = {
+	id = utevents.5
+	title = OK
+	desc = OK
+	picture = GFX_evt_geoengineering
+	show_sound = event_construction
+	location = ROOT
+
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+
+	option = {
+		name = utevents.5.a
+		change_pc = pc_plcom
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+			}
+			set_building = "ta_building_precursor_research3"
+		}
+		planet_event = { id = plcom_eve.1 }
+	}
+	option = {
+		name = utevents.5.b
+		change_pc = pc_gaia
+	}
+	option = {
+		name = utevents.5.c
+		change_pc = pc_nuked
+	}
+	option = {
+		name = utevents.5.d
+		change_pc = pc_savannah
+	}
+	option = {
+		name = utevents.5.e
+		change_pc = pc_tropical
+	}
+	option = {
+		name = utevents.5.f
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+			}
+			set_building = "ta_building_precursor_unity3"
+		}
+	}
+}

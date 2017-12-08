@@ -1,0 +1,27 @@
+﻿l_english:
+
+ primitive.131.name:0 "[From.GetName] Descends Into Nuclear War"
+ primitive.131.desc:0 "A massive war was recently triggered between several of the largest nation states on [From.GetName]. While our researchers were observing safely from orbit, the conflict rapidly escalated into a global nuclear exchange.\n\nThe population has all been wiped out, and the entire [From.GetPlanetMoon] has been transformed into an uninhabitable wasteland."
+ primitive.131.a:0 "Perhaps they may yet recover..."
+ primitive.132.desc:0 "A massive war was recently triggered between several of the largest nation states on [From.GetName]. While our researchers were observing safely from orbit, the conflict rapidly escalated into a global nuclear exchange.\n\nThe [From.GetPlanetMoon] has suffered extensive damage, with the destruction of every major city and more than 90% of the population. Scattered survivors have emerged from the rubble, but our researchers predict that the [From.GetPlanetMoon]'s civilization will be regressing to a much more primitive state."
+ primitive.132.a:0 "A tragic lesson."
+ primitive.133.desc:0 "A massive war was recently triggered between several of the largest nation states on [From.GetName]. While our researchers were observing safely from orbit, the conflict rapidly escalated into a global nuclear exchange.\n\nThe [From.GetPlanetMoon]'s entire population appears to have perished in the nuclear fire, and the environment has taken significant damage."
+
+ utopia.4000.desc:0 "Harnessing the power of the stars has been a dream of [Root.GetAdj] engineers throughout history - from crude combustion to the pale imitation of solar fusion - and we now stand ready to realize this dream. In the [From.From.GetName] system sits the scaffold upon which we will build a Dyson Sphere, encompassing [From.From.GetName] and monopolizing the cataclysmic power and mass of the star."
+ 
+ 
+ dyson_sphere_0_MEGASTRUCTURE_DETAILS:1 "A §Y$dyson_sphere_5$§! fully envelops a given star, converting all solar output and directly to £energy  Energy Credits. It also captures the reaction mass ejected from the star, and uses some of the captured solar energy to transmute this mass into useful  £minerals  Minerals."
+ dyson_sphere_0_CONSTRUCTION_INFO_DELAYED:1 "A $dyson_sphere_5$ will blot out the sun, turning all planets in the system into Barren or Frozen Worlds.§!"
+ dyson_sphere_0:0 "Dyson Sphere Site"
+ dyson_sphere_0_DESC:0 "The construction site station serves as the base for the future construction of a Dyson Sphere."
+ dyson_sphere_1:0 "Dyson Sphere Frame"
+ dyson_sphere_1_DESC:0 "The frame is the foundation for the future Dyson Sphere, already produces small amounts of £energy and £minerals!."
+ dyson_sphere_2:0 "Partial Dyson Sphere"
+ dyson_sphere_2_DESC:0 "A partially operational Dyson Sphere."
+ dyson_sphere_3:0 "Partial Dyson Sphere"
+ dyson_sphere_3_DESC:0 "A partially operational Dyson Sphere."
+ dyson_sphere_4:0 "Partial Dyson Sphere"
+ dyson_sphere_4_DESC:0 "A partially operational Dyson Sphere."
+ dyson_sphere_5:0 "Dyson Sphere"
+ dyson_sphere_5_DESC:0 "A fully operational Dyson Sphere - Produces the maximum poutput £energy  and £minerals."
+ 

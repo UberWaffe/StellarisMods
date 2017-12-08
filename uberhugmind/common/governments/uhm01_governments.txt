@@ -1,0 +1,16 @@
+## Hug Minds
+
+# Hive Mind - Symbiosis
+gov_symbiosis_hive = {
+	ruler_title = RT_HIVE_MIND
+	ruler_title_female = RT_HIVE_MIND_FEMALE
+
+	possible = {
+		has_authority = auth_hive_mind
+		has_valid_civic = civic_symbiosis_mind
+	}
+
+	weight = {
+		base = 100000
+	}
+}

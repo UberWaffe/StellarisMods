@@ -1,0 +1,32 @@
+
+namespace = us_terraform_events
+
+planet_event = {
+	id = us_terraform_events.1
+	hide_window = yes
+	
+	trigger = {
+		is_planet_class = us_pc_shrouded_livable
+		NOT = {
+			has_modifier = "us_shroudedplanet"
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = "us_shroudedplanet"
+				}
+			}
+			add_modifier = {
+				modifier = "us_shroudedplanet"
+				days = -1
+			}
+		}
+	}
+}

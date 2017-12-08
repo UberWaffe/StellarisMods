@@ -1,0 +1,17 @@
+﻿l_english:
+ ####################################
+ # Traits
+ ####################################
+ trait_ns_human_good:0 "Genetic Masters"
+ trait_ns_human_good_desc:1 "§LIn order to survive in an inhospitable world, these humans had to become masters of genetic engineering.§!\n"
+ trait_ns_human_bad:0 "Extreme Infertility"
+ trait_ns_human_bad_desc:1 "§LGiven the extreme genetic warfare humanity exposed itself to, they have become highly infertile. Struggling to grow beyond the smallest of sustainable populations.§!\n"
+ trait_ns_k9_good:0 "Genemod K9"
+ trait_ns_k9_good_desc:1 "§LExtremely strong, loyal, long-lived and adaptable. These genetically engineered super-canines are mans best friend and co-survivors of Sol III's nuclear apocolypse.§!\n"
+ trait_ns_k9_bad:0 "Instinct Driven"
+ trait_ns_k9_bad_desc:1 "§LWhile intelligent and clever, and capable of using any technology they can get their hands on. They are all but incapable of developing new technology on their own.§!\n"
+ trait_ns_roach_good:0 "Megaroach"
+ trait_ns_roach_good_desc:1 "§LSurprisingly skilled at energy generation and handling, these roaches are also very charismatic.§!\n"
+ trait_ns_roach_bad:0 "Megaroach"
+ trait_ns_roach_bad_desc:1 "§LSurprisingly skilled at energy generation and handling, these roaches are also very skilled at making others happy.§!\n"
+

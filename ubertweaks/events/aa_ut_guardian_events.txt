@@ -1,0 +1,403 @@
+#################################
+### Guardian & Enclave Events ###
+### by Maximilian Olbers	  ###
+### & Niclas Karlsson		  ###
+### & Rufus Tronde			  ###
+### & Henrik Eklund			  ###
+#################################
+
+namespace = guardian
+
+# Minerals
+country_event = {
+	id = guardian.110
+	title = guardian.110.name
+	desc = guardian.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = enclave_trader_room
+	}
+
+	option = {
+		name = guardian.110.a
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			energy > 200 
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}			
+		}
+		is_dialog_only = yes
+		response_text = guardian.110.a.reply
+
+		add_minerals = 100
+		add_energy = -200
+		custom_tooltip = opinion1
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.b
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			energy > 1000 
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.110.b.reply
+
+		add_minerals = 500
+		add_energy = -1000
+		custom_tooltip = opinion7
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.c
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			energy > 2000
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.110.c.reply
+
+		add_minerals = 1000
+		add_energy = -2000
+		custom_tooltip = opinion15
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.f
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			energy > 19000
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.110.c.reply
+
+		add_minerals = 10000
+		add_energy = -19000
+		custom_tooltip = opinion15
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.d
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_1 } }
+				country_event = { id = guardian.105 }
+			}
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_2 } }
+				country_event = { id = guardian.106 }
+			}
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_3 } }
+				country_event = { id = guardian.107 }
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.e
+		custom_gui = "enclave_trader_option"
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = trader_enclave_diplomacy_engaged
+		}
+	}
+}
+
+# Energy
+country_event = {
+	id = guardian.120
+	title = guardian.120.name
+	desc = guardian.120.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = enclave_trader_room
+	}
+
+	option = {
+		name = guardian.120.a
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			minerals > 200
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.120.a.reply
+
+		add_energy = 100
+		add_minerals = -200
+		custom_tooltip = opinion1
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.120.b
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			minerals > 1000 
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.120.b.reply
+
+		add_energy = 500
+		add_minerals = -1000
+		custom_tooltip = opinion7
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.120.c
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			minerals > 2000 
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.120.c.reply
+
+		add_energy = 1000
+		add_minerals = -2000
+		custom_tooltip = opinion15
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.120.f
+		custom_gui = "enclave_trader_option"
+		allow = { 
+			minerals > 19000
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = attacked_xuracorp
+						event_target:traders = { has_country_flag = trader_enclave_country_1 }
+					}
+					AND = {
+						has_country_flag = attacked_riggans
+						event_target:traders = { has_country_flag = trader_enclave_country_2 }
+					}
+					AND = {
+						has_country_flag = attacked_muutagans
+						event_target:traders = { has_country_flag = trader_enclave_country_3 }
+					}
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = guardian.120.f.reply
+
+		add_energy = 10000
+		add_minerals = -19000
+		custom_tooltip = opinion15
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.d
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_1 } }
+				country_event = { id = guardian.105 }
+			}
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_2 } }
+				country_event = { id = guardian.106 }
+			}
+			if = {
+				limit = { event_target:traders = { has_country_flag = trader_enclave_country_3 } }
+				country_event = { id = guardian.107 }
+			}
+		}
+	}
+
+	option = {
+		name = guardian.110.e
+		custom_gui = "enclave_trader_option"
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = trader_enclave_diplomacy_engaged
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@primary = 0.80
+@secondary = 0.60
+@tertiary = 0.20
+
+trait_us_pc_shrouded_livable = {
+	icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+	modification = no
+	modifier = {
+		trait_us_pc_shrouded_livable = 0.2
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

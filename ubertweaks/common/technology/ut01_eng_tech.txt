@@ -1,0 +1,386 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+## ---- Modded Tier Costs ----
+
+@tier4cost1 = 8200
+@tier4cost2 = 8760
+@tier4cost3 = 10450
+@tier4cost4 = 12140
+
+@tier5cost1 = 12400
+@tier5cost2 = 15520
+@tier5cost3 = 18900
+@tier5cost4 = 22280
+
+@tier6cost1 = 22800
+@tier6cost2 = 29040
+@tier6cost3 = 35800
+@tier6cost4 = 42560
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+## ---- Modded Tier Weights ----
+
+@tier4weight1 = 40
+@tier4weight2 = 35
+@tier4weight3 = 30
+@tier4weight4 = 25
+
+@tier5weight1 = 35
+@tier5weight2 = 30
+@tier5weight3 = 25
+@tier5weight4 = 20
+
+@tier6weight1 = 30
+@tier6weight2 = 25
+@tier6weight3 = 20
+@tier6weight4 = 15
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+@repeatableTechBaseCost = 5000
+@repeatableTechLevelCost = 1000
+@repeatableTechTier = 4
+
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+## ---- Modded Repeatable Costs ----
+
+@tier6repeatableLevelCost = 10000
+
+################################################################################
+
+
+########################
+# Modded Technologies  #
+########################
+
+tech_tb_ut_habitatexpansion = {
+	icon = "tech_mega_engineering"
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_mega_engineering" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ascension_perk = ap_master_builders
+				has_ascension_perk = ap_voidborn
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					any_tile = {
+						has_blocker = "tb_ut_habitatexpansion"
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+#Practical QEC Networks
+tech_ut_qetcomms_2 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_ut_qetcomms_1" }
+	is_rare = yes
+	weight = @tier4weight2
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = industry
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 0.25 #AI probably won't use this correctly, so make it unlikely to get this while it economy might be fragile.
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = industry
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	# unlocks GalNet
+}
+
+tech_ringworld_construction_one = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" }
+	weight = @tier4weight1
+	
+	# First of four techs to be able to construct ringworlds
+
+	weight_modifier = {
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+
+tech_ringworld_construction_two = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_ringworld_construction_one" }
+	weight = @tier4weight2
+	
+	# Second of four techs to be able to construct ringworlds
+
+	weight_modifier = {
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+tech_ringworld_construction_three = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_ringworld_construction_two" }
+	weight = @tier4weight3
+	
+	# Third of four techs to be able to construct ringworlds
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_RINGWORLD_REPAIR"
+			desc = "TECH_UNLOCK_RINGWORLD_REPAIR_DESC"
+		}
+	}
+
+	weight_modifier = {
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+tech_ringworld_construction_four = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 4
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_ringworld_construction_four" }
+	weight = 0
+	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_RING_MIL_CON"
+			desc = "TECH_UNLOCK_RING_MIL_CON_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+#Better Engineering research
+tech_private_engineering_contractors = {
+	area = engineering
+	tier = 3
+	cost = @tier3cost2
+	category = { industry }	
+	prerequisites = { "tech_engineering_lab_3" }
+	weight = @tier1weight4
+	
+	modifier = {
+		tile_resource_engineering_research_mult = 0.20
+	}
+	
+	weight_modifier = {
+	}
+}
+
+#Dimensional Storage Solutions
+tech_dimensional_storage_1 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_mineral_processing_2" "tech_shields_5" }
+	weight = @tier4weight1
+	icon = "tech_dimensional_storage_1"
+		
+	# unlock Dimensional Storage Silo 1
+	modifier = {
+		max_food = 1000
+		max_minerals = 5000
+		max_energy = 5000
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_dimensional_storage_2 = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_dimensional_storage_1" }
+	weight = @tier4weight2
+	icon = "tech_dimensional_storage_1"
+		
+	# unlock Dimensional Storage Silo 2
+	modifier = {
+		max_food = 2500
+		max_minerals = 20000
+		max_energy = 20000
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_dimensional_storage_3 = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = { industry }	
+	prerequisites = { "tech_dimensional_storage_2" }
+	weight = @tier4weight3
+	icon = "tech_dimensional_storage_1"
+		
+	# unlock Dimensional Storage Silo 3
+	modifier = {
+		max_food = 5000
+		max_minerals = 50000
+		max_energy = 50000
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}

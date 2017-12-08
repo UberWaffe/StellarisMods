@@ -1,0 +1,58 @@
+
+namespace = plcom_eve
+
+planet_event = {
+	id = plcom_eve.1
+	hide_window = yes
+	
+	trigger = {
+		is_planet_class = pc_plcom
+		NOT = {
+			has_modifier = "plcom_planet"
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = "plcom_planet"
+				}
+			}
+			add_modifier = {
+				modifier = "plcom_planet"
+				days = -1
+			}
+		}
+		remove_modifier = "dangerous_wildlife"
+		remove_modifier = "titanic_life"
+		remove_modifier = "eat_the_titans"
+		remove_modifier = "natural_beauty"
+		remove_modifier = "lush_planet"
+		remove_modifier = "bleak_planet"
+		remove_modifier = "migrating_forests"
+		remove_modifier = "migrating_forests_2"
+		remove_modifier = "stone_age_civilization"
+		remove_modifier = "dead_creatures"
+		remove_modifier = "abandoned_cities"
+		remove_modifier = "alien_writing"
+		remove_modifier = "colony_ruins"
+		remove_modifier = "friendly_trees"
+		remove_modifier = "gaia_world"
+		remove_modifier = "wasteland_infrastructure"
+		remove_modifier = "forest_fire"
+		
+		every_tile = {
+			clear_deposits = yes
+		}
+		while = {
+			count = 10
+			random_tile = {
+				limit = {
+					has_deposit = no
+				}
+				add_deposit = d_ut_plcom_science_all
+			}
+		}
+	}
+}

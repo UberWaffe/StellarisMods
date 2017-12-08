@@ -1,0 +1,26 @@
+This mod aims to add more content to the Shroud events and system.
+No attempt is made to balance this, it is not the aim here.
+
+This mod also abuses Unity as a resource for more than unlocking traditions.
+It is basically also used as a currency in the Shroud.
+
+I.e. Spiritualists may end up burning it all in the Shroud rather then getting more traditions, since it may be more lucrative.
+
+[h1][b]Shroud Features[/b][/h1]
+[list]
+	[*]Either energy or unity can be used to enter the Shroud.
+	[*]You can choose to breach the Shroud while the cooldown is active, but doing so is expensive. Costing both Unity and Energy, more than usual, and no discounts apply.
+	[*]You gain experience as you use the Shroud. Initially you can only explore the Shroud as normal.
+	[*]At higher levels of Shroud experience there are more options for what to do in the Shroud.
+	[*]Some options are less random, but require additional payments.
+	[*]Options for harming your enemies rather than buffing yourself exists.
+	[*]Having a patron has some additional benefits.
+	[*]Hidden patrons available.
+	[*]Overhauled The Reckoning.
+	[*]AI empires that have transcended are now capable of obtaining Shroud Patrons. Ethics and civics influence which Patrons are picked.
+	[*]AI empires can even seal a deal with The End. If crisis is allowed.
+[/list]
+
+Localizations: English.
+
+[b]No vanilla files are overwritten. But some of the vanilla entries are. Basically all shroud related events. See Notes.txt for a detailed list.[/b]

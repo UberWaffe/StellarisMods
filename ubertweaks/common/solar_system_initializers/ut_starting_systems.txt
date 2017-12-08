@@ -1,0 +1,1579 @@
+@distance = 50
+@base_moon_distance = 10
+
+### Ringworld
+ringworld_st_system = {
+	asteroids_distance = 150
+	usage = custom_empire	
+
+	class = "sc_g"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-A"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		starting_planet = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_deposit = d_energy_deposit	
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_deposit = d_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_deposit = d_mineral_deposit
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_hydroponics_farm_1"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_deposit = d_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_engineering_deposit			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_physics_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_deposit = d_farmland_deposit
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-B"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_tech"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-C"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_seam"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-D"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-E"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_tech"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-F"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_seam"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-G"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes	
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-H"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes		
+			change_pc = "pc_ringworld_tech"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-I"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_seam"
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-J"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes		
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-K"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes		
+			change_pc = "pc_ringworld_tech"				
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-L"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_seam"
+		}
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 3 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 3 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+### Ringworld Damaged
+ringworld_dmg_st_system = {
+	asteroids_distance = 150
+	usage = custom_empire	
+
+	class = "sc_g"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-A"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		starting_planet = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_deposit = d_energy_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_deposit = d_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_deposit = d_mineral_deposit
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_hydroponics_farm_1"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_deposit = d_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_engineering_deposit			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_physics_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_deposit = d_farmland_deposit
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-B"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-C"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-D"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-E"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-F"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-G"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes		
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-H"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-I"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	spawn_megastructure = {
+		type = "ring_world_ruined"
+		orbit_angle = 270
+		orbit_distance = 45
+		location = planet
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 3 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 3 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+### Ringworld Destroyed
+ringworld_des_st_system = {
+	asteroids_distance = 150
+	usage = custom_empire	
+
+	class = "sc_g"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-A"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		starting_planet = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_deposit = d_energy_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_deposit = d_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_deposit = d_mineral_deposit
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_hydroponics_farm_1"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_deposit = d_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_engineering_deposit			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_physics_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_deposit = d_farmland_deposit
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-B"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-C"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	spawn_megastructure = {
+		type = "ring_world_ruined"
+		orbit_angle = 90
+		orbit_distance = 45
+		location = planet
+	}
+	spawn_megastructure = {
+		type = "ring_world_ruined"
+		orbit_angle = 180
+		orbit_distance = 45
+		location = planet
+	}
+	spawn_megastructure = {
+		type = "ring_world_ruined"
+		orbit_angle = 270
+		orbit_distance = 45
+		location = planet
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 3 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 3 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+### Ringworld Super
+ringworld_sup_st_system = {
+	asteroids_distance = 150
+	usage = custom_empire	
+
+	class = "sc_g"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-A"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		starting_planet = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_deposit = d_energy_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_5"
+					add_deposit = d_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_5"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_5"
+					add_deposit = d_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_5"
+					add_deposit = d_mineral_deposit
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_hydroponics_farm_5"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_5"
+				add_deposit = d_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_5"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_engineering_deposit			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_physics_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_deposit = d_farmland_deposit
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-B"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-C"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-D"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-E"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-F"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-G"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes	
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-H"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-I"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-J"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-K"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-L"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes						
+		}
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 3 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 3 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+
+### Gaia Rich
+gaia_rich_system = {
+	asteroids_distance = 150
+	usage = custom_empire	
+
+	class = "rl_standard_stars"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			orbital_deposit_tile = {
+				add_deposit = d_immense_energy_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			orbital_deposit_tile = {
+				add_deposit = d_immense_mineral_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 40
+		home_planet = yes
+		class = "pc_gaia"
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		tile_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			change_pc = "pc_gaia"
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_deposit = d_immense_energy_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_agri_processing_complex"
+					add_deposit = d_immense_food_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_dark_matter_power_plant"
+					add_deposit = d_immense_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_dark_matter_power_plant"
+					add_deposit = d_immense_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_ancient_factory"
+					add_deposit = d_immense_mineral_deposit
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_ancient_factory"
+				add_deposit = d_immense_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_ancient_factory"
+				add_deposit = d_immense_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_dark_matter_power_plant"
+				add_deposit = d_immense_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_enormous3_engineering_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_enormous3_physics_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d_enormous3_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_immense_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_rich_mineral_food_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d_immense_energy_deposit
+			}
+		}
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			class = "pc_barren"
+			size = 6
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 10
+			
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_mineral_energy_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			size = 7
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 10
+			
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_living_metal_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_energy_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 15
+			orbit_angle = 110
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_immense_mineral_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		moon = {
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 5
+			orbit_angle = 10
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_immense_mineral_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_plcom"
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_society_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_society_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_physics_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_physics_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_plcom"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_society_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_society_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_physics_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_physics_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+			random_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = -160
+		size = 35
+		change_orbit = 6
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_terraforming_gas_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_terraforming_fluid_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		moon = {
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 5
+			orbit_angle = 10
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_living_metal_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		moon = {
+			class = "pc_barren"
+			size = 9
+			orbit_distance = 5
+			orbit_angle = 80
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_immense_mineral_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		moon = {
+			class = "pc_barren"
+			size = 7
+			orbit_distance = 5
+			orbit_angle = -155
+			has_ring = no
+		
+			init_effect = {
+				orbital_deposit_tile = {
+					add_deposit = d_immense_energy_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				random_tile = {
+					add_deposit = d_farmland_deposit
+				}
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_society_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				add_deposit = d_immense_engineering_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				add_deposit = d_farmland_deposit
+			}
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+}

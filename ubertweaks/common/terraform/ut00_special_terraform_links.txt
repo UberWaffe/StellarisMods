@@ -1,0 +1,19 @@
+################
+## Repair Ringworlds
+################
+
+terraform_link = {
+	from = "pc_ringworld_habitable_damaged"
+	to = "pc_ringworld_habitable"
+	
+	energy = 30000
+	duration = 7200
+	
+	condition = {
+		has_technology = "tech_ringworld_construction_three"
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}

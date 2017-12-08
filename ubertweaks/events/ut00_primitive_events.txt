@@ -1,0 +1,316 @@
+#########################################
+#
+# Events concerning Primitive Aliens
+#
+# Written by Henrik Eklund
+#
+#########################################
+
+namespace = primitive
+
+@tier1influencecontact = 7
+@tier1influencecontactxenophile = 8
+@tier1influencecontactmin = 20
+@tier1influencecontactmax = 80
+
+@tier2influencecontact = 10
+@tier2influencecontactxenophile = 12
+@tier2influencecontactmin = 40
+@tier2influencecontactmax = 100
+
+@tier1materialreward = 6
+@tier1materialmin = 100
+@tier1materialmax = 500
+@tier2materialreward = 12
+@tier2materialmin = 150
+@tier2materialmax = 1000
+@tier3materialreward = 18
+@tier3materialmin = 250
+@tier3materialmax = 1500
+@tier4materialreward = 24
+@tier4materialmin = 350
+@tier4materialmax = 2000
+@tier5materialreward = 48
+@tier5materialmin = 700
+@tier5materialmax = 4000
+
+@tier1influencereward = 6
+@tier1influencemin = 40
+@tier1influencemax = 100
+@tier2influencereward = 12
+@tier2influencemin = 80
+@tier2influencemax = 175
+@tier3influencereward = 18
+@tier3influencemin = 125
+@tier3influencemax = 250
+@tier4influencereward = 24
+@tier4influencemin = 150
+@tier4influencemax = 300
+@tier5influencereward = 36
+@tier5influencemin = 250
+@tier5influencemax = 500
+@tier6influencereward = 48
+@tier6influencemin = 300
+@tier6influencemax = 600
+
+@tier1researchreward = 6
+@tier1researchmin = 60
+@tier1researchmax = 150
+@tier2researchreward = 12
+@tier2researchmin = 90
+@tier2researchmax = 250
+@tier3researchreward = 18
+@tier3researchmin = 120
+@tier3researchmax = 350
+@tier4researchreward = 24
+@tier4researchmin = 150
+@tier4researchmax = 500
+@tier5researchreward = 48
+@tier5researchmin = 300
+@tier5researchmax = 1000
+
+# Nuclear War (Planet Rendered Uninhabitable)
+country_event = {
+	id = primitive.131
+	title = "primitive.131.name"
+	desc = "primitive.131.desc"
+	picture = GFX_evt_nuclear_explosion
+	location = FROM
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			set_planet_flag = primitives_nuked_themselves
+			every_owned_pop = {
+				if = {
+					limit = {
+						count_pops = {
+							limit = { is_non_sentient_robot = no }
+							count > 1
+						}
+					}
+					kill_pop = yes
+				}
+			}
+			every_tile = {
+				limit = { has_building = yes }
+				remove_building = yes
+			}
+			random_pop = {
+				limit = {
+					is_non_sentient_robot = no
+				}
+				set_building = building_primitive_farm
+			}
+			
+			change_pc = pc_nuked
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_city_ruins"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_city_ruins"
+			}
+
+			add_modifier = {
+				modifier = "nuclear_devastation"
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		name = primitive.131.a
+	}
+}
+
+# Nuclear War (Entire Population Died)
+country_event = {
+	id = primitive.133
+	title = "primitive.131.name"
+	desc = "primitive.133.desc"
+	picture = GFX_evt_nuclear_explosion
+	location = FROM
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			set_planet_flag = primitives_nuked_themselves
+			every_owned_pop = {
+				if = {
+					limit = {
+						count_pops = {
+							limit = { is_non_sentient_robot = no }
+							count > 1
+						}
+					}
+					kill_pop = yes
+				}
+			}
+			every_tile = {
+				limit = { has_building = yes }
+				remove_building = yes
+			}
+			random_pop = {
+				limit = {
+					is_non_sentient_robot = no
+				}
+				set_building = building_primitive_farm
+			}
+			
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_city_ruins"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_city_ruins"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_bomb_crater"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			random_tile = {
+				limit = {
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+		}
+	}
+
+	option = {
+		name = primitive.131.a
+	}
+}

@@ -1,0 +1,12 @@
+### Planet Modifiers
+
+pm_us_shroudedplanet = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = "us_pc_shrouded_livable"
+		}
+	}
+	
+	modifier = "us_shroudedplanet"
+}

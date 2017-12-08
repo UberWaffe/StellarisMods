@@ -1,0 +1,59 @@
+# Star glow from sun is set under atmosphere in   00_planet_classes
+# Star surface is set in worldgfx file for each star
+# Effects are set in particle effect for each star
+# New planets also need planet tiles (game\gfx\interface\icons\tile_backgrounds)
+# New planets need surface background (game\gfx\portraits\environments)
+
+# Planet Variables
+
+@planet_standard_scale = 11
+@habitable_planet_max_size = 25
+@habitable_planet_min_size = 12
+@habitable_moon_max_size = 15
+@habitable_moon_min_size = 10
+@habitable_min_distance = 60
+@habitable_max_distance = 100
+@habitable_spawn_odds = 1
+
+pc_plcom = {
+	entity = "plcom_planet"
+	picture = pc_plcom 
+	tile_set = pc_plcom
+	entity_scale = @planet_standard_scale
+	icon_frame = 8
+		
+	atmosphere_color 		= hsv { 0.55 0.15 0.7 }
+	atmosphere_intensity 	= 0.2
+	atmosphere_width 		= 0.1
+	
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+	min_distance_from_sun = 60
+	max_distance_from_sun = 95
+	
+	modifier = {
+		pop_environment_tolerance = 0.40
+		planet_building_cost_mult = 0.5
+		
+		tile_resource_food_mult = -0.5
+		tile_resource_minerals_mult = -10
+		tile_resource_energy_mult = 0.15
+		
+		tile_resource_physics_research_mult = 0.25
+		tile_resource_society_research_mult = 0.25
+		tile_resource_engineering_research_mult = 0.25
+	}
+	
+	spawn_odds = 0.0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0.2
+	
+	planet_size = 25
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	
+	colonizable = yes
+	ideal = no
+	starting_planet = no
+}

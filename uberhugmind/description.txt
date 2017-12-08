@@ -1,0 +1,10 @@
+This mod aims to add a new hive mind type, that is somewhat similar in gameplay to rogue servitors, but with some hive-mind/bio-focus twists in it.
+
+[h1][b]Hug mind features[/b][/h1]
+[list]
+	[*]Hug pops from other species! *Note: 'Hugging' may include devouring, unspeakably depraved acts, unwanted pampering, horrors made incarnate, slavery and actual hugging. Hugging is not for everyone, consult your doctor before use.
+	[*]Gain symbiosis points depending on number and percentage of non-hivemind pops.
+	[*]Spend symbiosis points on various bonusses, including but not limited to being better at hugging.
+[/list]
+
+Localizations: English.

@@ -1,0 +1,301 @@
+﻿l_english:
+
+ # ----------------------------------------------------------------------------------------------------------------
+ # Breaching the Shroud
+ # ----------------------------------------------------------------------------------------------------------------
+ utopia.3000.b:0 "With might we reach into the Shroud"
+ venture.shroud.energy.tooltip:0 "Expend energy to venture deeper in the Shroud.\n\nThis cost will decrease the more §HZro§! deposits we control, up to a maximum of 4.\n\n"
+ 
+ utopia.3000.c:0 "United we reach into the Shroud"
+ venture.shroud.unity.tooltip:0 "Draw on our united psionic power to venture deeper in the Shroud.\n\nThis cost will decrease the if we have fully unlocked the §HHarmony§! tradition, and also if we have the §HConsecrated Worlds§! ascendency."
+ 
+ utopia.3000.d:0 "§RThe Shroud resists§!, but we persist"
+ venture.shroud.force.tooltip:0 "Expend energy and unity to force the Veil of the Shroud. There will be no half measures in effort here."
+
+ # ----------------------------------------------------------------------------------------------------------------
+ # Shourd Events updated/ added text
+ # ----------------------------------------------------------------------------------------------------------------
+ utopia.3150.b:0 "§GReach into their minds in search of secrets.§!"
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Boons, Curses and Spirits
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.3001.desc.1:0 "§YMystic skill§! : §GConvenient snack§!"
+ utopia.3001.desc.2:0 "§YMystic skill§! : §GInitiate§!"
+ utopia.3001.desc.3:0 "§YMystic skill§! : §GApprentice§!"
+ utopia.3001.desc.4:0 "§YMystic skill§! : §GJourneyman§!"
+ utopia.3001.desc.5:0 "§YMystic skill§! : §GEvoker§!"
+ utopia.3001.desc.6:0 "§YMystic skill§! : §GMaster Evoker§!"
+ utopia.3001.desc.7:0 "§YMystic skill§! : §GWarlock§!"
+ utopia.3001.desc.8:0 "§YMystic skill§! : §GHigh Warlock§!"
+ utopia.3001.desc.9:0 "§YMystic skill§! : §GMagnus§!"
+ utopia.3001.desc.10:0 "§YMystic skill§! : §GArch-Magnus§!"
+ utopia.3001.desc.11:0 "§YMystic skill§! : §GWeaver§!"
+ utopia.3001.desc.12:0 "§YMystic skill§! : §GMaster Weaver§!"
+ utopia.3001.desc.13:0 "§YMystic skill§! : §GArch-Weaver§!"
+ 
+ utopia.3001.a:0 "Project through the Shroud"
+ utopia.3001.a.tooltip:0 "Project into the Shroud, and see what you can find. It is a gamble, both Boons and Curses await. But there is much to be gained."
+ 
+ utopia.3001.b:0 "Spirits, I've come to bargain"
+ utopia.3001.b.tooltip:0 "There are spirits, that for a £unity price will grant us more material gifts.\n\nSome benevolent, and eager to grant us boons.\n\nOther malevolent ones seek only the chance to sow chaos upon the material, and may be let loose upon our foes.\n\nOther seeks to steal what they can without giving anything."
+ 
+ utopia.3001.c:0 "Seek out Patron Spirits"
+ utopia.3001.c.tooltip:0 "With this I do bind myself. Grant me thy favour, and I shall embrace thy pleasures."
+ 
+ utopia.3001.d:0 "Ask a Boon"
+ utopia.3001.d.tooltip:0 "With this I do bind myself. Grant me thy favour, and I shall embrace thy pleasures."
+ 
+ utopia.3001.e:0 "Open thy third-eye, step into the astral, and behold..."
+ utopia.3001.e.tooltip:0 "Seek to seal a bargain for greater psionics amongst our population or leaders."
+
+ utopia.3001.f:0 "Spirits, I seek vengeance upon my foes!"
+ utopia.3001.f.tooltip:0 "There are malevolent spirits, that for a £unity price will strike at our foes or rivals from the Shroud.\n\nThese malevolent spirits seek only the chance to sow chaos upon the material."
+ 
+ utopia.3001.x:0 "Manifestation"
+ utopia.3001.x.tooltip:0 "Draw deeply upon the Shroud and manifest some material boons. Nothing ventured, not much gained."
+ 
+ utopia.3001.goto:0 "I've changed my mind."
+ utopia.3001.goto.tooltip:0 "A dangerous thing to do in the Shroud. But you can..."
+
+ 
+ 
+ utopia.3200.goto:0 "Continue on through the Shroud"
+ utopia.3200.goto.tooltip:0 "Project onwards, and see if more is revealed. But the strain may be too much."
+ 
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Bargains and Regrets
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.3002.name:0 "The Shroud - Greater Spirits"
+ utopia.3002.desc:0 "Trade £unity for §GBoons§!. §RBeware§!, unless you have a patron, you have little sway here."
+ 
+ utopia.3002.a:0 "I've changed my mind."
+ utopia.3002.a.tooltip:0 "A dangerous thing to do in the Shroud. But you can..."
+ 
+ utopia.3002.b:0 "I desire material gains."
+ utopia.3002.b.tooltip:0 "Seek to seal a bargain for £minerals rewards."
+ 
+ utopia.3002.c:0 "Feed my greed."
+ utopia.3002.c.tooltip:0 "Seek to seal a bargain for £energy rewards."
+
+ utopia.3002.d:0 "Whispered secrets."
+ utopia.3002.d.tooltip:0 "Seek to seal a bargain for £physics , £society , £engineering rewards."
+
+ utopia.3002.e:0 "Dip my tongue in silver, my words in gold."
+ utopia.3002.e.tooltip:0 "Seek to seal a bargain for £influence rewards."
+
+ 
+ shroud.bargain.payment:0 "Your people will have to draw together and use their psionic talent to project power into the shroud to feed the spirit.\n\nThis can only be done by drawing on the goodwill and £unity unity of your people."
+ 
+ # Bargains for Minerals
+ utopia.3003.name:0 "The Shroud - Greater Spirits - Minerals"
+ utopia.3003.desc:0 "$boon.bestowed$\n\nYou manage to find a benevolent spirit that will manifest £minerals for you.\n\n$shroud.bargain.payment$"
+ utopia.3003.a:0 "Lilliputian bargain £unity for £minerals"
+ utopia.3003.b:0 "Minuscule bargain £unity for £minerals"
+ utopia.3003.c:0 "Goodly bargain £unity for £minerals"
+ utopia.3003.d:0 "Orotund bargain £unity for £minerals"
+ 
+ # Bargains for Energy
+ utopia.3004.name:0 "The Shroud - Greater Spirits - Energy"
+ utopia.3004.desc:0 "$boon.bestowed$\n\nYou manage to find a benevolent spirit that will manifest £energy for you.\n\n$shroud.bargain.payment$"
+ utopia.3004.a:0 "Lilliputian bargain £unity for £energy"
+ utopia.3004.b:0 "Minuscule bargain £unity for £energy"
+ utopia.3004.c:0 "Goodly bargain £unity for £energy"
+ utopia.3004.d:0 "Orotund bargain £unity for £energy"
+ 
+ # Bargains for Research
+ utopia.3005.name:0 "The Shroud - Greater Spirits - Knowledge"
+ utopia.3005.desc:0 "$boon.bestowed$\n\nYou manage to find a benevolent spirit that will grant you knowledge £physics , £society , £engineering.\n\n$shroud.bargain.payment$"
+ utopia.3005.a:0 "Lilliputian bargain £unity for £physics , £society , £engineering"
+ utopia.3005.b:0 "Minuscule bargain £unity for £physics , £society , £engineering"
+ utopia.3005.c:0 "Goodly bargain £unity for £physics , £society , £engineering"
+ utopia.3005.d:0 "Orotund bargain £unity for £physics , £society , £engineering"
+ 
+ # Bargains for Influence
+ utopia.3006.name:0 "The Shroud - Greater Spirits - Influence"
+ utopia.3006.desc:0 "$boon.bestowed$\n\nYou manage to find a shrewd spirit that will grant you £influence.\n\n$shroud.bargain.payment$"
+ utopia.3006.a:0 "Lilliputian bargain £unity for £influence"
+ utopia.3006.b:0 "Minuscule bargain £unity for £influence"
+ utopia.3006.c:0 "Goodly bargain £unity for £influence"
+ utopia.3006.d:0 "Orotund bargain £unity for £influence"
+ 
+ # Bargains for Psionic Traits
+ requires_suitable_pops:0 "You must have a pop that is non-materialistic, non-robotic and doesn't already have the psionic trait."
+ requires_suitable_pops_upg:0 "You must have a pop that is non-materialistic, non-robotic and has the previous level of psionic trait."
+ 
+ # Offensive Bargains (Offensive as in murder, not as in easily triggered)
+ utopia.3011.name:0 "The Shroud - Greater Spirits"
+ utopia.3011.desc:0 "Trade £unity for §RBoons of Wrath§!. §RBeware§!, unless you have a patron, you have little sway here."
+ 
+ utopia.3011.a:0 "Kidnap £Pop."
+ utopia.3011.a.tooltip:0 "Snatches a random £Pop  and teleports them to one of your planets."
+ 
+ utopia.3011.b:0 "Shroud invasion"
+ utopia.3011.b.tooltip:0 "Hostile Shroud armies invades a random planet."
+ 
+ utopia.3011.c:0 "Shroud incursion"
+ utopia.3011.c.tooltip:0 "Hostile Shroud fleets invades a random system."
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Patrons
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.patron.binding.rhyme.1:0 "§YBind and bind and bound again. Favour drips, as honey suckles. Upon thy whims, thy pleasure sate. Bind and bind and bound again.§!"
+ 
+ covenant.good.tooltip:0 "§YThis§! §HPatron§! §Yis benevolent, but still not without a drawback.§!\n\n"
+ 
+ utopia.3300.desc.v2:0 "We have met spirits before, but then there are also §HSpirits§!. Patrons vastly more powerful, and far more ancient... Or would be if time wasn't merely a poor joke in the Shroud.\n\nThey yet seems unaware of us. Perhaps they are sleeping. Perhaps we are simply beneath their notice.\n\nPerhaps a §RWell aged steak tastes better§!... Wait, wha...\n\n$utopia.patron.binding.rhyme.1$\n\nPerhaps we should leave."
+ utopia.3300.1.a:0 "§GAttempt to communicate with the Patrons§!"
+ utopia.3300.1.b:0 "§YAttempt to communicate with the Patrons§!"
+ utopia.3300.1.c:0 "§RAttempt to communicate with the Patrons§!"
+ utopia.3300.1.d:0 "§G[chosen_one.GetName] will speak to the Patrons§!"
+ utopia.3300.2:0 "§GWe are no longer blind within the Shroud§!"
+ utopia.3300.2.tooltip:0 "We feel confident that we can approach without risk."
+ utopia.3301.desc:0 "As we reach out for the Patrons, we can feel something stirring, its attention now fully on us. It does not seem to appreciate being disturbed.\n\nA wave of energy lashes at our telepaths, causing great agony to some and knocking others unconscious. We have no choice but to withdraw from the Shroud for the time being."
+ utopia.3302.desc:0 "As we reach out for the Patrons, we can feel something stirring, its attention now fully on us. It does not seem to appreciate being disturbed.\n\nAn enormous wave of psionic energy crashes against us, blacking out the senses of our telepaths. When they come to, they notice one of their number is missing. §Y[leader_to_kill.GetName]§! is nowhere to be found, and where [leader_to_kill.GetSheHe] was standing there is now only the psionic trace of a small rift, as though the entity reached out into our world and dragged [leader_to_kill.GetHerHim] into the Shroud for... well, who knows what reason or purpose, really.\n\nNo matter its reasons for taking [leader_to_kill.GetHerHim], it seems doubtful that we will ever see [leader_to_kill.GetName] again."
+ 
+ utopia.3303.desc:0 "With great effort we manage to pierce deeper into the Shroud and make the most tentative of contact with the §HPatron Spirits§!.\n\nEven with this light a touch their sheer presence threatens to overwhelm our telepaths. Through the cacophony of raw awe, we hear hear greetings and promises.\n\nSomewhere in the distance a child sings '$utopia.patron.binding.rhyme.1$'"
+ 
+ utopia.3303.a:0 "The Whisperers in the Void"
+ utopia.3303.a.tooltip:0 "§YBind and bind and bound again. Upon thy secrets I will suckle. And upon thy secrets I will choke. Bind and bind and bound again.§!"
+ 
+ utopia.3303.b:0 "The Composer of Strands"
+ utopia.3303.b.tooltip:0 "§YBind and bind and bound again. Mold my flesh to make it strong. Mold and mold and mold it more. Bind and bind and bound again.§!"
+ 
+ utopia.3303.c:0 "The Eater of Worlds"
+ utopia.3303.c.tooltip:0 "§YBind and bind and bound again. Let me devour those I hate. Even as your gluttony I sate. Bind and bind and bound again.§!"
+ 
+ utopia.3303.d:0 "The Instrument of Desire"
+ utopia.3303.d.tooltip:0 "§YBind and bind and bound again. More and more I crave and take. Lust and dust and cacophony, pleasures wide and fetishes funny. Bind and bind and bound again.§!"
+ 
+ utopia.3303.e:0 "The End of the Cycle"
+ utopia.3303.e.tooltip:0 "§RBind and bind and bound again. Sieze the day, and grant us power, for we rise this very hour. Put tomorrow from your mind, only the now is what matters. Bind and bind and bound again.§!"
+ 
+ utopia.3303.f:0 "The Guide"
+ utopia.3303.f.tooltip:0 "§GBind and bind and bound again. Guide us through the Shroud so wide. Thy gentle hand our worst plight. Bind and bind and bound again.§!"
+ 
+ utopia.3303.g:0 "Kyuubi of the Shroud"
+ utopia.3303.g.tooltip:0 "§GBind and bind and bound again. Thruth be told we were simply seeking, but now found. We could have gone to another, but why shirk your loving embrance? Walk with us, and show your face. Leap and play and fly and ponder. Run with us to future yonder. Bind and bind and bound again.§!"
+ 
+ utopia.3304.desc:0 "As we reach out for the presence, the minds of our telepaths are filled with a chorus of voices. No more than soft whispers at first, the cacophony grows in intensity, a thousand voices speaking in unison. \n\nThe voices introduce themselves as the §YWhisperers in the Void§!. It - they - claim to be privy to all knowledge whispered in secrecy from one mortal to another, and offer to share of these secrets with us...\n\n§YIf we will only allow them into our consciousness.§!\n\nA trifling price, they assure us. We will barely even notice their presence.\n\nThere is an urgency to their tone."
+ utopia.3304.a:0 "§YForm a Covenant with the Whisperers in the Void§!"
+ utopia.3305.desc:0 "The presence welcomes us with genial familiarity. It speaks not so much in words but in visions, concepts, ideas. It seeps into the minds of our telepaths, so gently and smoothly that one might think it had always been there. A flurry of images flash before their eyes.\n\nThe presence is known as the §YComposer of Strands§!, and it regards our biological forms with curious interest. It shows us a variety of ways in which they can be grown, changed. Improved. Evolved.\n\n§YIf we will only take it into our flesh.§!\n\nIt waits for our answer patiently, affectionately. Like a doting father waiting on his favorite child."
+ utopia.3305.a:0 "§YForm a Covenant with the Composer of Strands§!"
+ utopia.3306.desc:0 "As we reach out for the presence, we sense a great hunger. The presence wastes no time, not words. It is the §YEater of Worlds§! and it wishes to devour us.\n\nOnly some of us, though. No more than we can spare. In exchange, it will grant us great powers. It will teach us its hunger, its rage. It will shape them into psionic weapons that can overcome any foe.\n\n§YIf we will only let it feed on us.§!\n\nIt sounds impatient to begin."
+ utopia.3306.a:0 "§YForm a Covenant with the Eater of Worlds§!"
+ utopia.3307.desc:0 "Before we can reach out for the presence, it reaches out for us. Its thoughts coil and twist themselves around the minds of our telepaths, bargaining, cajoling. It is the §YInstrument of Desire§! and it will grant us wealth, power, prestige... all that we have ever desired. All that we will ever desire.\n\nThe cost? A small matter, little more than a cover fee. It only wants what's best for us. It will help us, guide us, direct our ambitions and dreams.\n\n§YIf we will only accept it into our hearts.§!\n\nIt is confident that we will say yes. How could we possibly not say yes?"
+ utopia.3307.a:0 "§YForm a Covenant with the Instrument of Desire§!"
+ utopia.3308.desc:0 "The presence was waiting for us. It is §RThe End of the Cycle§! and it has always been waiting for us. Our telepaths suddenly speak in unison, a dozen voices in a perfect chorus: §R"IT IS NOT YET YOUR TIME."§! A pause. §R"BUT IT COULD BE."§!\n\nNothing more is said, but a bargain has been offered - we know that much. Power, knowledge and wealth beyond measure are ours for the taking.\n\n§RIf we will only bring forth the End.§!"
+ utopia.3308.a:0 "§RForm a Covenant with the End of the Cycle§!"
+ utopia.3310.name:0 "Covenant Formed"
+ 
+ utopia.3311.desc:0 "As we reach out for the presence, we sense great kindness.\n\nThe presence introduces itself as §HThe Guide§! and invites us to project through the Shroud as we commune.\nIt shows us paths and places we had never even seen, and seems to take pleasure in teaching.\n\nThe journey seems to last for several hours... or decades... or perhaps just months. Regardless, you've spend what feels like eons in debate and your horizons feels broadened.\n\nIt offers to teach us more, and nuture the skills of our populace.\n\n§YIf only we will allow it to commune with our populace, and strike no wrathful bargains.§!\n\nIt waits for our answer patiently."
+ utopia.3311.a:0 "§HForm a Covenant with The Guide§!"
+ utopia.3312.desc:0 "As we reach out to the presnce our souls cry out in recognition even before our minds do. It is §HKyuubi of the Shroud§!, whom we have felt tugging at the inner most parts of our being since time immemorial.\n\nIt seems affectionate, adorable, playful, eager, mighty, protective and dominating all at once. It seems joyous, treating us like long lost family members that have found their way back home.\n\nIt eagerly wishes to become our Patron, §YIf we will only allow it to walk amongst us.§!"
+ utopia.3312.a:0 "§HForm a Covenant with the Kyuubi of the Shroud§!"
+ 
+ covenant.guide.desc:0 "It is done. We have formed a Covenant with §HThe Guide§!."
+ covenant.guide.option:0 "Our people rejoice!"
+ 
+ covenant.kyuubi.desc:0 "It is done. We have formed a Covenant with the §HKyuubi of the Shroud§!."
+ covenant.kyuubi.option:0 "Our people rejoice!"
+ 
+ utopia.3319.name:0 "Covenant Formed"
+ 
+ us.utopia.3320.desc.a:0 "Our time is up. For fifty years, we have benefitted from the immense power given to us by the §REnd of the Cycle§!. We knew there would be a price to pay, but we thought it might be one we could bear, or that we could find some way to avoid paying it.\n\nIt was not, and we could not.\n\nThe price we have paid is everything. In an instant, so fast there is no time to react, let alone respond, the [Root.GetName] is... gone. Where once there was thriving colonies, there is now only nightmares made incarnate. Where once mighty fleets crossed the void, there is only ghosts and debris. All enslaved by the End. All taken by the Shroud.\n\nAll that remains of our empire is a group of exiles led by §Y[Root.GetRulerName]§!, a powerful psionic who saw the end coming and led a small part of our population into hiding on a world not marked by the End.\n\nAs if having our empire destroyed overnight wasn't bad enough, a massive Shroud entity has manifested itself in space above [former_capital.GetName]. Made immensely powerful by the enslaved consciousnesses of our psionics, it now roams the galaxy seeking further victims."
+ us.utopia.3320.desc.b:0 "Our time is up.\n\nFor fifty years, we have benefitted from the immense power given to us by the §REnd of the Cycle§!. We knew there would be a price to pay, but we thought it might be one we could bear, or that we could find some way to avoid paying it.\n\nIt was not, and we could not.\n\nThe price we have paid is everything. In an instant, so fast there is no time to react, let alone respond, the [Root.GetName] is... gone. Where once there was thriving colonies, there is now only nightmares made incarnate. Where once mighty fleets crossed the void, there is only ghosts and debris. All enslaved by the End. All taken by the Shroud.\n\nNot only have we been utterly destroyed, a massive Shroud entity has also manifested itself in space above [former_capital.GetName]. Made immensely powerful by the enslaved consciousnesses of our psionics, it now roams the galaxy seeking further victims. Forever we shall putrefy in the horrors of our own making."
+ 
+ us.utopia.3321.desc.a:0 "For fifty years we have known that something was wrong about the §Y[From.GetName]§!. Fifty years ago, their industrial output, the effectiveness of their science... everything about their empire suddenly and inexplicably experienced a massive increase in productivity and effectiveness, as if they were blessed by some unseen power.\n\nAs it turns out, it was not so much a blessing but a curse. Fifty years ago, the §Y[From.GetName]§! signed away their future and now the debt has come due.\n\nIn an instant, so fast there is no time to react, let alone respond, the [Root.GetName] is... gone. Where once there was thriving colonies, there is now only nightmares made incarnate. Where once mighty fleets crossed the void, there is only ghosts and debris. Even our empire wasn't untouched in the disaster, with some of our own worlds that were previously under [From.GetAdj] rule engulfed along with the rest.\n\nWhat's worse, the death of the [From.GetName] seems to have birthed some sort of immensely powerful energy being in the space above their former capital.\n\nIt appears to be restless."
+ us.utopia.3321.desc.b:0 "For fifty years we have known that something was wrong about the §Y[From.GetName]§!. Fifty years ago, their industrial output, the effectiveness of their science... everything about their empire suddenly and inexplicably experienced a massive increase in productivity and effectiveness, as if they were blessed by some unseen power.\n\nAs it turns out, it was not so much a blessing but a curse. Fifty years ago, the §Y[From.GetName]§! signed away their future and now the debt has come due.\n\nIn an instant, so fast there is no time to react, let alone respond, the [Root.GetName] is... gone. Where once there was thriving colonies, there is now only nightmares made incarnate. Where once mighty fleets crossed the void, there is only ghosts and debris.\n\nWhat's worse, the death of the [From.GetName] seems to have birthed some sort of immensely powerful energy being in the space above their former capital.\n\nNot satisfied with ending the [From.GetAdj] civilization, it now wanders from world to world, enslaving all in its path."
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Patron Pleasures
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.3343.name:0 "Kyuubi manifestation"
+ utopia.3343.desc:0 "Our §HPatron§! the §H$utopia.3303.g$§! is manifesting upon §Y[From.GetName]§!, commning with its inhabitants. The inhabitants will be distracted from things material during this time."
+ utopia.3343.opt.a:0 "Grant them this commune"
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Patron Boons
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.3350.1.desc:0 "$utopia.patron.binding.rhyme.1$\n\nA thousand dissonant whispers spouting eldritch knowledge assualts you. One question rises above the cacophony §HCome for another boon?§!"
+ utopia.3350.2.desc:0 "$utopia.patron.binding.rhyme.1$\n\nYou feel your innards squirm like a swarm of ravenous rats. The composer smiles fondly at you and asks §HYes, my child?§!"
+ utopia.3350.3.desc:0 "$utopia.patron.binding.rhyme.1$\n\nRavenous jaws snap at you, threatening to tear the delicious flesh from your bones. §HAsk your boon so that I may feast!§!"
+ utopia.3350.4.desc:0 "$utopia.patron.binding.rhyme.1$\n\nYou walk through a landscape filled with every deviant and perverted thing. §HLusting for more? Pleasure awaits those that ask for more...§!"
+ utopia.3350.5.desc:0 "$utopia.patron.binding.rhyme.1$\n\n§RTIME DWINDLES... ASK FOR MORE WHILE YOU CAN...§!"
+ utopia.3350.6.desc:0 "The guide softly greets you.\n\n§HAnother journey or perhaps another debate? I enjoy either, as I hope do you.§!"
+ utopia.3350.7.desc:0 "The Kyuubi playfully prances about.\n\n§HPlay?§!"
+ 
+ utopia.3350.whispers.b:0 "Grant us §HDeeper Secrets§!"
+ utopia.3350.whispers.b.tooltip:0 "Gain an additional research boost."
+
+ 
+ utopia.3351.name:0 "§H$utopia.3303.a$§!"
+ utopia.3351.desc:0 "Ask a §GBoon§! from $utopia.3351.name$.\n\n$shroud.bargain.payment$\n\nYou will also have to endure your Patron's §RPleasure§!"
+  
+ utopia.3351.whispers.a:0 "Curse our enemies with §HAbysmal Whispers§!"
+ utopia.3351.whispers.a.tooltip:0 "Madness and slowed research on a random planet"
+ 
+ utopia.3357.name:0 "§H$utopia.3303.g$§!"
+ utopia.3357.desc:0 "Ask a §GBoon§! from $utopia.3357.name$.\n\n$shroud.bargain.payment$\n\nYou will also have to endure your Patron's §RPleasure§!"
+  
+ utopia.3357.kyuubi.a:0 "Strike our enemies with §HKyuubi's Wrath§!"
+ utopia.3357.kyuubi.a.tooltip:0 "Madness, lowered food, pop growth and research on random planet"
+
+ utopia.3357.kyuubi.b:0 "Bargain for empowering §YPsionic§! §GLevel 5§! within our population"
+ utopia.3357.kyuubi.b.tooltip:0 "Improves the psionics of a species of non-materialistic, non-robotic, pops that have psionics level 4."
+ 
+ utopia.3357.kyuubi.c:0 "Bargain for empowering §YPsionic§! §GLevel 6§! within our population"
+ utopia.3357.kyuubi.c.tooltip:0 "Improves the psionics of a species of non-materialistic, non-robotic, pops that have psionics level 5."
+ 
+ utopia.3357.kyuubi.d:0 "Bargain for envoking one of your leaders as an §YIncarnate One§!"
+ utopia.3357.kyuubi.d.tooltip:0 "Permanently imbues and envokes into one of your leaders the psionic power equivalent to that of a Incarnate One."
+ 
+ 
+ # ----------------------------------------------------------------------------------------------------------------
+ # Evoker of Dreams (Grants Psionics to Pops and Leaders)
+ # ----------------------------------------------------------------------------------------------------------------
+ 
+ utopia.3360.desc:0 "You've come before the §HEvoker of Dream§!\n\nIt will help empower your £Pop  pops or leaders with greater psionic power.\n\n$shroud.bargain.payment$"
+ 
+ utopia.3360.a:0 "Empower pops £Pop"
+ utopia.3360.a.tooltip:0 "Add a higher level psionic trait to a species of pops"
+ 
+ utopia.3360.b:0 "Empower leaders"
+ utopia.3360.b.tooltip:0 "Add a higher level psionic trait to a leader"
+ 
+ 
+ 
+ utopia.3361.name:0 "§HEvoker of Dream§!"
+ utopia.3361.desc:0 "The §HEvoker of Dream§! will empower your £Pop  pops with greater psionic power.\n\n$shroud.bargain.payment$"
+ 
+ utopia.3361.a:0 "Bargain for awakening the §YLatent Psionic§! in our population"
+ utopia.3361.a.tooltip:0 "Gives latent psionics of a species of non-materialistic, non-robotic, pops that have no psionics yet."
+ 
+ utopia.3361.b:0 "Bargain for empowering §YPsionic§! §GLevel 1§! within our population"
+ utopia.3361.b.tooltip:0 "Gives psionics to a species of non-materialistic, non-robotic, pops that have latent psionics."
+ 
+ utopia.3361.c:0 "Bargain for empowering §YPsionic§! §GLevel 2§! within our population"
+ utopia.3361.c.tooltip:0 "Improves the psionics of a species of non-materialistic, non-robotic, pops that have psionics."
+ 
+ utopia.3361.d:0 "Bargain for empowering §YPsionic§! §GLevel 3§! within our population"
+ utopia.3361.d.tooltip:0 "Improves the psionics of a species of non-materialistic, non-robotic, pops that have psionics level 2."
+ 
+ utopia.3361.e:0 "Bargain for empowering §YPsionic§! §GLevel 4§! within our population"
+ utopia.3361.e.tooltip:0 "Improves the psionics of a species of non-materialistic, non-robotic, pops that have psionics level 3."
+ 
+ 
+ utopia.3362.name:0 "§HEvoker of Dream§!"
+ utopia.3362.desc:0 "The §HEvoker of Dream§! will empower one of your leaders with greater psionic power.\n\n$shroud.bargain.payment$"
+ 
+ utopia.3362.a:0 "Bargain for envoking one of your leaders as a §YChosen One§!"
+ utopia.3362.a.tooltip:0 "Permanently imbues and envokes into one of your leaders the psionic power equivalent to that of a Chosen One."
+ 
+ utopia.3362.b:0 "Bargain for envoking one of your leaders as an §YImmortal One§!"
+ utopia.3362.b.tooltip:0 "Permanently imbues and envokes into one of your leaders the psionic power equivalent to that of a Immortal One."
+ 

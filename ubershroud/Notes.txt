@@ -1,0 +1,267 @@
+
+# Notes on Events
+# Using hash comments incase this file somehow gets parsed.
+# us_shroud_experience => is the variables tracked per country (used on country scope) for the country's experience with the shroud.
+#	High Shroud experience gives better success rates.
+#	Some options gated behind enough Shroud experience.	
+#	Increased through Breaching the Shroud and additionally by certain Shroud events.
+#
+# You gain experience as follows:
+#	+5 for breaching the Shroud, regardless of method used.
+#	+1 for exploring the Shroud, if < 100. I.e. not taking the first choice, but exploring more and risking a worse outcome.
+#	+10 for success on special explore the Shroud events.
+#	+100 for forming covenant with a Patron.
+#
+# Levels of Shroud experience: See us01_scripted_triggers
+#		Convenient Snack
+#		Initiate
+#		Apprentice
+#		Journeyman
+#		Evoker
+#		Master Evoker
+#		Warlock
+#		High Warlock
+#		Magnus
+#		Arch-Magnus
+#		Weaver
+#		Master Weaver
+#		Arch-Weaver
+# Note: Success chances for exploration and bargains increases with each level.
+# Note: Shroud cooldown decreases with each level.
+
+
+
+# Shroud related
+# 200 = (DEPRECATED) Was for giving another species in your empire the psionic trait. Now does nothing.
+# 203 = (DEPRECATED) Second part of latent psionics into full psionics. Now does nothing.
+# 204 = (DEPRECATED) Neighbouring countries got free psionics. Now does nothing.
+
+# Breaching the Shroud
+# 3000 = (CHANGED) Event to only handle the cost of accessing the shroud. No longer gives an idea of what may be available.
+
+
+# Boons, Curses and Spirits
+# 3001 = (NEW) Choice on how to access the Shroud.
+# 3002 = (NEW) Bargain Unity for various things. Countries with patron will not get swindled.
+# 3003 = (NEW) Bargain for minerals.
+# 3004 = (NEW) Bargain for energy.
+# 3005 = (NEW) Bargain for research points.
+# 3006 = (NEW) Bargain for influence points.
+# 3010 = (DEPRECATED) Shroud unavailable popup. Now never shows.
+# 3011 = (NEW) Options for offensive powers. Must have active rival or be at war with someone.
+
+# 3100 = (CHANGED) High chance of Ship or Army. Other option to do a high chance standard roll.
+# 3110 = (CHANGED) High chance of Ship or Army. Other option to do a high chance standard roll.
+# 3120 = (CHANGED) Get vision flag. Do a high chance standard roll.
+# 3130 = (CHANGED) Get vision flag. Do a high chance barrel roll.
+# 3140 = (CHANGED) Get vision flag. Do a high chance standard roll.
+# 3150 = (CHANGED) Attempt to steal Secrets from Fallen Empire. Can do a reroll.
+# 3160 = (CHANGED) Attempt to gain Psi-Jump drives. Can do a reroll.
+# 3170 = (CHANGED) Attempt to gain Psionic Shield. Can do a reroll.
+# 3180 = (CHANGED) Attempt to gain Precognition Interface. Can do a reroll.
+# 3181 = (CHANGED) Get the Precog Interface. Now gives shroud experience.
+# 3190 = (CHANGED) Attempt psionically enhance leader. Can do a reroll.
+# 3200 = Generic Vision.
+# 3300 = (CHANGED) No patron yet. Added checks easy option if you have enough vision flags.
+# 3301 = Failure.
+# 3302 = Critical Failure.
+# 3303 = (CHANGED) Now can give multiple choices of patron. What choices show up is random, but can be multiple. Added choices for new patrons.
+
+# 3304 = Seal deal with patron. Whispers
+# 3305 = Seal deal with patron. Composer
+# 3306 = Seal deal with patron. Eater
+# 3307 = Seal deal with patron. Instruments
+# 3308 = Seal deal with patron. End
+# 3310 = Covenant sealed. Horror background.
+# 3311 = (NEW) Seal covenant with The Guide.
+# 3312 = (NEW) Seal covenant with Kyuubi of the Shroud.
+# 3319 = (NEW) Covenant sealed. Not horror background.
+# 3320 = (CHANGED) The end of the cycle.
+# 3321 = (CHANGED) .
+# 3322 = (CHANGED) .
+# 3323 = (CHANGED) .
+# 3324 = (CHANGED) End of Cycle noms a planet.
+# 3325 = (NEW) End of Cycle destroyed. Respawns if pops available for snackrifice.
+
+# 3330 = (CHANGED) The gatekeeper that applies the pleasure of the patron based on time. Triggers 3349.
+# 3331 = Leader turns to substance abuse
+# 3332 = Suicide of leader
+# 3333 = Planet succumbs to madness
+# 3334 = Planet collapses into anarchy
+# 3335 = Pop devoured
+# 3336 = Pops devoured
+# 3337 = Planet devoured
+# 3338 = Planet gets deviant ethics
+# 3339 = Empire gets deviant ethics
+# 3340 = Planet gets increased desire for consumer goods
+# 3341 = Composer messes with species traits
+# 3342 = (NEW) Guide communes with a planet.
+# 3343 = (NEW) Kyuubi manifests on a planet.
+
+# 3349 = (NEW) Immediately triggers a Patron pleasure. Includes new patrons.
+
+# 3350 = (NEW) Patron boons.
+# 3351 = (NEW) Whispers 
+# 3352 = (NEW) Composer 
+# 3353 = (NEW) Eater 
+# 3354 = (NEW) Instruments
+# 3355 = (NEW) End
+# 3356 = (NEW) Guide
+# 3357 = (NEW) Kyuubi
+
+# 3360 = (NEW) Evoker of Dreams
+# 3361 = (NEW) Bargain to empower pops with psionics.
+# 3362 = (NEW) Bargain to empower leaders with psionics.
+
+# 3390 = (NEW) Clean planet of offensive wrath modifiers after ownership change.
+
+# ---------------------- Bargains ----------------------
+# Everything costs unity, and (if any) additional costs for a baragin will be listed.
+
+# Minerals
+# Energy
+# Stored Research Points
+# Influence
+# Kidnap a pop from a random rival / enemy planet.
+# Unrest on random rival / enemy planet.
+# Invade random rival / enemy planet.
+# Hostile avatar ship in random rival / enemy system.
+# Food reduction on random rival / enemy planet.
+# Mineral reduction on random rival / enemy planet.
+# Energy reduction on random rival / enemy planet.
+# Research reduction on random rival / enemy planet.
+
+
+# ---------------------- Patrons ----------------------
+
+# Whisperers in the Void (Existing)
+#		"covenant_whisperers_in_the_void"
+#	Requirement:
+#		None.
+#
+#	Passive:
+#		+15% Research, +15% Influence
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Unrest on planets, Leader dies, Leader life shortened
+#
+# 	Boon Offensive:
+#		Unrest and lowered research on enemy / rival planet
+#
+# 	Boon Self:
+#		Research speed bonus
+
+# Composer of Strands (Existing)
+#		"covenant_composer_of_strands"
+#	Requirement:
+#		None.
+#
+#	Passive:
+#		-15% growth req, +20 years leader age
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Random species trait changes
+#
+# 	Boon Offensive:
+#		Food reduction, increased pop growth on random enemy / rival planet.
+#
+# 	Boon Self:
+#		Lowers unrest, boosts food.
+
+# Eater of Worlds (Existing)
+#		"covenant_eater_of_worlds"
+#	Requirement:
+#		None.
+#
+#	Passive:
+#		+15% Rate of Fire, +30% Army morale
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Eats 1 pop and unhappiness, Eats 3 pops and unhappiness, Eats entire planet and unhappiness
+#
+# 	Boon Offensive:
+#		Spawn armies on random enemy / rival planets
+#
+# 	Boon Self:
+#		Buy avatar ships
+
+# Instrument of Desire (Existing)
+#		"covenant_instrument_of_desire"
+#	Requirement:
+#		None.
+#
+#	Passive:
+#		+25% Energy, +25% Minerals
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Increased consumer goods consumption, planet ethics divergence, empire ethics divergence
+#
+# 	Boon Offensive:
+#		Decrease enemy's mineral and energy income.
+#
+# 	Boon Self:
+#		Happiness.
+
+# End of the Cycle (Existing)
+#		"us_covenant_end_of_the_cycle"
+#	Requirement:
+#		Only 5% chance to show up.
+#
+#	Passive:
+#		+100% Food, +100% Minerals, +100% Energy, +100% Unity, +100% Influence, +100% All Research, +100% Navy Size
+#
+#	Pleasure:
+#		End of the cycle 50 years later. 2% chance to happen per boon.
+#		Cannot strike bargains anymore.
+#
+# 	Boon Offensive:
+#		Spawn hostile-to-all avatar ships in random enemy / rival system AND 2 Month's minerals, 2 Month's Energy, 6 Month's all research
+#
+# 	Boon Self:
+#		None
+
+# The Guide (New)
+#		"covenant_the_guide"
+#	Requirement:
+#		Have all vision flags.
+#
+#	Passive:
+#		+10% Energy, +10% Minerals, +25% Research
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Commune with planet (Halts output of minerals, -25% (net) energy output, +20% happiness. Lasts 5 year.)
+#		Cannot buy offensive bargains.
+#
+# 	Boon Offensive:
+#		None.
+#
+# 	Boon Self:
+#		Research speed bonus.
+
+# Kyuubi of the Shroud (New)
+#		"covenant_kyuubi_of_the_shroud"
+#	Requirement:
+#		Have Kyuubi civic.
+#
+#	Passive:
+#		+25% Energy, +25% Minerals, +50% Unity, +50% Research
+#		Cannot be swindled in bargains.
+#
+#	Pleasure:
+#		Materialize on planet (Halts output of minerals, -75% (net) energy output, +50% happiness, +150% unity, +50% research. Lasts 5 years.)
+#
+# 	Boon Offensive:
+#		Food reduction, slowed pop growth, lowers research and generates unrest on random enemy / rival planet.
+#
+# 	Boon Self:
+#		Level 5 and 6 Psionics for Pops, and Leaders.
+
+
+Fix: Kyuubi boons no back button.
+Fix: Shroud experience gain rate and display.
+Fix: Utopia.3343.name, Utopia.3343.desc, Utopia.3343.opt.a localisation needs fixing

@@ -1,0 +1,47 @@
+# Warped Consciousness
+ship_design = {
+	name = "NAME_US_Warped_Consciousness"
+	ship_size = us_warped_consciousness
+	hide_size = yes
+
+	section = {
+		template = "us_corrupted_psionic_avatar_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "PSIONIC_BLAST_1"
+		}
+	}
+	required_component="COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+	required_component="SHIP_THRUSTER_1"
+	required_component="PSI_JUMP_DRIVE_1"
+}
